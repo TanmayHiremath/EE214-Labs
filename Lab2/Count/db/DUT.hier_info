@@ -7,8 +7,8 @@ input_vector[4] => Compare:add_instance.A[4]
 input_vector[5] => Compare:add_instance.A[5]
 input_vector[6] => Compare:add_instance.A[6]
 input_vector[7] => Compare:add_instance.A[7]
-output_vector[0] << Compare:add_instance.S[0]
-output_vector[1] << Compare:add_instance.S[1]
+output_vector[0] <= Compare:add_instance.S[0]
+output_vector[1] <= Compare:add_instance.S[1]
 
 
 |DUT|Compare:add_instance

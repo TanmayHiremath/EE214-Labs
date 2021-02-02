@@ -7,7 +7,7 @@ vmap work gate_work
 
 vcom -93 -work work {DUT.vho}
 
-vcom -93 -work work {S:/EE214 Labs/Lab2/Count/Testbench.vhdl}
+vcom -93 -work work {/media/captain/Study/EE214 Labs/Lab2/Count/Testbench.vhdl}
 
 vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /dut_instance=DUT_vhd.sdo -L maxv -L gate_work -L work -voptargs="+acc"  Testbench
 

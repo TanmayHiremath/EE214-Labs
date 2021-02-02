@@ -1,6 +1,6 @@
 Fitter report for DUT
-Sat Jan 30 21:05:11 2021
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Feb  2 21:52:09 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -54,8 +54,8 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Sat Jan 30 21:05:11 2021       ;
-; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Fitter Status         ; Successful - Tue Feb  2 21:52:09 2021       ;
+; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name         ; DUT                                         ;
 ; Top-level Entity Name ; DUT                                         ;
 ; Family                ; MAX V                                       ;
@@ -136,7 +136,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in S:/EE214 Labs/Lab2/Count/output_files/DUT.pin.
+The pin-out file can be found in /media/captain/Study/EE214 Labs/Lab2/Count/output_files/DUT.pin.
 
 
 +-------------------------------------------------------------------+
@@ -591,20 +591,20 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file S:/EE214 Labs/Lab2/Count/output_files/DUT.fit.smsg
+Info (144001): Generated suppressed messages file /media/captain/Study/EE214 Labs/Lab2/Count/output_files/DUT.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5522 megabytes
-    Info: Processing ended: Sat Jan 30 21:05:12 2021
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 1004 megabytes
+    Info: Processing ended: Tue Feb  2 21:52:09 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in S:/EE214 Labs/Lab2/Count/output_files/DUT.fit.smsg.
+The suppressed messages can be found in /media/captain/Study/EE214 Labs/Lab2/Count/output_files/DUT.fit.smsg.
 
 
