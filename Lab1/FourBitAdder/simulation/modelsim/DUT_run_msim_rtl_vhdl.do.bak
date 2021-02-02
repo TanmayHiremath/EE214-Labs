@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {S:/EE214 Labs/Lab1/FourBitAdder/Gates.vhdl}
+vcom -93 -work work {S:/EE214 Labs/Lab1/FourBitAdder/DUT.vhdl}
+vcom -93 -work work {S:/EE214 Labs/Lab1/FourBitAdder/Full_Adder.vhdl}
+vcom -93 -work work {S:/EE214 Labs/Lab1/FourBitAdder/FourBitAdder.vhd}
+

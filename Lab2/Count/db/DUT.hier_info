@@ -1,0 +1,1179 @@
+|DUT
+input_vector[0] => Compare:add_instance.A[0]
+input_vector[1] => Compare:add_instance.A[1]
+input_vector[2] => Compare:add_instance.A[2]
+input_vector[3] => Compare:add_instance.A[3]
+input_vector[4] => Compare:add_instance.A[4]
+input_vector[5] => Compare:add_instance.A[5]
+input_vector[6] => Compare:add_instance.A[6]
+input_vector[7] => Compare:add_instance.A[7]
+output_vector[0] << Compare:add_instance.S[0]
+output_vector[1] << Compare:add_instance.S[1]
+
+
+|DUT|Compare:add_instance
+A[0] => Count:f0.A[0]
+A[1] => Count:f0.A[1]
+A[2] => Count:f0.A[2]
+A[3] => Count:f0.A[3]
+A[4] => Count:f0.A[4]
+A[5] => Count:f0.A[5]
+A[6] => Count:f0.A[6]
+A[7] => Count:f0.A[7]
+S[0] <= OR_2:f3.Y
+S[1] <= OR_2:f3.Y
+
+
+|DUT|Compare:add_instance|Count:f0
+A[0] => FourBitAdder:f0.A[0]
+A[1] => FourBitAdder:f0.B[0]
+A[2] => FourBitAdder:f1.B[0]
+A[3] => FourBitAdder:f2.B[0]
+A[4] => FourBitAdder:f3.B[0]
+A[5] => FourBitAdder:f4.B[0]
+A[6] => FourBitAdder:f5.B[0]
+A[7] => FourBitAdder:f6.B[0]
+S[0] <= FourBitAdder:f6.S[0]
+S[1] <= FourBitAdder:f6.S[1]
+S[2] <= FourBitAdder:f6.S[2]
+S[3] <= FourBitAdder:f6.S[3]
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+Cout <= Full_Adder:f3.Cout
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f0|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+Cout <= Full_Adder:f3.Cout
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f1|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+Cout <= Full_Adder:f3.Cout
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f2|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+Cout <= Full_Adder:f3.Cout
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f3|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+Cout <= Full_Adder:f3.Cout
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f4|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+Cout <= Full_Adder:f3.Cout
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f5|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+Cout <= Full_Adder:f3.Cout
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|Count:f0|FourBitAdder:f6|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|OR_2:f1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|AND_2:f2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Compare:add_instance|OR_2:f3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

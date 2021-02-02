@@ -1,0 +1,529 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dS:/EE214 Labs/Lab1/FourBitAdder/simulation/modelsim
+Eand_2
+Z1 w1611675743
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8S:/EE214 Labs/Lab1/FourBitAdder/Gates.vhdl
+Z5 FS:/EE214 Labs/Lab1/FourBitAdder/Gates.vhdl
+l0
+L56 1
+V^<@S]C[a0o`<5z]A6^QEI3
+!s100 >c97M_;fFCB48AL2f[iKC2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1612012639
+!i10b 1
+Z8 !s108 1612012638.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|S:/EE214 Labs/Lab1/FourBitAdder/Gates.vhdl|
+Z10 !s107 S:/EE214 Labs/Lab1/FourBitAdder/Gates.vhdl|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aequations
+R2
+R3
+DEx4 work 5 and_2 0 22 ^<@S]C[a0o`<5z]A6^QEI3
+!i122 0
+l61
+L60 4
+Vi7`04d:YUkZ:LXCBHI`>R2
+!s100 I>aFk>kT5NUl>7o8>[^323
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1611745678
+R2
+R3
+!i122 1
+R0
+Z14 8S:/EE214 Labs/Lab1/FourBitAdder/DUT.vhdl
+Z15 FS:/EE214 Labs/Lab1/FourBitAdder/DUT.vhdl
+l0
+L7 1
+VMTE>;hDm6AA79M5QY>O3E2
+!s100 `a8CS0obQd=6aZk4SHD:C0
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1612012639.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|S:/EE214 Labs/Lab1/FourBitAdder/DUT.vhdl|
+Z18 !s107 S:/EE214 Labs/Lab1/FourBitAdder/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 MTE>;hDm6AA79M5QY>O3E2
+!i122 1
+l17
+L12 16
+VFSiT[7>AmLc4L_AGe[gCT1
+!s100 miidVZmhPgJ0cQD7TI^[00
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Efourbitadder
+Z19 w1611745563
+Z20 DPx4 work 5 gates 0 22 1z@ib<`E=5b_OlWBn<=Xo1
+R2
+R3
+!i122 3
+R0
+Z21 8S:/EE214 Labs/Lab1/FourBitAdder/FourBitAdder.vhd
+Z22 FS:/EE214 Labs/Lab1/FourBitAdder/FourBitAdder.vhd
+l0
+L7 1
+VdB8i7]JSI5_O<@0jMdX5Q1
+!s100 eKaRb6i_4gfH2kAf_MEV]1
+R6
+31
+R7
+!i10b 1
+R16
+Z23 !s90 -reportprogress|300|-93|-work|work|S:/EE214 Labs/Lab1/FourBitAdder/FourBitAdder.vhd|
+Z24 !s107 S:/EE214 Labs/Lab1/FourBitAdder/FourBitAdder.vhd|
+!i113 1
+R11
+R12
+Astruct
+R20
+R2
+R3
+DEx4 work 12 fourbitadder 0 22 dB8i7]JSI5_O<@0jMdX5Q1
+!i122 3
+l13
+L11 9
+V?oe790[Dj82:4[H4UnbNW1
+!s100 9TmFa_PMOb7eHK?@40O;E1
+R6
+31
+R7
+!i10b 1
+R16
+R23
+R24
+!i113 1
+R11
+R12
+Efull_adder
+Z25 w1611674238
+R20
+R2
+R3
+!i122 2
+R0
+Z26 8S:/EE214 Labs/Lab1/FourBitAdder/Full_Adder.vhdl
+Z27 FS:/EE214 Labs/Lab1/FourBitAdder/Full_Adder.vhdl
+l0
+L7 1
+V_S=WZ8fFSSGS0G<9Do9HR0
+!s100 H=:zT=46zo28lmNL^=N@g0
+R6
+31
+R7
+!i10b 1
+R16
+Z28 !s90 -reportprogress|300|-93|-work|work|S:/EE214 Labs/Lab1/FourBitAdder/Full_Adder.vhdl|
+Z29 !s107 S:/EE214 Labs/Lab1/FourBitAdder/Full_Adder.vhdl|
+!i113 1
+R11
+R12
+Astruct
+R20
+R2
+R3
+DEx4 work 10 full_adder 0 22 _S=WZ8fFSSGS0G<9Do9HR0
+!i122 2
+l12
+L10 14
+VDb^ljfQ?OkP7b=WRDfV^z2
+!s100 VnnS6P?]2A1:]TGdaJ7;e0
+R6
+31
+R7
+!i10b 1
+R16
+R28
+R29
+!i113 1
+R11
+R12
+Pgates
+R2
+R3
+!i122 0
+R1
+R0
+R4
+R5
+l0
+L3 1
+V1z@ib<`E=5b_OlWBn<=Xo1
+!s100 `h_0E[=Ad5F`af2zZ=0zI1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ehalf_adder
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L123 1
+VbDm=HfUnO`6mSBX@<?Aom0
+!s100 SB;>?8UHGFObO2>`HnE`H1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 10 half_adder 0 22 bDm=HfUnO`6mSBX@<?Aom0
+!i122 0
+l128
+L127 5
+VNM7c9Qd@bKe6I@bL4FSEk1
+!s100 [2F1VDcl^mF4h4?8GIOng1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Einverter
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L44 1
+Vg>kFzoD<k3POH:lX8DYRU1
+!s100 4zMf`KU=[U4HeO:hhHG4@3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 8 inverter 0 22 g>kFzoD<k3POH:lX8DYRU1
+!i122 0
+l49
+L48 4
+VceDaA`O;Pz7aJG<S7bOeP3
+!s100 1lgla<781P7FVlERBL?YW3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enand_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L67 1
+Vcz[iTP_5REZg[QdGT99GB2
+!s100 eOQoo@6=9fT1fb9]mfik23
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 nand_2 0 22 cz[iTP_5REZg[QdGT99GB2
+!i122 0
+l72
+L71 4
+VVXV=_6VL`62fGRmPY`fQZ1
+!s100 VIAXCNHjQ<j<jIe9C2MPc3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enor_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L89 1
+VX?l7HPQ0Dc6Jh3];?hhWg0
+!s100 f;5_R1QO]zO<a_=hSE6g?2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 nor_2 0 22 X?l7HPQ0Dc6Jh3];?hhWg0
+!i122 0
+l94
+L93 4
+VdQ:>D?:[CKQVDUY@k>j?Z3
+!s100 YG;BnUldPPS;;L81K=DSD2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L78 1
+VO1:bEf=ZA0GzEik1BIB5K0
+!s100 [RU1?NY:Cc1Q@JeX2W9Qc1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 4 or_2 0 22 O1:bEf=ZA0GzEik1BIB5K0
+!i122 0
+l83
+L82 4
+VafEg<iI^D]IAJPgb@U2352
+!s100 ;M[gOSF:KFiN>DPkm>_1E3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z30 w1611746603
+R3
+R2
+!i122 4
+R0
+Z31 8S:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl
+Z32 FS:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R16
+Z33 !s90 -reportprogress|300|-93|-work|work|S:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl|
+!s107 S:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 4
+l69
+L9 132
+VM[JNc9INWP?:@2l;IVDDi3
+!s100 ?TPR7SG_ZOe:VmM03LnPB2
+R6
+31
+R7
+!i10b 1
+R16
+R33
+Z34 !s107 S:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl|
+!i113 1
+R11
+R12
+Exnor_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L112 1
+VhASzMAlYEBEL8R<9eGmXh1
+!s100 RjCmZgWZS>GT0oV0d242:0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 xnor_2 0 22 hASzMAlYEBEL8R<9eGmXh1
+!i122 0
+l117
+L116 4
+VRVl2;nNWd<LgJzjNFHQ?Z3
+!s100 S8I`WmoALle5njkPlb?eR3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Exor_2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L101 1
+V6E4L7zd4;Z2K@kd]:ZSQQ3
+!s100 MDhjz5]elUIC7>BQ=`82o1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 xor_2 0 22 6E4L7zd4;Z2K@kd]:ZSQQ3
+!i122 0
+l106
+L105 4
+VgOnLj;LHEW`;3@2Rfo62O3
+!s100 T?`5bHD@Z39k`?g>NH?Vj0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
