@@ -1,6 +1,6 @@
 Fitter report for DUT
-Tue Feb  2 21:52:09 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Thu Feb 04 16:52:03 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -17,17 +17,16 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   9. I/O Bank Usage
  10. All Package Pins
  11. Output Pin Default Load For Reported TCO
- 12. I/O Assignment Warnings
- 13. Fitter Resource Utilization by Entity
- 14. Delay Chain Summary
- 15. Routing Usage Summary
- 16. LAB Logic Elements
- 17. LAB Signals Sourced
- 18. LAB Signals Sourced Out
- 19. LAB Distinct Inputs
- 20. Fitter Device Options
- 21. Fitter Messages
- 22. Fitter Suppressed Messages
+ 12. Fitter Resource Utilization by Entity
+ 13. Delay Chain Summary
+ 14. Routing Usage Summary
+ 15. LAB Logic Elements
+ 16. LAB Signals Sourced
+ 17. LAB Signals Sourced Out
+ 18. LAB Distinct Inputs
+ 19. Fitter Device Options
+ 20. Fitter Messages
+ 21. Fitter Suppressed Messages
 
 
 
@@ -54,8 +53,8 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Tue Feb  2 21:52:09 2021       ;
-; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Fitter Status         ; Successful - Thu Feb 04 16:52:03 2021       ;
+; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; DUT                                         ;
 ; Top-level Entity Name ; DUT                                         ;
 ; Family                ; MAX V                                       ;
@@ -136,7 +135,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /media/captain/Study/EE214 Labs/Lab2/Count/output_files/DUT.pin.
+The pin-out file can be found in S:/EE214_Labs/Lab2/Count/output_files/DUT.pin.
 
 
 +-------------------------------------------------------------------+
@@ -179,8 +178,8 @@ The pin-out file can be found in /media/captain/Study/EE214 Labs/Lab2/Count/outp
 ; Global signals                              ; 0                   ;
 ;     -- Global clocks                        ; 0 / 4 ( 0 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )       ;
-; Average interconnect usage (total/H/V)      ; 0.3% / 0.2% / 0.4%  ;
-; Peak interconnect usage (total/H/V)         ; 0.3% / 0.2% / 0.5%  ;
+; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.3%  ;
+; Peak interconnect usage (total/H/V)         ; 0.5% / 0.4% / 0.5%  ;
 ; Maximum fan-out                             ; 2                   ;
 ; Highest non-global fan-out                  ; 2                   ;
 ; Total fan-out                               ; 25                  ;
@@ -193,14 +192,14 @@ The pin-out file can be found in /media/captain/Study/EE214 Labs/Lab2/Count/outp
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
-; input_vector[0] ; 124   ; 2        ; 9            ; 11           ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; input_vector[1] ; 125   ; 2        ; 9            ; 11           ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; input_vector[2] ; 62    ; 4        ; 10           ; 3            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; input_vector[3] ; 119   ; 2        ; 11           ; 11           ; 3           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; input_vector[4] ; 114   ; 2        ; 12           ; 11           ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; input_vector[5] ; 61    ; 4        ; 10           ; 3            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; input_vector[6] ; 117   ; 2        ; 11           ; 11           ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; input_vector[7] ; 118   ; 2        ; 11           ; 11           ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[0] ; 39    ; 4        ; 2            ; 3            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; input_vector[1] ; 40    ; 4        ; 3            ; 3            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; input_vector[2] ; 41    ; 4        ; 3            ; 3            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; input_vector[3] ; 42    ; 4        ; 4            ; 3            ; 0           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; input_vector[4] ; 43    ; 4        ; 5            ; 3            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; input_vector[5] ; 44    ; 4        ; 5            ; 3            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; input_vector[6] ; 45    ; 4        ; 6            ; 3            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; input_vector[7] ; 48    ; 4        ; 7            ; 3            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
 
@@ -209,21 +208,21 @@ The pin-out file can be found in /media/captain/Study/EE214 Labs/Lab2/Count/outp
 +------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name             ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; output_vector[0] ; 13    ; 1        ; 0            ; 7            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; output_vector[1] ; 12    ; 1        ; 0            ; 7            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[0] ; 57    ; 4        ; 8            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; output_vector[1] ; 58    ; 4        ; 9            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 +------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
-+-----------------------------------------------------------+
-; I/O Bank Usage                                            ;
-+----------+-----------------+---------------+--------------+
-; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
-+----------+-----------------+---------------+--------------+
-; 1        ; 2 / 25 ( 8 % )  ; 3.3V          ; --           ;
-; 2        ; 6 / 30 ( 20 % ) ; 3.3V          ; --           ;
-; 3        ; 0 / 29 ( 0 % )  ; 3.3V          ; --           ;
-; 4        ; 2 / 30 ( 7 % )  ; 3.3V          ; --           ;
-+----------+-----------------+---------------+--------------+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 0 / 25 ( 0 % )   ; 3.3V          ; --           ;
+; 2        ; 0 / 30 ( 0 % )   ; 3.3V          ; --           ;
+; 3        ; 0 / 29 ( 0 % )   ; 3.3V          ; --           ;
+; 4        ; 10 / 30 ( 33 % ) ; 3.3V          ; --           ;
++----------+------------------+---------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -242,8 +241,8 @@ The pin-out file can be found in /media/captain/Study/EE214 Labs/Lab2/Count/outp
 ; 9        ;            ; 1        ; VCCIO1           ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 10       ;            ;          ; GNDIO            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 11       ;            ;          ; GNDIO            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 12       ; 21         ; 1        ; output_vector[1] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 13       ; 22         ; 1        ; output_vector[0] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 12       ; 21         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 13       ; 22         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 14       ; 23         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 15       ; 24         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 16       ; 25         ; 1        ; GND*             ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -269,16 +268,16 @@ The pin-out file can be found in /media/captain/Study/EE214 Labs/Lab2/Count/outp
 ; 36       ; 53         ; 1        ; #TDO             ; output ;              ;         ; --         ;                 ; --       ; --           ;
 ; 37       ; 56         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 38       ; 57         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 39       ; 60         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 40       ; 62         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 41       ; 63         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 42       ; 67         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 43       ; 68         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 44       ; 69         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 45       ; 74         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 39       ; 60         ; 4        ; input_vector[0]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 40       ; 62         ; 4        ; input_vector[1]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 41       ; 63         ; 4        ; input_vector[2]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 42       ; 67         ; 4        ; input_vector[3]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 43       ; 68         ; 4        ; input_vector[4]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 44       ; 69         ; 4        ; input_vector[5]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 45       ; 74         ; 4        ; input_vector[6]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 46       ;            ; 4        ; VCCIO4           ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 47       ;            ;          ; GNDIO            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 48       ; 75         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 48       ; 75         ; 4        ; input_vector[7]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 49       ; 76         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 50       ; 77         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 51       ; 78         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -287,12 +286,12 @@ The pin-out file can be found in /media/captain/Study/EE214 Labs/Lab2/Count/outp
 ; 54       ;            ;          ; GNDINT           ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 55       ; 81         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 56       ;            ;          ; VCCINT           ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
-; 57       ; 82         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 58       ; 83         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 57       ; 82         ; 4        ; output_vector[0] ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; 58       ; 83         ; 4        ; output_vector[1] ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 59       ; 84         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 60       ; 85         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 61       ; 86         ; 4        ; input_vector[5]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 62       ; 87         ; 4        ; input_vector[2]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 61       ; 86         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 62       ; 87         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 63       ; 88         ; 4        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 64       ;            ; 4        ; VCCIO4           ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 65       ;            ;          ; GNDIO            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -344,18 +343,18 @@ The pin-out file can be found in /media/captain/Study/EE214 Labs/Lab2/Count/outp
 ; 111      ; 166        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 112      ; 171        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 113      ; 174        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 114      ; 177        ; 2        ; input_vector[4]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 114      ; 177        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 115      ;            ;          ; GNDIO            ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 116      ;            ; 2        ; VCCIO2           ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 117      ; 180        ; 2        ; input_vector[6]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 118      ; 181        ; 2        ; input_vector[7]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 119      ; 182        ; 2        ; input_vector[3]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 117      ; 180        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 118      ; 181        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 119      ; 182        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 120      ; 183        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 121      ; 184        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 122      ; 185        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 123      ; 186        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 124      ; 187        ; 2        ; input_vector[0]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 125      ; 188        ; 2        ; input_vector[1]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 124      ; 187        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 125      ; 188        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 126      ;            ;          ; VCCINT           ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
 ; 127      ; 189        ; 2        ; GND*             ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 128      ;            ;          ; GNDINT           ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -399,24 +398,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+------------------------------------------------+
-; I/O Assignment Warnings                        ;
-+------------------+-----------------------------+
-; Pin Name         ; Reason                      ;
-+------------------+-----------------------------+
-; output_vector[0] ; Missing location assignment ;
-; output_vector[1] ; Missing location assignment ;
-; input_vector[3]  ; Missing location assignment ;
-; input_vector[4]  ; Missing location assignment ;
-; input_vector[0]  ; Missing location assignment ;
-; input_vector[5]  ; Missing location assignment ;
-; input_vector[6]  ; Missing location assignment ;
-; input_vector[7]  ; Missing location assignment ;
-; input_vector[1]  ; Missing location assignment ;
-; input_vector[2]  ; Missing location assignment ;
-+------------------+-----------------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Fitter Resource Utilization by Entity                                                                                                                                                                                                            ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------+-------------+--------------+
@@ -447,19 +428,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------+----------+---------------+
 
 
-+---------------------------------------------+
-; Routing Usage Summary                       ;
-+-----------------------+---------------------+
-; Routing Resource Type ; Usage               ;
-+-----------------------+---------------------+
-; C4s                   ; 8 / 2,870 ( < 1 % ) ;
-; Direct links          ; 0 / 3,938 ( 0 % )   ;
-; Global clocks         ; 0 / 4 ( 0 % )       ;
-; LAB clocks            ; 0 / 72 ( 0 % )      ;
-; LUT chains            ; 1 / 1,143 ( < 1 % ) ;
-; Local interconnects   ; 9 / 3,938 ( < 1 % ) ;
-; R4s                   ; 5 / 2,832 ( < 1 % ) ;
-+-----------------------+---------------------+
++----------------------------------------------+
+; Routing Usage Summary                        ;
++-----------------------+----------------------+
+; Routing Resource Type ; Usage                ;
++-----------------------+----------------------+
+; C4s                   ; 10 / 2,870 ( < 1 % ) ;
+; Direct links          ; 0 / 3,938 ( 0 % )    ;
+; Global clocks         ; 0 / 4 ( 0 % )        ;
+; LAB clocks            ; 0 / 72 ( 0 % )       ;
+; LUT chains            ; 1 / 1,143 ( < 1 % )  ;
+; Local interconnects   ; 10 / 3,938 ( < 1 % ) ;
+; R4s                   ; 5 / 2,832 ( < 1 % )  ;
++-----------------------+----------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -553,7 +534,6 @@ Info (176444): Device migration not selected. If you intend to use device migrat
     Info (176445): Device 5M570ZT144C5 is compatible
     Info (176445): Device 5M570ZT144I5 is compatible
     Info (176445): Device 5M1270ZT144I5 is compatible
-Critical Warning (169085): No exact pin location assignment(s) for 10 pins of 10 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'DUT.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -568,16 +548,7 @@ Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 10 (unused VREF, 3.3V VCCIO, 8 input, 2 output, 0 bidirectional)
-        Info (176212): I/O standards used: 3.3-V LVTTL.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  25 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  30 pins available
-        Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  29 pins available
-        Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  30 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -586,25 +557,25 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X9_Y0 to location X17_Y11
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X8_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file /media/captain/Study/EE214 Labs/Lab2/Count/output_files/DUT.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 1004 megabytes
-    Info: Processing ended: Tue Feb  2 21:52:09 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:02
+Info (144001): Generated suppressed messages file S:/EE214_Labs/Lab2/Count/output_files/DUT.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5520 megabytes
+    Info: Processing ended: Thu Feb 04 16:52:03 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /media/captain/Study/EE214 Labs/Lab2/Count/output_files/DUT.fit.smsg.
+The suppressed messages can be found in S:/EE214_Labs/Lab2/Count/output_files/DUT.fit.smsg.
 
 

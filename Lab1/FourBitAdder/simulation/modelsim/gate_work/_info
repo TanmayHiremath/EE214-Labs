@@ -8,9 +8,9 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dS:/EE214 Labs/Lab1/FourBitAdder/simulation/modelsim
+Z0 dS:/EE214_Labs/Lab1/FourBitAdder/simulation/modelsim
 Edut
-Z1 w1611824933
+Z1 w1612435864
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx4 maxv 14 maxv_atom_pack 0 22 DA=HhE]4cXbV_NTemfNUC2
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -27,9 +27,9 @@ VdH3CabC3`LmIC0U8[WJ>;3
 !s100 PE`e9C;o9>1P<f@iYBk8N0
 Z10 OV;C;2020.1;71
 31
-Z11 !s110 1612018049
+Z11 !s110 1612436938
 !i10b 1
-Z12 !s108 1612018049.000000
+Z12 !s108 1612436938.000000
 Z13 !s90 -reportprogress|300|-93|-work|work|DUT.vho|
 Z14 !s107 DUT.vho|
 !i113 1
@@ -46,8 +46,8 @@ DEx4 work 3 dut 0 22 dH3CabC3`LmIC0U8[WJ>;3
 !i122 0
 l66
 L45 328
-VFM>oSC]3h<93hXMYXJ:IQ2
-!s100 C:6z@3gg]kGiSL=SOnIhB0
+VHCWdDj=d2c2I`ooBE=F1=0
+!s100 ahkCZok7Jo]0A^1G5@ZKH2
 R10
 31
 R11
@@ -64,19 +64,19 @@ R7
 R6
 !i122 1
 R0
-Z18 8S:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl
-Z19 FS:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl
+Z18 8S:/EE214_Labs/Lab1/FourBitAdder/Testbench.vhdl
+Z19 FS:/EE214_Labs/Lab1/FourBitAdder/Testbench.vhdl
 l0
 L7 1
 V]iKK_Z9L:G9B:i8c]3eFH0
 !s100 bWf8kl8zb90X@P1m>V^K20
 R10
 31
-R11
+Z20 !s110 1612436939
 !i10b 1
-R12
-Z20 !s90 -reportprogress|300|-93|-work|work|S:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl|
-!s107 S:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl|
+Z21 !s108 1612436939.000000
+Z22 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab1/FourBitAdder/Testbench.vhdl|
+!s107 S:/EE214_Labs/Lab1/FourBitAdder/Testbench.vhdl|
 !i113 1
 R15
 R16
@@ -91,11 +91,11 @@ VM[JNc9INWP?:@2l;IVDDi3
 !s100 ?TPR7SG_ZOe:VmM03LnPB2
 R10
 31
-R11
-!i10b 1
-R12
 R20
-Z21 !s107 S:/EE214 Labs/Lab1/FourBitAdder/Testbench.vhdl|
+!i10b 1
+R21
+R22
+Z23 !s107 S:/EE214_Labs/Lab1/FourBitAdder/Testbench.vhdl|
 !i113 1
 R15
 R16
