@@ -1,5 +1,5 @@
 Fitter report for DUT
-Fri Feb 05 17:05:26 2021
+Thu Feb 11 15:15:09 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Fri Feb 05 17:05:26 2021       ;
+; Fitter Status         ; Successful - Thu Feb 11 15:15:09 2021       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; DUT                                         ;
 ; Top-level Entity Name ; DUT                                         ;
@@ -179,7 +179,7 @@ The pin-out file can be found in S:/EE214_Labs/Lab3/MUX2bit/output_files/DUT.pin
 ;     -- Global clocks                        ; 0 / 4 ( 0 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )       ;
 ; Average interconnect usage (total/H/V)      ; 0.1% / 0.2% / 0.1%  ;
-; Peak interconnect usage (total/H/V)         ; 0.2% / 0.3% / 0.2%  ;
+; Peak interconnect usage (total/H/V)         ; 0.3% / 0.3% / 0.2%  ;
 ; Maximum fan-out                             ; 2                   ;
 ; Highest non-global fan-out                  ; 2                   ;
 ; Total fan-out                               ; 8                   ;
@@ -192,8 +192,8 @@ The pin-out file can be found in S:/EE214_Labs/Lab3/MUX2bit/output_files/DUT.pin
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
 +-----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
-; input_vector[0] ; 48    ; 4        ; 7            ; 3            ; 3           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; input_vector[1] ; 45    ; 4        ; 6            ; 3            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; input_vector[0] ; 48    ; 4        ; 7            ; 3            ; 3           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; input_vector[1] ; 45    ; 4        ; 6            ; 3            ; 0           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; input_vector[2] ; 44    ; 4        ; 5            ; 3            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; input_vector[3] ; 43    ; 4        ; 5            ; 3            ; 3           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; input_vector[4] ; 42    ; 4        ; 4            ; 3            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
@@ -415,12 +415,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------+----------+---------------+
 ; Name             ; Pin Type ; Pad to Core 0 ;
 +------------------+----------+---------------+
-; input_vector[0]  ; Input    ; (0)           ;
 ; output_vector[0] ; Output   ; --            ;
 ; output_vector[1] ; Output   ; --            ;
-; input_vector[1]  ; Input    ; (1)           ;
+; input_vector[0]  ; Input    ; (1)           ;
 ; input_vector[2]  ; Input    ; (1)           ;
 ; input_vector[4]  ; Input    ; (1)           ;
+; input_vector[1]  ; Input    ; (1)           ;
 ; input_vector[3]  ; Input    ; (1)           ;
 +------------------+----------+---------------+
 
@@ -430,12 +430,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+---------------------+
 ; Routing Resource Type ; Usage               ;
 +-----------------------+---------------------+
-; C4s                   ; 6 / 2,870 ( < 1 % ) ;
+; C4s                   ; 7 / 2,870 ( < 1 % ) ;
 ; Direct links          ; 0 / 3,938 ( 0 % )   ;
 ; Global clocks         ; 0 / 4 ( 0 % )       ;
 ; LAB clocks            ; 0 / 72 ( 0 % )      ;
 ; LUT chains            ; 0 / 1,143 ( 0 % )   ;
-; Local interconnects   ; 6 / 3,938 ( < 1 % ) ;
+; Local interconnects   ; 7 / 3,938 ( < 1 % ) ;
 ; R4s                   ; 4 / 2,832 ( < 1 % ) ;
 +-----------------------+---------------------+
 
@@ -483,13 +483,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 4.00) ; Number of LABs  (Total = 1) ;
+; Number of Distinct Inputs  (Average = 5.00) ; Number of LABs  (Total = 1) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
-; 4                                           ; 1                           ;
+; 4                                           ; 0                           ;
+; 5                                           ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -537,7 +538,7 @@ Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -556,9 +557,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file S:/EE214_Labs/Lab3/MUX2bit/output_files/DUT.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5520 megabytes
-    Info: Processing ended: Fri Feb 05 17:05:26 2021
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 5519 megabytes
+    Info: Processing ended: Thu Feb 11 15:15:09 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

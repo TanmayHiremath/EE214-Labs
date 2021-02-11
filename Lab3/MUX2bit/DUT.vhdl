@@ -23,7 +23,7 @@ begin
 					A0=> input_vector(3),
 					A1=>input_vector(2),
 					B0=>input_vector(1),
-					B1=>input_vector(1),-- order of outputs S Cout
+					B1=>input_vector(0),-- order of outputs S Cout
 					O => output_vector);
 
 end DutWrap;

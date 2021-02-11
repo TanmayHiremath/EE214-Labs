@@ -1,7 +1,6 @@
 |DUT
-input_vector[0] => ~NO_FANOUT~
+input_vector[0] => MUX2bit:add_instance.B1
 input_vector[1] => MUX2bit:add_instance.B0
-input_vector[1] => MUX2bit:add_instance.B1
 input_vector[2] => MUX2bit:add_instance.A1
 input_vector[3] => MUX2bit:add_instance.A0
 input_vector[4] => MUX2bit:add_instance.S
