@@ -65,13 +65,13 @@ CHIP  "DUT"  ASSIGNED TO AN: 5M1270ZT144C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-input_vector[2]              : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 1         :        :                   :         : 1         :                
 GND*                         : 2         :        :                   :         : 1         :                
-GND*                         : 3         :        :                   :         : 1         :                
+TDO                          : 3         : output : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 4         :        :                   :         : 1         :                
-input_vector[0]              : 5         : input  : 3.3-V LVTTL       :         : 1         : N              
-output_vector[0]             : 6         : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 7         :        :                   :         : 1         :                
+TDI                          : 5         : input  : 3.3-V LVTTL       :         : 1         : Y              
+GND*                         : 6         :        :                   :         : 1         :                
+TMS                          : 7         : input  : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 8         :        :                   :         : 1         :                
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
@@ -85,9 +85,9 @@ GNDINT                       : 17        : gnd    :                   :         
 GND*                         : 18        :        :                   :         : 1         :                
 VCCINT                       : 19        : power  :                   : 1.8V    :           :                
 GND*                         : 20        :        :                   :         : 1         :                
-GND*                         : 21        :        :                   :         : 1         :                
+TRST                         : 21        : input  : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 22        :        :                   :         : 1         :                
-GND*                         : 23        :        :                   :         : 1         :                
+TCLK                         : 23        : input  : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 24        :        :                   :         : 1         :                
 VCCIO1                       : 25        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 26        : gnd    :                   :         :           :                
@@ -206,6 +206,6 @@ GND*                         : 138       :        :                   :         
 GND*                         : 139       :        :                   :         : 2         :                
 GND*                         : 140       :        :                   :         : 2         :                
 GND*                         : 141       :        :                   :         : 2         :                
-output_vector[1]             : 142       : output : 3.3-V LVTTL       :         : 2         : N              
-input_vector[1]              : 143       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 142       :        :                   :         : 2         :                
+GND*                         : 143       :        :                   :         : 2         :                
 GND*                         : 144       :        :                   :         : 2         :                

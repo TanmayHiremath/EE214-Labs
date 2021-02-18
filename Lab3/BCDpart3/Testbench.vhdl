@@ -107,7 +107,7 @@ begin
           input_vector <= to_std_logic_vector(input_vector_var);
 
 	  -- wait for the circuit to settle 
-	  wait for 15 ns;
+	  wait for 50 ns;
 
 	  -- check output.
           output_comp_var := (to_std_logic_vector(output_mask_var) and 

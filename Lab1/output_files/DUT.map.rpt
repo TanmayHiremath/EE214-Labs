@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Tue Jan 26 15:14:52 2021
+Thu Feb 18 15:17:37 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,8 +13,15 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  8. State Machine - |TopLevel|Scan_Chain:scan_instance|current_state
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Scan_Chain:scan_instance
+ 12. Parameter Settings for User Entity Instance: Scan_Chain:scan_instance|Scan_Reg:In_Reg
+ 13. Parameter Settings for User Entity Instance: Scan_Chain:scan_instance|Scan_Reg:Out_Reg
+ 14. Port Connectivity Checks: "Scan_Chain:scan_instance|Scan_Reg:Out_Reg"
+ 15. Port Connectivity Checks: "Scan_Chain:scan_instance|Scan_Reg:In_Reg"
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -41,12 +48,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Jan 26 15:14:52 2021       ;
+; Analysis & Synthesis Status ; Successful - Thu Feb 18 15:17:37 2021       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
-; Top-level Entity Name       ; DUT                                         ;
+; Top-level Entity Name       ; TopLevel                                    ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 2                                           ;
+; Total logic elements        ; 18                                          ;
 ; Total pins                  ; 5                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -59,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 5M1270ZT144C5      ;                    ;
-; Top-level entity name                                            ; DUT                ; DUT                ;
+; Top-level entity name                                            ; TopLevel           ; DUT                ;
 ; Family name                                                      ; MAX V              ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -140,62 +147,83 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                                                                ;
-+--------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                                                                                           ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                               ; Library ;
-+--------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl      ; yes             ; User VHDL File  ; D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl      ;         ;
-; D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Full_Adder.vhdl ; yes             ; User VHDL File  ; D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Full_Adder.vhdl ;         ;
-; D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/DUT.vhdl        ; yes             ; User VHDL File  ; D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/DUT.vhdl        ;         ;
-+--------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path       ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------+---------+
+; TopLevel.vhdl                    ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab1/TopLevel.vhdl   ;         ;
+; scan_reg.vhdl                    ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab1/scan_reg.vhdl   ;         ;
+; scan_chain.vhdl                  ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab1/scan_chain.vhdl ;         ;
+; Gates.vhdl                       ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab1/Gates.vhdl      ;         ;
+; Full_Adder.vhdl                  ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab1/Full_Adder.vhdl ;         ;
+; DUT.vhdl                         ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab1/DUT.vhdl        ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Total logic elements                        ; 2               ;
-;     -- Combinational with no register       ; 2               ;
-;     -- Register only                        ; 0               ;
-;     -- Combinational with a register        ; 0               ;
-;                                             ;                 ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 0               ;
-;     -- 3 input functions                    ; 2               ;
-;     -- 2 input functions                    ; 0               ;
-;     -- 1 input functions                    ; 0               ;
-;     -- 0 input functions                    ; 0               ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 2               ;
-;     -- arithmetic mode                      ; 0               ;
-;     -- qfbk mode                            ; 0               ;
-;     -- register cascade mode                ; 0               ;
-;     -- synchronous clear/load mode          ; 0               ;
-;     -- asynchronous clear/load mode         ; 0               ;
-;                                             ;                 ;
-; Total registers                             ; 0               ;
-; I/O pins                                    ; 5               ;
-; Maximum fan-out node                        ; input_vector[1] ;
-; Maximum fan-out                             ; 2               ;
-; Total fan-out                               ; 8               ;
-; Average fan-out                             ; 1.14            ;
-+---------------------------------------------+-----------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 18    ;
+;     -- Combinational with no register       ; 5     ;
+;     -- Register only                        ; 1     ;
+;     -- Combinational with a register        ; 12    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 6     ;
+;     -- 3 input functions                    ; 7     ;
+;     -- 2 input functions                    ; 4     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 18    ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 2     ;
+;     -- asynchronous clear/load mode         ; 5     ;
+;                                             ;       ;
+; Total registers                             ; 13    ;
+; I/O pins                                    ; 5     ;
+; Maximum fan-out node                        ; TRST  ;
+; Maximum fan-out                             ; 17    ;
+; Total fan-out                               ; 81    ;
+; Average fan-out                             ; 3.52  ;
++---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
-+------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node   ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                   ; Entity Name ; Library Name ;
-+------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------+-------------+--------------+
-; |DUT                         ; 2 (0)       ; 0            ; 0          ; 5    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                                  ; DUT         ; work         ;
-;    |Full_Adder:add_instance| ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|Full_Adder:add_instance          ; Full_Adder  ; work         ;
-;       |OR_2:o1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|Full_Adder:add_instance|OR_2:o1  ; OR_2        ; work         ;
-;       |XOR_2:x1|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|Full_Adder:add_instance|XOR_2:x1 ; XOR_2       ; work         ;
-+------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Entity Name ; Library Name ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+-------------+--------------+
+; |TopLevel                       ; 18 (0)      ; 13           ; 0          ; 5    ; 0            ; 5 (0)        ; 1 (0)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |TopLevel                                                   ; TopLevel    ; work         ;
+;    |DUT:dut_instance|           ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance                                  ; DUT         ; work         ;
+;       |Full_Adder:add_instance| ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|Full_Adder:add_instance          ; Full_Adder  ; work         ;
+;          |OR_2:o1|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|Full_Adder:add_instance|OR_2:o1  ; OR_2        ; work         ;
+;          |XOR_2:x1|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|Full_Adder:add_instance|XOR_2:x1 ; XOR_2       ; work         ;
+;    |Scan_Chain:scan_instance|   ; 16 (6)      ; 13           ; 0          ; 0    ; 0            ; 3 (1)        ; 1 (1)             ; 12 (4)           ; 0 (0)           ; 0 (0)      ; |TopLevel|Scan_Chain:scan_instance                          ; Scan_Chain  ; work         ;
+;       |Scan_Reg:In_Reg|         ; 7 (7)       ; 6            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:In_Reg          ; Scan_Reg    ; work         ;
+;       |Scan_Reg:Out_Reg|        ; 3 (3)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:Out_Reg         ; Scan_Reg    ; work         ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TopLevel|Scan_Chain:scan_instance|current_state                                                                               ;
++-------------------------+------------------------+-----------------------+-------------------------+--------------------+----------------------+
+; Name                    ; current_state.s_update ; current_state.s_shift ; current_state.s_capture ; current_state.s_DR ; current_state.s_idle ;
++-------------------------+------------------------+-----------------------+-------------------------+--------------------+----------------------+
+; current_state.s_idle    ; 0                      ; 0                     ; 0                       ; 0                  ; 0                    ;
+; current_state.s_DR      ; 0                      ; 0                     ; 0                       ; 1                  ; 1                    ;
+; current_state.s_capture ; 0                      ; 0                     ; 1                       ; 0                  ; 1                    ;
+; current_state.s_shift   ; 0                      ; 1                     ; 0                       ; 0                  ; 1                    ;
+; current_state.s_update  ; 1                      ; 0                     ; 0                       ; 0                  ; 1                    ;
++-------------------------+------------------------+-----------------------+-------------------------+--------------------+----------------------+
 
 
 +------------------------------------------------------+
@@ -203,14 +231,74 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 13    ;
+; Number of registers using Synchronous Clear  ; 2     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:In_Reg|L2[1]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:In_Reg|L1[0]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:Out_Reg|L1[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Scan_Chain:scan_instance ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; in_pins        ; 3     ; Signed Integer                               ;
+; out_pins       ; 2     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Scan_Chain:scan_instance|Scan_Reg:In_Reg ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; length         ; 3     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Scan_Chain:scan_instance|Scan_Reg:Out_Reg ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; length         ; 2     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Scan_Chain:scan_instance|Scan_Reg:Out_Reg"                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; po   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Scan_Chain:scan_instance|Scan_Reg:In_Reg" ;
++------+-------+----------+--------------------------------------------+
+; Port ; Type  ; Severity ; Details                                    ;
++------+-------+----------+--------------------------------------------+
+; pi   ; Input ; Info     ; Stuck at GND                               ;
++------+-------+----------+--------------------------------------------+
 
 
 +-------------------------------+
@@ -219,51 +307,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Jan 26 15:14:40 2021
+    Info: Processing started: Thu Feb 18 15:17:29 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Full_Adder -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file d:/onedrive - indian institute of technology bombay/iitb material/sem 4/ee 214/full_adder_code_files/full_adder_code_files/testbench.vhdl
-    Info (12022): Found design unit 1: Testbench-Behave File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Testbench.vhdl Line: 9
-    Info (12023): Found entity 1: Testbench File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Testbench.vhdl Line: 7
-Info (12021): Found 17 design units, including 8 entities, in source file d:/onedrive - indian institute of technology bombay/iitb material/sem 4/ee 214/full_adder_code_files/full_adder_code_files/gates.vhdl
-    Info (12022): Found design unit 1: Gates File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 3
-    Info (12022): Found design unit 2: INVERTER-Equations File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 45
-    Info (12022): Found design unit 3: AND_2-Equations File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 57
-    Info (12022): Found design unit 4: NAND_2-Equations File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 68
-    Info (12022): Found design unit 5: OR_2-Equations File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 79
-    Info (12022): Found design unit 6: NOR_2-Equations File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 90
-    Info (12022): Found design unit 7: XOR_2-Equations File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 102
-    Info (12022): Found design unit 8: XNOR_2-Equations File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 113
-    Info (12022): Found design unit 9: HALF_ADDER-Equations File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 124
-    Info (12023): Found entity 1: INVERTER File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 41
-    Info (12023): Found entity 2: AND_2 File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 53
-    Info (12023): Found entity 3: NAND_2 File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 64
-    Info (12023): Found entity 4: OR_2 File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 75
-    Info (12023): Found entity 5: NOR_2 File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 86
-    Info (12023): Found entity 6: XOR_2 File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 98
-    Info (12023): Found entity 7: XNOR_2 File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 109
-    Info (12023): Found entity 8: HALF_ADDER File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Gates.vhdl Line: 120
-Info (12021): Found 2 design units, including 1 entities, in source file d:/onedrive - indian institute of technology bombay/iitb material/sem 4/ee 214/full_adder_code_files/full_adder_code_files/full_adder.vhdl
-    Info (12022): Found design unit 1: Full_Adder-Struct File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Full_Adder.vhdl Line: 10
-    Info (12023): Found entity 1: Full_Adder File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Full_Adder.vhdl Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file d:/onedrive - indian institute of technology bombay/iitb material/sem 4/ee 214/full_adder_code_files/full_adder_code_files/dut.vhdl
-    Info (12022): Found design unit 1: DUT-DutWrap File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/DUT.vhdl Line: 12
-    Info (12023): Found entity 1: DUT File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/DUT.vhdl Line: 7
-Info (12127): Elaborating entity "DUT" for the top level hierarchy
-Info (12128): Elaborating entity "Full_Adder" for hierarchy "Full_Adder:add_instance" File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/DUT.vhdl Line: 21
-Info (12128): Elaborating entity "HALF_ADDER" for hierarchy "Full_Adder:add_instance|HALF_ADDER:ha" File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Full_Adder.vhdl Line: 14
-Info (12128): Elaborating entity "AND_2" for hierarchy "Full_Adder:add_instance|AND_2:a1" File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Full_Adder.vhdl Line: 18
-Info (12128): Elaborating entity "OR_2" for hierarchy "Full_Adder:add_instance|OR_2:o1" File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Full_Adder.vhdl Line: 19
-Info (12128): Elaborating entity "XOR_2" for hierarchy "Full_Adder:add_instance|XOR_2:x1" File: D:/OneDrive - Indian Institute of Technology Bombay/IITB Material/Sem 4/EE 214/Full_Adder_code_files/Full_Adder_code_files/Full_Adder.vhdl Line: 22
-Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 2 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4751 megabytes
-    Info: Processing ended: Tue Jan 26 15:14:52 2021
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:21
+Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhdl
+    Info (12022): Found design unit 1: TopLevel-Struct File: S:/EE214_Labs/Lab1/TopLevel.vhdl Line: 21
+    Info (12023): Found entity 1: TopLevel File: S:/EE214_Labs/Lab1/TopLevel.vhdl Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file scan_reg.vhdl
+    Info (12022): Found design unit 1: Scan_Reg-behave File: S:/EE214_Labs/Lab1/scan_reg.vhdl Line: 26
+    Info (12023): Found entity 1: Scan_Reg File: S:/EE214_Labs/Lab1/scan_reg.vhdl Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file scan_chain.vhdl
+    Info (12022): Found design unit 1: Scan_Chain-behave File: S:/EE214_Labs/Lab1/scan_chain.vhdl Line: 26
+    Info (12023): Found entity 1: Scan_Chain File: S:/EE214_Labs/Lab1/scan_chain.vhdl Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhdl
+    Info (12022): Found design unit 1: Testbench-Behave File: S:/EE214_Labs/Lab1/Testbench.vhdl Line: 9
+    Info (12023): Found entity 1: Testbench File: S:/EE214_Labs/Lab1/Testbench.vhdl Line: 7
+Info (12021): Found 17 design units, including 8 entities, in source file gates.vhdl
+    Info (12022): Found design unit 1: Gates File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 3
+    Info (12022): Found design unit 2: INVERTER-Equations File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 45
+    Info (12022): Found design unit 3: AND_2-Equations File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 57
+    Info (12022): Found design unit 4: NAND_2-Equations File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 68
+    Info (12022): Found design unit 5: OR_2-Equations File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 79
+    Info (12022): Found design unit 6: NOR_2-Equations File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 90
+    Info (12022): Found design unit 7: XOR_2-Equations File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 102
+    Info (12022): Found design unit 8: XNOR_2-Equations File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 113
+    Info (12022): Found design unit 9: HALF_ADDER-Equations File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 124
+    Info (12023): Found entity 1: INVERTER File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 41
+    Info (12023): Found entity 2: AND_2 File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 53
+    Info (12023): Found entity 3: NAND_2 File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 64
+    Info (12023): Found entity 4: OR_2 File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 75
+    Info (12023): Found entity 5: NOR_2 File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 86
+    Info (12023): Found entity 6: XOR_2 File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 98
+    Info (12023): Found entity 7: XNOR_2 File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 109
+    Info (12023): Found entity 8: HALF_ADDER File: S:/EE214_Labs/Lab1/Gates.vhdl Line: 120
+Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhdl
+    Info (12022): Found design unit 1: Full_Adder-Struct File: S:/EE214_Labs/Lab1/Full_Adder.vhdl Line: 10
+    Info (12023): Found entity 1: Full_Adder File: S:/EE214_Labs/Lab1/Full_Adder.vhdl Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file dut.vhdl
+    Info (12022): Found design unit 1: DUT-DutWrap File: S:/EE214_Labs/Lab1/DUT.vhdl Line: 12
+    Info (12023): Found entity 1: DUT File: S:/EE214_Labs/Lab1/DUT.vhdl Line: 7
+Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
+Info (12128): Elaborating entity "Scan_Chain" for hierarchy "Scan_Chain:scan_instance" File: S:/EE214_Labs/Lab1/TopLevel.vhdl Line: 64
+Warning (10036): Verilog HDL or VHDL warning at scan_chain.vhdl(46): object "unused" assigned a value but never read File: S:/EE214_Labs/Lab1/scan_chain.vhdl Line: 46
+Info (12128): Elaborating entity "Scan_Reg" for hierarchy "Scan_Chain:scan_instance|Scan_Reg:In_Reg" File: S:/EE214_Labs/Lab1/scan_chain.vhdl Line: 53
+Info (12128): Elaborating entity "Scan_Reg" for hierarchy "Scan_Chain:scan_instance|Scan_Reg:Out_Reg" File: S:/EE214_Labs/Lab1/scan_chain.vhdl Line: 55
+Info (12128): Elaborating entity "DUT" for hierarchy "DUT:dut_instance" File: S:/EE214_Labs/Lab1/TopLevel.vhdl Line: 74
+Info (12128): Elaborating entity "Full_Adder" for hierarchy "DUT:dut_instance|Full_Adder:add_instance" File: S:/EE214_Labs/Lab1/DUT.vhdl Line: 21
+Info (12128): Elaborating entity "HALF_ADDER" for hierarchy "DUT:dut_instance|Full_Adder:add_instance|HALF_ADDER:ha" File: S:/EE214_Labs/Lab1/Full_Adder.vhdl Line: 14
+Info (12128): Elaborating entity "AND_2" for hierarchy "DUT:dut_instance|Full_Adder:add_instance|AND_2:a1" File: S:/EE214_Labs/Lab1/Full_Adder.vhdl Line: 18
+Info (12128): Elaborating entity "OR_2" for hierarchy "DUT:dut_instance|Full_Adder:add_instance|OR_2:o1" File: S:/EE214_Labs/Lab1/Full_Adder.vhdl Line: 19
+Info (12128): Elaborating entity "XOR_2" for hierarchy "DUT:dut_instance|Full_Adder:add_instance|XOR_2:x1" File: S:/EE214_Labs/Lab1/Full_Adder.vhdl Line: 22
+Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 18 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4760 megabytes
+    Info: Processing ended: Thu Feb 18 15:17:37 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 

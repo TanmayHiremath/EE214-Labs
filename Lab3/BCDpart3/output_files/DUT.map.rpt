@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Wed Feb 17 23:27:49 2021
+Thu Feb 18 15:42:19 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,14 +13,21 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7"
- 10. Port Connectivity Checks: "BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0"
- 11. Port Connectivity Checks: "BCDpart3:add_instance|BCD_ADD:f11"
- 12. Port Connectivity Checks: "BCDpart3:add_instance|AND_2:f10"
- 13. Port Connectivity Checks: "BCDpart3:add_instance|AND_2:f9"
- 14. Port Connectivity Checks: "BCDpart3:add_instance|AND_2:f8"
- 15. Analysis & Synthesis Messages
+  8. State Machine - |TopLevel|Scan_Chain:scan_instance|current_state
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Scan_Chain:scan_instance
+ 12. Parameter Settings for User Entity Instance: Scan_Chain:scan_instance|Scan_Reg:In_Reg
+ 13. Parameter Settings for User Entity Instance: Scan_Chain:scan_instance|Scan_Reg:Out_Reg
+ 14. Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7"
+ 15. Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0"
+ 16. Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11"
+ 17. Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|AND_2:f10"
+ 18. Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|AND_2:f9"
+ 19. Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|AND_2:f8"
+ 20. Port Connectivity Checks: "Scan_Chain:scan_instance|Scan_Reg:Out_Reg"
+ 21. Port Connectivity Checks: "Scan_Chain:scan_instance|Scan_Reg:In_Reg"
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +54,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Feb 17 23:27:49 2021       ;
+; Analysis & Synthesis Status ; Successful - Thu Feb 18 15:42:19 2021       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
-; Top-level Entity Name       ; DUT                                         ;
+; Top-level Entity Name       ; TopLevel                                    ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 28                                          ;
-; Total pins                  ; 16                                          ;
+; Total logic elements        ; 65                                          ;
+; Total pins                  ; 5                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -65,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 5M1270ZT144C5      ;                    ;
-; Top-level entity name                                            ; DUT                ; DUT                ;
+; Top-level entity name                                            ; TopLevel           ; DUT                ;
 ; Family name                                                      ; MAX V              ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -151,6 +158,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                 ; Library ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
+; TopLevel.vhdl                    ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab3/BCDpart3/TopLevel.vhdl    ;         ;
+; scan_reg.vhdl                    ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab3/BCDpart3/scan_reg.vhdl    ;         ;
+; scan_chain.vhdl                  ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab3/BCDpart3/scan_chain.vhdl  ;         ;
 ; FourBitAdder.vhd                 ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab3/BCDpart3/FourBitAdder.vhd ;         ;
 ; FourBitBCD.vhd                   ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab3/BCDpart3/FourBitBCD.vhd   ;         ;
 ; BCD_ADD.vhd                      ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab3/BCDpart3/BCD_ADD.vhd      ;         ;
@@ -162,94 +172,96 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+----------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                   ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                                           ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Total logic elements                        ; 28                                                                                              ;
-;     -- Combinational with no register       ; 28                                                                                              ;
-;     -- Register only                        ; 0                                                                                               ;
-;     -- Combinational with a register        ; 0                                                                                               ;
-;                                             ;                                                                                                 ;
-; Logic element usage by number of LUT inputs ;                                                                                                 ;
-;     -- 4 input functions                    ; 16                                                                                              ;
-;     -- 3 input functions                    ; 11                                                                                              ;
-;     -- 2 input functions                    ; 1                                                                                               ;
-;     -- 1 input functions                    ; 0                                                                                               ;
-;     -- 0 input functions                    ; 0                                                                                               ;
-;                                             ;                                                                                                 ;
-; Logic elements by mode                      ;                                                                                                 ;
-;     -- normal mode                          ; 28                                                                                              ;
-;     -- arithmetic mode                      ; 0                                                                                               ;
-;     -- qfbk mode                            ; 0                                                                                               ;
-;     -- register cascade mode                ; 0                                                                                               ;
-;     -- synchronous clear/load mode          ; 0                                                                                               ;
-;     -- asynchronous clear/load mode         ; 0                                                                                               ;
-;                                             ;                                                                                                 ;
-; Total registers                             ; 0                                                                                               ;
-; I/O pins                                    ; 16                                                                                              ;
-; Maximum fan-out node                        ; BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0|HALF_ADDER:ha|C~0 ;
-; Maximum fan-out                             ; 10                                                                                              ;
-; Total fan-out                               ; 107                                                                                             ;
-; Average fan-out                             ; 2.43                                                                                            ;
-+---------------------------------------------+-------------------------------------------------------------------------------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 65    ;
+;     -- Combinational with no register       ; 36    ;
+;     -- Register only                        ; 1     ;
+;     -- Combinational with a register        ; 28    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 31    ;
+;     -- 3 input functions                    ; 11    ;
+;     -- 2 input functions                    ; 22    ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 65    ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 8     ;
+;     -- asynchronous clear/load mode         ; 5     ;
+;                                             ;       ;
+; Total registers                             ; 29    ;
+; I/O pins                                    ; 5     ;
+; Maximum fan-out node                        ; TRST  ;
+; Maximum fan-out                             ; 35    ;
+; Total fan-out                               ; 260   ;
+; Average fan-out                             ; 3.71  ;
++---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
-+-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                              ; Entity Name  ; Library Name ;
-+-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------+--------------+--------------+
-; |DUT                              ; 28 (0)      ; 0            ; 0          ; 16   ; 0            ; 28 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                                                                                             ; DUT          ; work         ;
-;    |BCDpart3:add_instance|        ; 28 (0)      ; 0            ; 0          ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance                                                                       ; BCDpart3     ; work         ;
-;       |BCD:f0|                    ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD:f0                                                                ; BCD          ; work         ;
-;          |OR_2:f6|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD:f0|OR_2:f6                                                        ; OR_2         ; work         ;
-;          |OR_2:f7|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD:f0|OR_2:f7                                                        ; OR_2         ; work         ;
-;          |OR_2:f8|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD:f0|OR_2:f8                                                        ; OR_2         ; work         ;
-;       |BCD:f1|                    ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD:f1                                                                ; BCD          ; work         ;
-;          |OR_2:f4|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD:f1|OR_2:f4                                                        ; OR_2         ; work         ;
-;          |OR_2:f7|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD:f1|OR_2:f7                                                        ; OR_2         ; work         ;
-;          |OR_2:f8|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD:f1|OR_2:f8                                                        ; OR_2         ; work         ;
-;       |BCD_ADD:f11|               ; 10 (0)      ; 0            ; 0          ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11                                                           ; BCD_ADD      ; work         ;
-;          |FourBitBCD:f0|          ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0                                             ; FourBitBCD   ; work         ;
-;             |FourBitAdder:f0|     ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0                             ; FourBitAdder ; work         ;
-;                |Full_Adder:f0|    ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0               ; Full_Adder   ; work         ;
-;                   |HALF_ADDER:ha| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0|HALF_ADDER:ha ; HALF_ADDER   ; work         ;
-;                |Full_Adder:f2|    ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f2               ; Full_Adder   ; work         ;
-;                   |AND_2:a1|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f2|AND_2:a1      ; AND_2        ; work         ;
-;             |FourBitAdder:f7|     ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7                             ; FourBitAdder ; work         ;
-;                |Full_Adder:f2|    ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7|Full_Adder:f2               ; Full_Adder   ; work         ;
-;                   |XOR_2:x1|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7|Full_Adder:f2|XOR_2:x1      ; XOR_2        ; work         ;
-;             |OR_2:f6|             ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|OR_2:f6                                     ; OR_2         ; work         ;
-;          |FourBitBCD:f1|          ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1                                             ; FourBitBCD   ; work         ;
-;             |FourBitAdder:f0|     ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0                             ; FourBitAdder ; work         ;
-;                |Full_Adder:f1|    ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f1               ; Full_Adder   ; work         ;
-;                   |OR_2:o1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f1|OR_2:o1       ; OR_2         ; work         ;
-;                   |XOR_2:x1|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f1|XOR_2:x1      ; XOR_2        ; work         ;
-;                |Full_Adder:f2|    ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f2               ; Full_Adder   ; work         ;
-;                   |XOR_2:x1|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f2|XOR_2:x1      ; XOR_2        ; work         ;
-;             |OR_2:f6|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|OR_2:f6                                     ; OR_2         ; work         ;
-;       |EightBitMUX:f12|           ; 11 (0)      ; 0            ; 0          ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12                                                       ; EightBitMUX  ; work         ;
-;          |MUX:m1|                 ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m1                                                ; MUX          ; work         ;
-;             |OR_2:b3|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m1|OR_2:b3                                        ; OR_2         ; work         ;
-;          |MUX:m2|                 ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m2                                                ; MUX          ; work         ;
-;             |OR_2:b3|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m2|OR_2:b3                                        ; OR_2         ; work         ;
-;          |MUX:m3|                 ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m3                                                ; MUX          ; work         ;
-;             |OR_2:b3|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m3|OR_2:b3                                        ; OR_2         ; work         ;
-;          |MUX:m4|                 ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m4                                                ; MUX          ; work         ;
-;             |OR_2:b3|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m4|OR_2:b3                                        ; OR_2         ; work         ;
-;          |MUX:m5|                 ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m5                                                ; MUX          ; work         ;
-;             |OR_2:b3|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m5|OR_2:b3                                        ; OR_2         ; work         ;
-;          |MUX:m6|                 ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m6                                                ; MUX          ; work         ;
-;             |OR_2:b3|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m6|OR_2:b3                                        ; OR_2         ; work         ;
-;          |MUX:m7|                 ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m7                                                ; MUX          ; work         ;
-;             |OR_2:b3|             ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m7|OR_2:b3                                        ; OR_2         ; work         ;
-;          |MUX:m8|                 ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m8                                                ; MUX          ; work         ;
-;             |OR_2:b3|             ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|EightBitMUX:f12|MUX:m8|OR_2:b3                                        ; OR_2         ; work         ;
-;       |OR_2:f6|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|BCDpart3:add_instance|OR_2:f6                                                               ; OR_2         ; work         ;
-+-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------+--------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                              ;
++--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                    ; Entity Name  ; Library Name ;
++--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+--------------+--------------+
+; |TopLevel                            ; 65 (0)      ; 29           ; 0          ; 5    ; 0            ; 36 (0)       ; 1 (0)             ; 28 (0)           ; 0 (0)           ; 0 (0)      ; |TopLevel                                                                                                              ; TopLevel     ; work         ;
+;    |DUT:dut_instance|                ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance                                                                                             ; DUT          ; work         ;
+;       |BCDpart3:add_instance|        ; 19 (0)      ; 0            ; 0          ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance                                                                       ; BCDpart3     ; work         ;
+;          |AND4digits:f5|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|AND4digits:f5                                                         ; AND4digits   ; work         ;
+;          |BCD:f0|                    ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD:f0                                                                ; BCD          ; work         ;
+;             |OR_2:f6|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD:f0|OR_2:f6                                                        ; OR_2         ; work         ;
+;             |OR_2:f7|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD:f0|OR_2:f7                                                        ; OR_2         ; work         ;
+;             |OR_2:f8|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD:f0|OR_2:f8                                                        ; OR_2         ; work         ;
+;          |BCD:f1|                    ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD:f1                                                                ; BCD          ; work         ;
+;             |OR_2:f6|                ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD:f1|OR_2:f6                                                        ; OR_2         ; work         ;
+;             |OR_2:f7|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD:f1|OR_2:f7                                                        ; OR_2         ; work         ;
+;             |OR_2:f8|                ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD:f1|OR_2:f8                                                        ; OR_2         ; work         ;
+;          |BCD_ADD:f11|               ; 9 (0)       ; 0            ; 0          ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11                                                           ; BCD_ADD      ; work         ;
+;             |FourBitBCD:f0|          ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0                                             ; FourBitBCD   ; work         ;
+;                |FourBitAdder:f0|     ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0                             ; FourBitAdder ; work         ;
+;                   |Full_Adder:f0|    ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0               ; Full_Adder   ; work         ;
+;                      |HALF_ADDER:ha| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0|HALF_ADDER:ha ; HALF_ADDER   ; work         ;
+;                   |Full_Adder:f2|    ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f2               ; Full_Adder   ; work         ;
+;                      |AND_2:a1|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f2|AND_2:a1      ; AND_2        ; work         ;
+;                |FourBitAdder:f7|     ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7                             ; FourBitAdder ; work         ;
+;                   |Full_Adder:f2|    ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7|Full_Adder:f2               ; Full_Adder   ; work         ;
+;                      |XOR_2:x1|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7|Full_Adder:f2|XOR_2:x1      ; XOR_2        ; work         ;
+;                |OR_2:f6|             ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|OR_2:f6                                     ; OR_2         ; work         ;
+;             |FourBitBCD:f1|          ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1                                             ; FourBitBCD   ; work         ;
+;                |FourBitAdder:f0|     ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0                             ; FourBitAdder ; work         ;
+;                   |Full_Adder:f1|    ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f1               ; Full_Adder   ; work         ;
+;                      |OR_2:o1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f1|OR_2:o1       ; OR_2         ; work         ;
+;                      |XOR_2:x1|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f1|XOR_2:x1      ; XOR_2        ; work         ;
+;                   |Full_Adder:f2|    ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f2               ; Full_Adder   ; work         ;
+;                      |XOR_2:x1|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|FourBitAdder:f0|Full_Adder:f2|XOR_2:x1      ; XOR_2        ; work         ;
+;                |OR_2:f6|             ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f1|OR_2:f6                                     ; OR_2         ; work         ;
+;          |OR_2:f6|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TopLevel|DUT:dut_instance|BCDpart3:add_instance|OR_2:f6                                                               ; OR_2         ; work         ;
+;    |Scan_Chain:scan_instance|        ; 46 (8)      ; 29           ; 0          ; 0    ; 0            ; 17 (3)       ; 1 (1)             ; 28 (4)           ; 0 (0)           ; 0 (0)      ; |TopLevel|Scan_Chain:scan_instance                                                                                     ; Scan_Chain   ; work         ;
+;       |Scan_Reg:In_Reg|              ; 19 (19)     ; 16           ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:In_Reg                                                                     ; Scan_Reg     ; work         ;
+;       |Scan_Reg:Out_Reg|             ; 19 (19)     ; 8            ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:Out_Reg                                                                    ; Scan_Reg     ; work         ;
++--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |TopLevel|Scan_Chain:scan_instance|current_state                                                                               ;
++-------------------------+------------------------+-----------------------+-------------------------+--------------------+----------------------+
+; Name                    ; current_state.s_update ; current_state.s_shift ; current_state.s_capture ; current_state.s_DR ; current_state.s_idle ;
++-------------------------+------------------------+-----------------------+-------------------------+--------------------+----------------------+
+; current_state.s_idle    ; 0                      ; 0                     ; 0                       ; 0                  ; 0                    ;
+; current_state.s_DR      ; 0                      ; 0                     ; 0                       ; 1                  ; 1                    ;
+; current_state.s_capture ; 0                      ; 0                     ; 1                       ; 0                  ; 1                    ;
+; current_state.s_shift   ; 0                      ; 1                     ; 0                       ; 0                  ; 1                    ;
+; current_state.s_update  ; 1                      ; 0                     ; 0                       ; 0                  ; 1                    ;
++-------------------------+------------------------+-----------------------+-------------------------+--------------------+----------------------+
 
 
 +------------------------------------------------------+
@@ -257,18 +269,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 29    ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 23    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:In_Reg|L2[7]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:In_Reg|L1[0]  ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |TopLevel|Scan_Chain:scan_instance|Scan_Reg:Out_Reg|L1[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Scan_Chain:scan_instance ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; in_pins        ; 8     ; Signed Integer                               ;
+; out_pins       ; 8     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Scan_Chain:scan_instance|Scan_Reg:In_Reg ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; length         ; 8     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Scan_Chain:scan_instance|Scan_Reg:Out_Reg ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; length         ; 8     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7"                    ;
+; Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f7"   ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -279,17 +333,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0" ;
-+------+-------+----------+---------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                           ;
-+------+-------+----------+---------------------------------------------------+
-; cin  ; Input ; Info     ; Stuck at GND                                      ;
-+------+-------+----------+---------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0" ;
++------+-------+----------+--------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                            ;
++------+-------+----------+--------------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                       ;
++------+-------+----------+--------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCDpart3:add_instance|BCD_ADD:f11"                                                     ;
+; Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11"                                    ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -300,31 +354,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "BCDpart3:add_instance|AND_2:f10" ;
-+------+-------+----------+-----------------------------------+
-; Port ; Type  ; Severity ; Details                           ;
-+------+-------+----------+-----------------------------------+
-; a    ; Input ; Info     ; Stuck at VCC                      ;
-+------+-------+----------+-----------------------------------+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|AND_2:f10" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; a    ; Input ; Info     ; Stuck at VCC                                       ;
++------+-------+----------+----------------------------------------------------+
 
 
-+------------------------------------------------------------+
-; Port Connectivity Checks: "BCDpart3:add_instance|AND_2:f9" ;
-+------+-------+----------+----------------------------------+
-; Port ; Type  ; Severity ; Details                          ;
-+------+-------+----------+----------------------------------+
-; a    ; Input ; Info     ; Stuck at VCC                     ;
-+------+-------+----------+----------------------------------+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|AND_2:f9" ;
++------+-------+----------+---------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                           ;
++------+-------+----------+---------------------------------------------------+
+; a    ; Input ; Info     ; Stuck at VCC                                      ;
++------+-------+----------+---------------------------------------------------+
 
 
-+------------------------------------------------------------+
-; Port Connectivity Checks: "BCDpart3:add_instance|AND_2:f8" ;
-+------+-------+----------+----------------------------------+
-; Port ; Type  ; Severity ; Details                          ;
-+------+-------+----------+----------------------------------+
-; a    ; Input ; Info     ; Stuck at VCC                     ;
-+------+-------+----------+----------------------------------+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "DUT:dut_instance|BCDpart3:add_instance|AND_2:f8" ;
++------+-------+----------+---------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                           ;
++------+-------+----------+---------------------------------------------------+
+; a    ; Input ; Info     ; Stuck at VCC                                      ;
++------+-------+----------+---------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Scan_Chain:scan_instance|Scan_Reg:Out_Reg"                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; po   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Scan_Chain:scan_instance|Scan_Reg:In_Reg" ;
++------+-------+----------+--------------------------------------------+
+; Port ; Type  ; Severity ; Details                                    ;
++------+-------+----------+--------------------------------------------+
+; pi   ; Input ; Info     ; Stuck at GND                               ;
++------+-------+----------+--------------------------------------------+
 
 
 +-------------------------------+
@@ -333,10 +405,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Feb 17 23:27:40 2021
+    Info: Processing started: Thu Feb 18 15:42:11 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BCDpart3 -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhdl
+    Info (12022): Found design unit 1: TopLevel-Struct File: S:/EE214_Labs/Lab3/BCDpart3/TopLevel.vhdl Line: 21
+    Info (12023): Found entity 1: TopLevel File: S:/EE214_Labs/Lab3/BCDpart3/TopLevel.vhdl Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file scan_reg.vhdl
+    Info (12022): Found design unit 1: Scan_Reg-behave File: S:/EE214_Labs/Lab3/BCDpart3/scan_reg.vhdl Line: 26
+    Info (12023): Found entity 1: Scan_Reg File: S:/EE214_Labs/Lab3/BCDpart3/scan_reg.vhdl Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file scan_chain.vhdl
+    Info (12022): Found design unit 1: Scan_Chain-behave File: S:/EE214_Labs/Lab3/BCDpart3/scan_chain.vhdl Line: 26
+    Info (12023): Found entity 1: Scan_Chain File: S:/EE214_Labs/Lab3/BCDpart3/scan_chain.vhdl Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file fourbitadder.vhd
     Info (12022): Found design unit 1: FourBitAdder-Struct File: S:/EE214_Labs/Lab3/BCDpart3/FourBitAdder.vhd Line: 11
     Info (12023): Found entity 1: FourBitAdder File: S:/EE214_Labs/Lab3/BCDpart3/FourBitAdder.vhd Line: 7
@@ -388,31 +469,35 @@ Info (12021): Found 2 design units, including 1 entities, in source file bcd.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file bcdpart3.vhd
     Info (12022): Found design unit 1: BCDpart3-Struct File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 8
     Info (12023): Found entity 1: BCDpart3 File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 5
-Info (12127): Elaborating entity "DUT" for the top level hierarchy
-Info (12128): Elaborating entity "BCDpart3" for hierarchy "BCDpart3:add_instance" File: S:/EE214_Labs/Lab3/BCDpart3/DUT.vhdl Line: 20
+Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
+Info (12128): Elaborating entity "Scan_Chain" for hierarchy "Scan_Chain:scan_instance" File: S:/EE214_Labs/Lab3/BCDpart3/TopLevel.vhdl Line: 64
+Warning (10036): Verilog HDL or VHDL warning at scan_chain.vhdl(46): object "unused" assigned a value but never read File: S:/EE214_Labs/Lab3/BCDpart3/scan_chain.vhdl Line: 46
+Info (12128): Elaborating entity "Scan_Reg" for hierarchy "Scan_Chain:scan_instance|Scan_Reg:In_Reg" File: S:/EE214_Labs/Lab3/BCDpart3/scan_chain.vhdl Line: 53
+Info (12128): Elaborating entity "DUT" for hierarchy "DUT:dut_instance" File: S:/EE214_Labs/Lab3/BCDpart3/TopLevel.vhdl Line: 74
+Info (12128): Elaborating entity "BCDpart3" for hierarchy "DUT:dut_instance|BCDpart3:add_instance" File: S:/EE214_Labs/Lab3/BCDpart3/DUT.vhdl Line: 20
 Warning (10036): Verilog HDL or VHDL warning at BCDpart3.vhd(11): object "temp" assigned a value but never read File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 11
-Info (12128): Elaborating entity "BCD" for hierarchy "BCDpart3:add_instance|BCD:f0" File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 14
-Info (12128): Elaborating entity "INVERTER" for hierarchy "BCDpart3:add_instance|BCD:f0|INVERTER:f0" File: S:/EE214_Labs/Lab3/BCDpart3/BCD.vhd Line: 12
-Info (12128): Elaborating entity "AND_2" for hierarchy "BCDpart3:add_instance|BCD:f0|AND_2:f3" File: S:/EE214_Labs/Lab3/BCDpart3/BCD.vhd Line: 15
-Info (12128): Elaborating entity "OR_2" for hierarchy "BCDpart3:add_instance|BCD:f0|OR_2:f4" File: S:/EE214_Labs/Lab3/BCDpart3/BCD.vhd Line: 16
-Info (12128): Elaborating entity "AND4digits" for hierarchy "BCDpart3:add_instance|AND4digits:f4" File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 16
-Info (12128): Elaborating entity "BCD_ADD" for hierarchy "BCDpart3:add_instance|BCD_ADD:f11" File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 36
-Info (12128): Elaborating entity "FourBitBCD" for hierarchy "BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0" File: S:/EE214_Labs/Lab3/BCDpart3/BCD_ADD.vhd Line: 14
+Info (12128): Elaborating entity "BCD" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD:f0" File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 14
+Info (12128): Elaborating entity "INVERTER" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD:f0|INVERTER:f0" File: S:/EE214_Labs/Lab3/BCDpart3/BCD.vhd Line: 12
+Info (12128): Elaborating entity "AND_2" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD:f0|AND_2:f3" File: S:/EE214_Labs/Lab3/BCDpart3/BCD.vhd Line: 15
+Info (12128): Elaborating entity "OR_2" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD:f0|OR_2:f4" File: S:/EE214_Labs/Lab3/BCDpart3/BCD.vhd Line: 16
+Info (12128): Elaborating entity "AND4digits" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|AND4digits:f4" File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 16
+Info (12128): Elaborating entity "BCD_ADD" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11" File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 36
+Info (12128): Elaborating entity "FourBitBCD" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0" File: S:/EE214_Labs/Lab3/BCDpart3/BCD_ADD.vhd Line: 14
 Warning (10036): Verilog HDL or VHDL warning at FourBitBCD.vhd(12): object "temp1" assigned a value but never read File: S:/EE214_Labs/Lab3/BCDpart3/FourBitBCD.vhd Line: 12
-Info (12128): Elaborating entity "FourBitAdder" for hierarchy "BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0" File: S:/EE214_Labs/Lab3/BCDpart3/FourBitBCD.vhd Line: 16
-Info (12128): Elaborating entity "Full_Adder" for hierarchy "BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0" File: S:/EE214_Labs/Lab3/BCDpart3/FourBitAdder.vhd Line: 15
-Info (12128): Elaborating entity "HALF_ADDER" for hierarchy "BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0|HALF_ADDER:ha" File: S:/EE214_Labs/Lab3/BCDpart3/Full_Adder.vhdl Line: 14
-Info (12128): Elaborating entity "XOR_2" for hierarchy "BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0|XOR_2:x1" File: S:/EE214_Labs/Lab3/BCDpart3/Full_Adder.vhdl Line: 22
-Info (12128): Elaborating entity "EightBitMUX" for hierarchy "BCDpart3:add_instance|EightBitMUX:f12" File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 37
-Info (12128): Elaborating entity "MUX" for hierarchy "BCDpart3:add_instance|EightBitMUX:f12|MUX:m1" File: S:/EE214_Labs/Lab3/BCDpart3/Gates.vhdl Line: 96
-Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 28 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4760 megabytes
-    Info: Processing ended: Wed Feb 17 23:27:49 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+Info (12128): Elaborating entity "FourBitAdder" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0" File: S:/EE214_Labs/Lab3/BCDpart3/FourBitBCD.vhd Line: 16
+Info (12128): Elaborating entity "Full_Adder" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0" File: S:/EE214_Labs/Lab3/BCDpart3/FourBitAdder.vhd Line: 15
+Info (12128): Elaborating entity "HALF_ADDER" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0|HALF_ADDER:ha" File: S:/EE214_Labs/Lab3/BCDpart3/Full_Adder.vhdl Line: 14
+Info (12128): Elaborating entity "XOR_2" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|BCD_ADD:f11|FourBitBCD:f0|FourBitAdder:f0|Full_Adder:f0|XOR_2:x1" File: S:/EE214_Labs/Lab3/BCDpart3/Full_Adder.vhdl Line: 22
+Info (12128): Elaborating entity "EightBitMUX" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|EightBitMUX:f12" File: S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd Line: 37
+Info (12128): Elaborating entity "MUX" for hierarchy "DUT:dut_instance|BCDpart3:add_instance|EightBitMUX:f12|MUX:m1" File: S:/EE214_Labs/Lab3/BCDpart3/Gates.vhdl Line: 96
+Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 65 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4755 megabytes
+    Info: Processing ended: Thu Feb 18 15:42:19 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 

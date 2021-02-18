@@ -23,9 +23,9 @@ V7fmjRD_2XKIkzV5YCUENl1
 !s100 3ccZ^o_8a^[=Kjcedj1n80
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1613584404
+Z7 !s110 1613638991
 !i10b 1
-Z8 !s108 1613584404.000000
+Z8 !s108 1613638991.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/Gates.vhdl|
 Z10 !s107 S:/EE214_Labs/Lab3/BCDpart3/Gates.vhdl|
 !i113 1
@@ -106,9 +106,9 @@ Vmfmg2TOJhFMGhVIQ:``WW3
 !s100 Jd2nRKg819_G1Z6agGEQU3
 R6
 31
-Z17 !s110 1613584406
+Z17 !s110 1613638994
 !i10b 1
-Z18 !s108 1613584406.000000
+Z18 !s108 1613638994.000000
 Z19 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/BCD.vhd|
 Z20 !s107 S:/EE214_Labs/Lab3/BCDpart3/BCD.vhd|
 !i113 1
@@ -149,11 +149,11 @@ VRdGK<MZ^[b7[;73_0HN[V0
 !s100 0dG63Em<PiZgV7ooB2AUC0
 R6
 31
-R17
+Z24 !s110 1613638993
 !i10b 1
-R18
-Z24 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/BCD_ADD.vhd|
-Z25 !s107 S:/EE214_Labs/Lab3/BCDpart3/BCD_ADD.vhd|
+Z25 !s108 1613638993.000000
+Z26 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/BCD_ADD.vhd|
+Z27 !s107 S:/EE214_Labs/Lab3/BCDpart3/BCD_ADD.vhd|
 !i113 1
 R11
 R12
@@ -169,23 +169,23 @@ V>HSSAMEeik:[4f`=TEWj60
 !s100 7]?iR1[:fV8U4oli_5nQ;1
 R6
 31
-R17
-!i10b 1
-R18
 R24
+!i10b 1
 R25
+R26
+R27
 !i113 1
 R11
 R12
 Ebcdpart3
-Z26 w1613584065
+Z28 w1613584065
 R14
 R2
 R3
 !i122 7
 R0
-Z27 8S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd
-Z28 FS:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd
+Z29 8S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd
+Z30 FS:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd
 l0
 L5 1
 VXXDUohcZBW3o21J:^@fj<1
@@ -195,8 +195,8 @@ R6
 R17
 !i10b 1
 R18
-Z29 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd|
-Z30 !s107 S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd|
+Z31 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd|
+Z32 !s107 S:/EE214_Labs/Lab3/BCDpart3/BCDpart3.vhd|
 !i113 1
 R11
 R12
@@ -215,28 +215,28 @@ R6
 R17
 !i10b 1
 R18
-R29
-R30
+R31
+R32
 !i113 1
 R11
 R12
 Edut
-Z31 w1613581378
+Z33 w1613581378
 R2
 R3
 !i122 1
 R0
-Z32 8S:/EE214_Labs/Lab3/BCDpart3/DUT.vhdl
-Z33 FS:/EE214_Labs/Lab3/BCDpart3/DUT.vhdl
+Z34 8S:/EE214_Labs/Lab3/BCDpart3/DUT.vhdl
+Z35 FS:/EE214_Labs/Lab3/BCDpart3/DUT.vhdl
 l0
 L7 1
 V1]db1ci?O[A>=[D0A<TRT0
 !s100 K[X2l`AMDG61GXkOT_afV1
 R6
 31
-Z34 !s110 1613584405
+R24
 !i10b 1
-Z35 !s108 1613584405.000000
+R25
 Z36 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/DUT.vhdl|
 Z37 !s107 S:/EE214_Labs/Lab3/BCDpart3/DUT.vhdl|
 !i113 1
@@ -253,9 +253,9 @@ V<`kQdoO`M]HehzkOGWbUo3
 !s100 RB50A]Aa?R[3NgSP`^MHL3
 R6
 31
-R34
+R24
 !i10b 1
-R35
+R25
 R36
 R37
 !i113 1
@@ -319,9 +319,9 @@ VECQaF`ko_gIOTb_z_PFz91
 !s100 eAnJ4YooVSO2_;;nmB8[61
 R6
 31
-R17
+R24
 !i10b 1
-R35
+R25
 Z41 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/FourBitAdder.vhd|
 Z42 !s107 S:/EE214_Labs/Lab3/BCDpart3/FourBitAdder.vhd|
 !i113 1
@@ -339,9 +339,9 @@ VMKmERF8F>h63mRMnVi<_V1
 !s100 YWkQ=d;SXObQeL`=dCH[T2
 R6
 31
-R17
+R24
 !i10b 1
-R35
+R25
 R41
 R42
 !i113 1
@@ -362,9 +362,9 @@ VD^`R]AE3QPAaoSPSzzahc1
 !s100 KLTk5Q3ReiNgU6OhOZ[6c2
 R6
 31
-R17
+R24
 !i10b 1
-R18
+R25
 Z46 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/FourBitBCD.vhd|
 Z47 !s107 S:/EE214_Labs/Lab3/BCDpart3/FourBitBCD.vhd|
 !i113 1
@@ -382,9 +382,9 @@ Vg8^CDd@e1dELS`cPgQCFh1
 !s100 GPJE<]F0T6G=c5m:oF6jk1
 R6
 31
-R17
+R24
 !i10b 1
-R18
+R25
 R46
 R47
 !i113 1
@@ -446,9 +446,9 @@ V_S=WZ8fFSSGS0G<9Do9HR0
 !s100 H=:zT=46zo28lmNL^=N@g0
 R6
 31
-R17
+R24
 !i10b 1
-R18
+R25
 Z52 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/Full_Adder.vhdl|
 Z53 !s107 S:/EE214_Labs/Lab3/BCDpart3/Full_Adder.vhdl|
 !i113 1
@@ -466,9 +466,9 @@ VDb^ljfQ?OkP7b=WRDfV^z2
 !s100 VnnS6P?]2A1:]TGdaJ7;e0
 R6
 31
-R17
+R24
 !i10b 1
-R18
+R25
 R52
 R53
 !i113 1
@@ -758,10 +758,10 @@ V]iKK_Z9L:G9B:i8c]3eFH0
 !s100 bWf8kl8zb90X@P1m>V^K20
 R6
 31
-Z57 !s110 1613584407
+R17
 !i10b 1
-Z58 !s108 1613584407.000000
-Z59 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/Testbench.vhdl|
+R18
+Z57 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCDpart3/Testbench.vhdl|
 !s107 S:/EE214_Labs/Lab3/BCDpart3/Testbench.vhdl|
 !i113 1
 R11
@@ -777,11 +777,11 @@ VzEEQBgn5^5k4Ge3ga_;bO0
 !s100 69J5m`9:7a]nae=EBMk4]2
 R6
 31
-R57
+R17
 !i10b 1
-R58
-R59
-Z60 !s107 S:/EE214_Labs/Lab3/BCDpart3/Testbench.vhdl|
+R18
+R57
+Z58 !s107 S:/EE214_Labs/Lab3/BCDpart3/Testbench.vhdl|
 !i113 1
 R11
 R12
