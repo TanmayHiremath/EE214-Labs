@@ -1,0 +1,1772 @@
+|DUT
+input_vector[0] => MY_MUX:add_instance.B[0]
+input_vector[0] => MY_MUX:add_instance.S1
+input_vector[1] => MY_MUX:add_instance.B[1]
+input_vector[1] => MY_MUX:add_instance.S0
+input_vector[2] => MY_MUX:add_instance.B[2]
+input_vector[3] => MY_MUX:add_instance.B[3]
+input_vector[4] => MY_MUX:add_instance.A[0]
+input_vector[5] => MY_MUX:add_instance.A[1]
+input_vector[6] => MY_MUX:add_instance.A[2]
+input_vector[7] => MY_MUX:add_instance.A[3]
+output_vector[0] << MY_MUX:add_instance.Y[0]
+output_vector[1] << MY_MUX:add_instance.Y[1]
+output_vector[2] << MY_MUX:add_instance.Y[2]
+output_vector[3] << MY_MUX:add_instance.Y[3]
+output_vector[4] << MY_MUX:add_instance.Y[4]
+output_vector[5] << MY_MUX:add_instance.Y[5]
+
+
+|DUT|MY_MUX:add_instance
+A[0] => MY_MUL:f0.A[0]
+A[0] => MY_ADD:f1.A[0]
+A[0] => MY_DCR:f2.A[0]
+A[0] => MY_XOR:f3.A[0]
+A[1] => MY_MUL:f0.A[1]
+A[1] => MY_ADD:f1.A[1]
+A[1] => MY_DCR:f2.A[1]
+A[1] => MY_XOR:f3.A[1]
+A[2] => MY_MUL:f0.A[2]
+A[2] => MY_ADD:f1.A[2]
+A[2] => MY_DCR:f2.A[2]
+A[2] => MY_XOR:f3.A[2]
+A[3] => MY_MUL:f0.A[3]
+A[3] => MY_ADD:f1.A[3]
+A[3] => MY_DCR:f2.A[3]
+A[3] => MY_XOR:f3.A[3]
+B[0] => MY_ADD:f1.B[0]
+B[0] => MY_XOR:f3.B[0]
+B[1] => MY_ADD:f1.B[1]
+B[1] => MY_XOR:f3.B[1]
+B[2] => MY_ADD:f1.B[2]
+B[2] => MY_XOR:f3.B[2]
+B[3] => MY_ADD:f1.B[3]
+B[3] => MY_XOR:f3.B[3]
+S1 => SixBitMUX:f4.S1
+S0 => SixBitMUX:f4.S0
+Y[0] <= SixBitMUX:f4.S[0]
+Y[1] <= SixBitMUX:f4.S[1]
+Y[2] <= SixBitMUX:f4.S[2]
+Y[3] <= SixBitMUX:f4.S[3]
+Y[4] <= SixBitMUX:f4.S[4]
+Y[5] <= SixBitMUX:f4.S[5]
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0
+A[0] => AND_2:f0.A
+A[0] => SixBitMul:f5.A[0]
+A[1] => AND_2:f0.B
+A[1] => AND_2:f2.A
+A[1] => SixBitMul:f5.A[1]
+A[2] => AND_2:f1.A
+A[2] => AND_2:f2.B
+A[2] => SixBitMul:f5.A[2]
+A[3] => AND_2:f1.B
+A[3] => SixBitMul:f5.A[3]
+Y[0] <= SixBitAdder:f7.S[0]
+Y[1] <= SixBitAdder:f7.S[1]
+Y[2] <= SixBitAdder:f7.S[2]
+Y[3] <= SixBitAdder:f7.S[3]
+Y[4] <= SixBitAdder:f7.S[4]
+Y[5] <= SixBitAdder:f7.S[5]
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|AND_2:f0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|AND_2:f1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|AND_2:f2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|OR_2:f3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|OR_2:f4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitMul:f5
+A[0] => AND_2:m1.A
+A[1] => AND_2:m2.A
+A[2] => AND_2:m3.A
+A[3] => AND_2:m4.A
+A[4] => AND_2:m5.A
+A[5] => AND_2:m6.A
+S => AND_2:m1.B
+S => AND_2:m2.B
+S => AND_2:m3.B
+S => AND_2:m4.B
+S => AND_2:m5.B
+S => AND_2:m6.B
+D[0] <= AND_2:m1.Y
+D[1] <= AND_2:m2.Y
+D[2] <= AND_2:m3.Y
+D[3] <= AND_2:m4.Y
+D[4] <= AND_2:m5.Y
+D[5] <= AND_2:m6.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitMul:f5|AND_2:m1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitMul:f5|AND_2:m2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitMul:f5|AND_2:m3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitMul:f5|AND_2:m4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitMul:f5|AND_2:m5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitMul:f5|AND_2:m6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+A[4] => Full_Adder:f4.A
+A[5] => Full_Adder:f5.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+B[4] => Full_Adder:f4.B
+B[5] => Full_Adder:f5.B
+Cin => Full_Adder:f0.Cin
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+S[4] <= Full_Adder:f4.S
+S[5] <= Full_Adder:f5.S
+C <= Full_Adder:f5.Cout
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f4
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f4|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f4|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f4|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f4|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f5
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f5|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f5|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f5|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f6|Full_Adder:f5|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+A[4] => Full_Adder:f4.A
+A[5] => Full_Adder:f5.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+B[4] => Full_Adder:f4.B
+B[5] => Full_Adder:f5.B
+Cin => Full_Adder:f0.Cin
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+S[4] <= Full_Adder:f4.S
+S[5] <= Full_Adder:f5.S
+C <= Full_Adder:f5.Cout
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f4
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f4|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f4|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f4|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f4|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f5
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f5|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f5|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f5|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_MUL:f0|SixBitAdder:f7|Full_Adder:f5|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1
+A[0] => SixBitAdder:f0.A[0]
+A[1] => SixBitAdder:f0.A[1]
+A[2] => SixBitAdder:f0.A[2]
+A[3] => SixBitAdder:f0.A[3]
+B[0] => SixBitAdder:f0.B[0]
+B[1] => SixBitAdder:f0.B[1]
+B[2] => SixBitAdder:f0.B[2]
+B[3] => SixBitAdder:f0.B[3]
+Y[0] <= SixBitAdder:f0.S[0]
+Y[1] <= SixBitAdder:f0.S[1]
+Y[2] <= SixBitAdder:f0.S[2]
+Y[3] <= SixBitAdder:f0.S[3]
+Y[4] <= SixBitAdder:f0.S[4]
+Y[5] <= SixBitAdder:f0.S[5]
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+A[4] => Full_Adder:f4.A
+A[5] => Full_Adder:f5.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+B[4] => Full_Adder:f4.B
+B[5] => Full_Adder:f5.B
+Cin => Full_Adder:f0.Cin
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+S[4] <= Full_Adder:f4.S
+S[5] <= Full_Adder:f5.S
+C <= Full_Adder:f5.Cout
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f4
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f4|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f4|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f4|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f4|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f5
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f5|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f5|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f5|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_ADD:f1|SixBitAdder:f0|Full_Adder:f5|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2
+A[0] => SixBitAdder:f0.A[0]
+A[1] => SixBitAdder:f0.A[1]
+A[2] => SixBitAdder:f0.A[2]
+A[3] => SixBitAdder:f0.A[3]
+Y[0] <= SixBitAdder:f0.S[0]
+Y[1] <= SixBitAdder:f0.S[1]
+Y[2] <= SixBitAdder:f0.S[2]
+Y[3] <= SixBitAdder:f0.S[3]
+Y[4] <= SixBitAdder:f0.S[4]
+Y[5] <= SixBitAdder:f0.S[5]
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0
+A[0] => Full_Adder:f0.A
+A[1] => Full_Adder:f1.A
+A[2] => Full_Adder:f2.A
+A[3] => Full_Adder:f3.A
+A[4] => Full_Adder:f4.A
+A[5] => Full_Adder:f5.A
+B[0] => Full_Adder:f0.B
+B[1] => Full_Adder:f1.B
+B[2] => Full_Adder:f2.B
+B[3] => Full_Adder:f3.B
+B[4] => Full_Adder:f4.B
+B[5] => Full_Adder:f5.B
+Cin => Full_Adder:f0.Cin
+S[0] <= Full_Adder:f0.S
+S[1] <= Full_Adder:f1.S
+S[2] <= Full_Adder:f2.S
+S[3] <= Full_Adder:f3.S
+S[4] <= Full_Adder:f4.S
+S[5] <= Full_Adder:f5.S
+C <= Full_Adder:f5.Cout
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f0
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f0|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f0|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f0|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f0|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f1
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f1|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f1|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f1|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f1|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f2
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f2|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f2|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f2|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f2|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f3
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f3|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f3|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f3|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f3|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f4
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f4|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f4|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f4|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f4|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f5
+A => HALF_ADDER:ha.A
+B => HALF_ADDER:ha.B
+Cin => AND_2:a1.B
+Cin => XOR_2:x1.B
+S <= XOR_2:x1.Y
+Cout <= OR_2:o1.Y
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f5|HALF_ADDER:ha
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f5|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f5|OR_2:o1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_DCR:f2|SixBitAdder:f0|Full_Adder:f5|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_XOR:f3
+A[0] => XOR_2:f0.A
+A[1] => XOR_2:f1.A
+A[2] => XOR_2:f2.A
+A[3] => XOR_2:f3.A
+B[0] => XOR_2:f0.B
+B[1] => XOR_2:f1.B
+B[2] => XOR_2:f2.B
+B[3] => XOR_2:f3.B
+Y[0] <= XOR_2:f0.Y
+Y[1] <= XOR_2:f1.Y
+Y[2] <= XOR_2:f2.Y
+Y[3] <= XOR_2:f3.Y
+Y[4] <= <GND>
+Y[5] <= <GND>
+
+
+|DUT|MY_MUX:add_instance|MY_XOR:f3|XOR_2:f0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_XOR:f3|XOR_2:f1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_XOR:f3|XOR_2:f2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|MY_XOR:f3|XOR_2:f3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4
+A[0] => MUX:m1.A
+A[1] => MUX:m2.A
+A[2] => MUX:m3.A
+A[3] => MUX:m4.A
+A[4] => MUX:m5.A
+A[5] => MUX:m6.A
+B[0] => MUX:m1.B
+B[1] => MUX:m2.B
+B[2] => MUX:m3.B
+B[3] => MUX:m4.B
+B[4] => MUX:m5.B
+B[5] => MUX:m6.B
+C[0] => MUX:m1.C
+C[1] => MUX:m2.C
+C[2] => MUX:m3.C
+C[3] => MUX:m4.C
+C[4] => MUX:m5.C
+C[5] => MUX:m6.C
+D[0] => MUX:m1.D
+D[1] => MUX:m2.D
+D[2] => MUX:m3.D
+D[3] => MUX:m4.D
+D[4] => MUX:m5.D
+D[5] => MUX:m6.D
+S0 => MUX:m1.S0
+S0 => MUX:m2.S0
+S0 => MUX:m3.S0
+S0 => MUX:m4.S0
+S0 => MUX:m5.S0
+S0 => MUX:m6.S0
+S1 => MUX:m1.S1
+S1 => MUX:m2.S1
+S1 => MUX:m3.S1
+S1 => MUX:m4.S1
+S1 => MUX:m5.S1
+S1 => MUX:m6.S1
+S[0] <= MUX:m1.Y
+S[1] <= MUX:m2.Y
+S[2] <= MUX:m3.Y
+S[3] <= MUX:m4.Y
+S[4] <= MUX:m5.Y
+S[5] <= MUX:m6.Y
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1
+A => AND_2:b2.A
+B => AND_2:b3.A
+C => AND_2:b4.A
+D => AND_2:b5.A
+S0 => INVERTER:b1.A
+S0 => AND_2:f8.A
+S0 => AND_2:f9.A
+S1 => INVERTER:b0.A
+S1 => AND_2:f7.B
+S1 => AND_2:f9.B
+Y <= OR_2:f11.Y
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|INVERTER:b0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|INVERTER:b1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|AND_2:f6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|AND_2:f7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|AND_2:f8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|AND_2:f9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|AND_2:b2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|AND_2:b3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|AND_2:b4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|AND_2:b5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|OR_2:b6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|OR_2:f10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m1|OR_2:f11
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2
+A => AND_2:b2.A
+B => AND_2:b3.A
+C => AND_2:b4.A
+D => AND_2:b5.A
+S0 => INVERTER:b1.A
+S0 => AND_2:f8.A
+S0 => AND_2:f9.A
+S1 => INVERTER:b0.A
+S1 => AND_2:f7.B
+S1 => AND_2:f9.B
+Y <= OR_2:f11.Y
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|INVERTER:b0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|INVERTER:b1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|AND_2:f6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|AND_2:f7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|AND_2:f8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|AND_2:f9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|AND_2:b2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|AND_2:b3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|AND_2:b4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|AND_2:b5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|OR_2:b6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|OR_2:f10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m2|OR_2:f11
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3
+A => AND_2:b2.A
+B => AND_2:b3.A
+C => AND_2:b4.A
+D => AND_2:b5.A
+S0 => INVERTER:b1.A
+S0 => AND_2:f8.A
+S0 => AND_2:f9.A
+S1 => INVERTER:b0.A
+S1 => AND_2:f7.B
+S1 => AND_2:f9.B
+Y <= OR_2:f11.Y
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|INVERTER:b0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|INVERTER:b1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|AND_2:f6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|AND_2:f7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|AND_2:f8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|AND_2:f9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|AND_2:b2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|AND_2:b3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|AND_2:b4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|AND_2:b5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|OR_2:b6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|OR_2:f10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m3|OR_2:f11
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4
+A => AND_2:b2.A
+B => AND_2:b3.A
+C => AND_2:b4.A
+D => AND_2:b5.A
+S0 => INVERTER:b1.A
+S0 => AND_2:f8.A
+S0 => AND_2:f9.A
+S1 => INVERTER:b0.A
+S1 => AND_2:f7.B
+S1 => AND_2:f9.B
+Y <= OR_2:f11.Y
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|INVERTER:b0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|INVERTER:b1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|AND_2:f6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|AND_2:f7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|AND_2:f8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|AND_2:f9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|AND_2:b2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|AND_2:b3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|AND_2:b4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|AND_2:b5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|OR_2:b6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|OR_2:f10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m4|OR_2:f11
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5
+A => AND_2:b2.A
+B => AND_2:b3.A
+C => AND_2:b4.A
+D => AND_2:b5.A
+S0 => INVERTER:b1.A
+S0 => AND_2:f8.A
+S0 => AND_2:f9.A
+S1 => INVERTER:b0.A
+S1 => AND_2:f7.B
+S1 => AND_2:f9.B
+Y <= OR_2:f11.Y
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|INVERTER:b0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|INVERTER:b1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|AND_2:f6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|AND_2:f7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|AND_2:f8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|AND_2:f9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|AND_2:b2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|AND_2:b3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|AND_2:b4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|AND_2:b5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|OR_2:b6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|OR_2:f10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m5|OR_2:f11
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6
+A => AND_2:b2.A
+B => AND_2:b3.A
+C => AND_2:b4.A
+D => AND_2:b5.A
+S0 => INVERTER:b1.A
+S0 => AND_2:f8.A
+S0 => AND_2:f9.A
+S1 => INVERTER:b0.A
+S1 => AND_2:f7.B
+S1 => AND_2:f9.B
+Y <= OR_2:f11.Y
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|INVERTER:b0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|INVERTER:b1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|AND_2:f6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|AND_2:f7
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|AND_2:f8
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|AND_2:f9
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|AND_2:b2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|AND_2:b3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|AND_2:b4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|AND_2:b5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|OR_2:b6
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|OR_2:f10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MY_MUX:add_instance|SixBitMUX:f4|MUX:m6|OR_2:f11
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

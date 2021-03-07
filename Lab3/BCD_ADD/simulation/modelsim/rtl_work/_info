@@ -23,9 +23,9 @@ VYT]I=5mGIAZWQUI:P2CIa0
 !s100 6nAdW8j4d04HV@1jQJ_2?3
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1613043570
+Z7 !s110 1613915797
 !i10b 1
-Z8 !s108 1613043570.000000
+Z8 !s108 1613915796.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/Gates.vhdl|
 Z10 !s107 S:/EE214_Labs/Lab3/BCD_ADD/Gates.vhdl|
 !i113 1
@@ -65,11 +65,11 @@ V`V@KmGh4302medTK7ea0g2
 !s100 ccQ0^mhOn]n`K>J@KIgf21
 R6
 31
-Z17 !s110 1613043571
+R7
 !i10b 1
-Z18 !s108 1613043571.000000
-Z19 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/BCD_ADD.vhd|
-Z20 !s107 S:/EE214_Labs/Lab3/BCD_ADD/BCD_ADD.vhd|
+Z17 !s108 1613915797.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/BCD_ADD.vhd|
+Z19 !s107 S:/EE214_Labs/Lab3/BCD_ADD/BCD_ADD.vhd|
 !i113 1
 R11
 R12
@@ -85,22 +85,22 @@ Va]kn>5KVj3zePU3kMLhEa1
 !s100 6<9Q`ifN6c2coJUFV^3Ug1
 R6
 31
-R17
+R7
 !i10b 1
+R17
 R18
 R19
-R20
 !i113 1
 R11
 R12
 Edut
-Z21 w1613042846
+Z20 w1613042846
 R2
 R3
 !i122 1
 R0
-Z22 8S:/EE214_Labs/Lab3/BCD_ADD/DUT.vhdl
-Z23 FS:/EE214_Labs/Lab3/BCD_ADD/DUT.vhdl
+Z21 8S:/EE214_Labs/Lab3/BCD_ADD/DUT.vhdl
+Z22 FS:/EE214_Labs/Lab3/BCD_ADD/DUT.vhdl
 l0
 L7 1
 V>VNS><nFjmee3KQ1KH?oQ1
@@ -109,9 +109,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z24 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/DUT.vhdl|
-Z25 !s107 S:/EE214_Labs/Lab3/BCD_ADD/DUT.vhdl|
+R17
+Z23 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/DUT.vhdl|
+Z24 !s107 S:/EE214_Labs/Lab3/BCD_ADD/DUT.vhdl|
 !i113 1
 R11
 R12
@@ -128,32 +128,32 @@ R6
 31
 R7
 !i10b 1
-R8
+R17
+R23
 R24
-R25
 !i113 1
 R11
 R12
 Efourbitadder
-Z26 w1613042651
+Z25 w1613042651
 R14
 R2
 R3
 !i122 3
 R0
-Z27 8S:/EE214_Labs/Lab3/BCD_ADD/FourBitAdder.vhd
-Z28 FS:/EE214_Labs/Lab3/BCD_ADD/FourBitAdder.vhd
+Z26 8S:/EE214_Labs/Lab3/BCD_ADD/FourBitAdder.vhd
+Z27 FS:/EE214_Labs/Lab3/BCD_ADD/FourBitAdder.vhd
 l0
 L7 1
 VECQaF`ko_gIOTb_z_PFz91
 !s100 eAnJ4YooVSO2_;;nmB8[61
 R6
 31
-R17
+R7
 !i10b 1
-R18
-Z29 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/FourBitAdder.vhd|
-Z30 !s107 S:/EE214_Labs/Lab3/BCD_ADD/FourBitAdder.vhd|
+R17
+Z28 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/FourBitAdder.vhd|
+Z29 !s107 S:/EE214_Labs/Lab3/BCD_ADD/FourBitAdder.vhd|
 !i113 1
 R11
 R12
@@ -169,34 +169,34 @@ VMKmERF8F>h63mRMnVi<_V1
 !s100 YWkQ=d;SXObQeL`=dCH[T2
 R6
 31
-R17
+R7
 !i10b 1
-R18
+R17
+R28
 R29
-R30
 !i113 1
 R11
 R12
 Efourbitbcd
-Z31 w1613043443
+Z30 w1613043443
 R14
 R2
 R3
 !i122 5
 R0
-Z32 8S:/EE214_Labs/Lab3/BCD_ADD/FourBitBCD.vhd
-Z33 FS:/EE214_Labs/Lab3/BCD_ADD/FourBitBCD.vhd
+Z31 8S:/EE214_Labs/Lab3/BCD_ADD/FourBitBCD.vhd
+Z32 FS:/EE214_Labs/Lab3/BCD_ADD/FourBitBCD.vhd
 l0
 L7 1
 VD^`R]AE3QPAaoSPSzzahc1
 !s100 KLTk5Q3ReiNgU6OhOZ[6c2
 R6
 31
-R17
+R7
 !i10b 1
-R18
-Z34 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/FourBitBCD.vhd|
-Z35 !s107 S:/EE214_Labs/Lab3/BCD_ADD/FourBitBCD.vhd|
+R17
+Z33 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/FourBitBCD.vhd|
+Z34 !s107 S:/EE214_Labs/Lab3/BCD_ADD/FourBitBCD.vhd|
 !i113 1
 R11
 R12
@@ -207,39 +207,39 @@ R3
 DEx4 work 10 fourbitbcd 0 22 D^`R]AE3QPAaoSPSzzahc1
 !i122 5
 l14
-Z36 L10 14
+Z35 L10 14
 Vg8^CDd@e1dELS`cPgQCFh1
 !s100 GPJE<]F0T6G=c5m:oF6jk1
 R6
 31
-R17
+R7
 !i10b 1
-R18
+R17
+R33
 R34
-R35
 !i113 1
 R11
 R12
 Efull_adder
-Z37 w1611674238
+Z36 w1611674238
 R14
 R2
 R3
 !i122 2
 R0
-Z38 8S:/EE214_Labs/Lab3/BCD_ADD/Full_Adder.vhdl
-Z39 FS:/EE214_Labs/Lab3/BCD_ADD/Full_Adder.vhdl
+Z37 8S:/EE214_Labs/Lab3/BCD_ADD/Full_Adder.vhdl
+Z38 FS:/EE214_Labs/Lab3/BCD_ADD/Full_Adder.vhdl
 l0
 L7 1
 V_S=WZ8fFSSGS0G<9Do9HR0
 !s100 H=:zT=46zo28lmNL^=N@g0
 R6
 31
-R17
+R7
 !i10b 1
-R18
-Z40 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/Full_Adder.vhdl|
-Z41 !s107 S:/EE214_Labs/Lab3/BCD_ADD/Full_Adder.vhdl|
+R17
+Z39 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/Full_Adder.vhdl|
+Z40 !s107 S:/EE214_Labs/Lab3/BCD_ADD/Full_Adder.vhdl|
 !i113 1
 R11
 R12
@@ -250,16 +250,16 @@ R3
 DEx4 work 10 full_adder 0 22 _S=WZ8fFSSGS0G<9Do9HR0
 !i122 2
 l12
-R36
+R35
 VDb^ljfQ?OkP7b=WRDfV^z2
 !s100 VnnS6P?]2A1:]TGdaJ7;e0
 R6
 31
-R17
+R7
 !i10b 1
-R18
+R17
+R39
 R40
-R41
 !i113 1
 R11
 R12
@@ -491,22 +491,22 @@ R10
 R11
 R12
 Etestbench
-Z42 w1613041159
+Z41 w1613640181
 R3
 R2
 !i122 6
 R0
-Z43 8S:/EE214_Labs/Lab3/BCD_ADD/Testbench.vhdl
-Z44 FS:/EE214_Labs/Lab3/BCD_ADD/Testbench.vhdl
+Z42 8S:/EE214_Labs/Lab3/BCD_ADD/Testbench.vhdl
+Z43 FS:/EE214_Labs/Lab3/BCD_ADD/Testbench.vhdl
 l0
 L7 1
 V]iKK_Z9L:G9B:i8c]3eFH0
 !s100 bWf8kl8zb90X@P1m>V^K20
 R6
 31
-R17
+Z44 !s110 1613915798
 !i10b 1
-R18
+R17
 Z45 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD_ADD/Testbench.vhdl|
 !s107 S:/EE214_Labs/Lab3/BCD_ADD/Testbench.vhdl|
 !i113 1
@@ -519,13 +519,13 @@ DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
 !i122 6
 l69
 L9 132
-VlF<kDC?kh:7<Ak@?>`J=30
-!s100 fDG>^:ZOm9EEfI4:YUzT31
+VBYcUlO:1WWP[>RW>K5Xok0
+!s100 gQF6Yf[dS_]F6?`H5?2l50
 R6
 31
-R17
+R44
 !i10b 1
-R18
+R17
 R45
 Z46 !s107 S:/EE214_Labs/Lab3/BCD_ADD/Testbench.vhdl|
 !i113 1

@@ -23,9 +23,9 @@ VU7DI`Tzl@EfAQ?4z53E2F2
 !s100 1`nWBgISBZCVoBKm`L3TM3
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1613041765
+Z7 !s110 1613913920
 !i10b 1
-Z8 !s108 1613041765.000000
+Z8 !s108 1613913919.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD/Gates.vhdl|
 Z10 !s107 S:/EE214_Labs/Lab3/BCD/Gates.vhdl|
 !i113 1
@@ -67,9 +67,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z17 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD/BCD.vhd|
-Z18 !s107 S:/EE214_Labs/Lab3/BCD/BCD.vhd|
+Z17 !s108 1613913920.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD/BCD.vhd|
+Z19 !s107 S:/EE214_Labs/Lab3/BCD/BCD.vhd|
 !i113 1
 R11
 R12
@@ -87,20 +87,20 @@ R6
 31
 R7
 !i10b 1
-R8
 R17
 R18
+R19
 !i113 1
 R11
 R12
 Edut
-Z19 w1613035307
+Z20 w1613035307
 R2
 R3
 !i122 1
 R0
-Z20 8S:/EE214_Labs/Lab3/BCD/DUT.vhdl
-Z21 FS:/EE214_Labs/Lab3/BCD/DUT.vhdl
+Z21 8S:/EE214_Labs/Lab3/BCD/DUT.vhdl
+Z22 FS:/EE214_Labs/Lab3/BCD/DUT.vhdl
 l0
 L7 1
 Vm>`0fcV952I6GlGKzl>N]1
@@ -109,9 +109,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z22 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD/DUT.vhdl|
-Z23 !s107 S:/EE214_Labs/Lab3/BCD/DUT.vhdl|
+R17
+Z23 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD/DUT.vhdl|
+Z24 !s107 S:/EE214_Labs/Lab3/BCD/DUT.vhdl|
 !i113 1
 R11
 R12
@@ -128,9 +128,9 @@ R6
 31
 R7
 !i10b 1
-R8
-R22
+R17
 R23
+R24
 !i113 1
 R11
 R12
@@ -362,22 +362,22 @@ R10
 R11
 R12
 Etestbench
-Z24 w1613035487
+Z25 w1613035487
 R3
 R2
 !i122 3
 R0
-Z25 8S:/EE214_Labs/Lab3/BCD/Testbench.vhdl
-Z26 FS:/EE214_Labs/Lab3/BCD/Testbench.vhdl
+Z26 8S:/EE214_Labs/Lab3/BCD/Testbench.vhdl
+Z27 FS:/EE214_Labs/Lab3/BCD/Testbench.vhdl
 l0
 L7 1
 V]iKK_Z9L:G9B:i8c]3eFH0
 !s100 bWf8kl8zb90X@P1m>V^K20
 R6
 31
-Z27 !s110 1613041766
+R7
 !i10b 1
-R8
+R17
 Z28 !s90 -reportprogress|300|-93|-work|work|S:/EE214_Labs/Lab3/BCD/Testbench.vhdl|
 !s107 S:/EE214_Labs/Lab3/BCD/Testbench.vhdl|
 !i113 1
@@ -394,9 +394,9 @@ V>Gb^SM[9A9FeHk@:@o5ja2
 !s100 mE8]Sa>1mIWnH1?AH<dh23
 R6
 31
-R27
+R7
 !i10b 1
-R8
+R17
 R28
 Z29 !s107 S:/EE214_Labs/Lab3/BCD/Testbench.vhdl|
 !i113 1
