@@ -1,0 +1,73 @@
+|DUT
+input_vector[0] => div:add_instance.D[0]
+input_vector[1] => div:add_instance.D[1]
+input_vector[2] => div:add_instance.D[2]
+input_vector[3] => div:add_instance.D[3]
+input_vector[4] => div:add_instance.Nu[0]
+input_vector[5] => div:add_instance.Nu[1]
+input_vector[6] => div:add_instance.Nu[2]
+input_vector[7] => div:add_instance.Nu[3]
+output_vector[0] << div:add_instance.RQ[0]
+output_vector[1] << div:add_instance.RQ[1]
+output_vector[2] << div:add_instance.RQ[2]
+output_vector[3] << div:add_instance.RQ[3]
+output_vector[4] << div:add_instance.RQ[4]
+output_vector[5] << div:add_instance.RQ[5]
+output_vector[6] << div:add_instance.RQ[6]
+output_vector[7] << div:add_instance.RQ[7]
+
+
+|DUT|div:add_instance
+Nu[0] => borrow.IN0
+Nu[0] => borrow.IN0
+Nu[0] => pr.DATAA
+Nu[1] => borrow.IN0
+Nu[1] => borrow.IN0
+Nu[1] => \division:pr[3][4].DATAA
+Nu[2] => borrow.IN0
+Nu[2] => borrow.IN0
+Nu[2] => \division:pr[2][4].DATAA
+Nu[3] => diff.IN0
+Nu[3] => borrow.IN0
+Nu[3] => \division:pr[1][4].DATAA
+D[0] => diff.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[0] => borrow.IN1
+D[1] => \division:diff[0][1].IN1
+D[1] => borrow.IN1
+D[1] => diff.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[2] => \division:diff[0][2].IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => diff.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => diff.IN1
+D[3] => borrow.IN1
+RQ[0] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[1] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[2] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[3] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[4] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[5] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[6] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+RQ[7] <= pr.DB_MAX_OUTPUT_PORT_TYPE
+
+
