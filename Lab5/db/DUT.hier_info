@@ -1,0 +1,133 @@
+|DUT
+input_vector[0] => seqDetector:add_instance.clock
+input_vector[1] => seqDetector:add_instance.inp
+input_vector[2] => seqDetector:add_instance.resetn
+output_vector[0] << seqDetector:add_instance.y
+
+
+|DUT|seqDetector:add_instance
+resetn => dFlipFlop:f8.resetn
+resetn => dFlipFlop:f9.resetn
+resetn => dFlipFlop:f13.resetn
+inp => INVERTER:f2.A
+inp => dFlipFlop:f9.inp
+inp => AND_4:f11.D
+inp => AND_4:f14.D
+clock => dFlipFlop:f8.clock
+clock => dFlipFlop:f9.clock
+clock => dFlipFlop:f13.clock
+y <= OR_2:f16.Y
+
+
+|DUT|seqDetector:add_instance|INVERTER:f0
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|INVERTER:f1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|INVERTER:f2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|AND_2:f3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|AND_2:f4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|AND_2:f5
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|AND_4:f6
+A => Y.IN0
+B => Y.IN1
+C => Y.IN1
+D => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|OR_4:f7
+A => Y.IN0
+B => Y.IN1
+C => Y.IN1
+D => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|dFlipFlop:f8
+resetn => y.OUTPUTSELECT
+inp => y.DATAA
+clock => y~reg0.CLK
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|dFlipFlop:f9
+resetn => y.OUTPUTSELECT
+inp => y.DATAA
+clock => y~reg0.CLK
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|AND_2:f10
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|AND_4:f11
+A => Y.IN0
+B => Y.IN1
+C => Y.IN1
+D => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|OR_2:f12
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|dFlipFlop:f13
+resetn => y.OUTPUTSELECT
+inp => y.DATAA
+clock => y~reg0.CLK
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|AND_4:f14
+A => Y.IN0
+B => Y.IN1
+C => Y.IN1
+D => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|AND_4:f15
+A => Y.IN0
+B => Y.IN1
+C => Y.IN1
+D => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|seqDetector:add_instance|OR_2:f16
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
