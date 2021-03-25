@@ -1,5 +1,5 @@
 Fitter report for Music
-Thu Mar 25 15:31:12 2021
+Thu Mar 25 15:37:16 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Thu Mar 25 15:31:12 2021       ;
+; Fitter Status         ; Successful - Thu Mar 25 15:37:16 2021       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; Music                                       ;
 ; Top-level Entity Name ; Music                                       ;
@@ -132,7 +132,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   1.1%      ;
+;     Processors 2-6         ;   1.0%      ;
 +----------------------------+-------------+
 
 
@@ -654,14 +654,14 @@ Info (170195): Router estimated average interconnect usage is 11% of the availab
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.30 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file S:/EE214_Labs/Lab6/Music/output_files/Music.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5537 megabytes
-    Info: Processing ended: Thu Mar 25 15:31:13 2021
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 5535 megabytes
+    Info: Processing ended: Thu Mar 25 15:37:16 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:05
 
 
