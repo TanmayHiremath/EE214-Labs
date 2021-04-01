@@ -74,3 +74,4 @@ set_location_assignment PIN_57 -to LED[1]
 set_location_assignment PIN_58 -to LED[0]
 set_location_assignment PIN_1 -to toneOut
 set_location_assignment PIN_39 -to resetn
+set_location_assignment PIN_89 -to clk_50

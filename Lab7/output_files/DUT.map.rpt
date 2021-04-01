@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Thu Apr 01 15:49:49 2021
+Thu Apr 01 16:35:13 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Apr 01 15:49:49 2021       ;
+; Analysis & Synthesis Status ; Successful - Thu Apr 01 16:35:13 2021       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; MusicSynthesizer                            ;
@@ -173,9 +173,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Combinational with a register        ; 115    ;
 ;                                             ;        ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 187    ;
-;     -- 3 input functions                    ; 43     ;
-;     -- 2 input functions                    ; 246    ;
+;     -- 4 input functions                    ; 189    ;
+;     -- 3 input functions                    ; 38     ;
+;     -- 2 input functions                    ; 249    ;
 ;     -- 1 input functions                    ; 7      ;
 ;     -- 0 input functions                    ; 0      ;
 ;                                             ;        ;
@@ -192,7 +192,7 @@ https://fpgasoftware.intel.com/eula.
 ; I/O pins                                    ; 11     ;
 ; Maximum fan-out node                        ; clk_50 ;
 ; Maximum fan-out                             ; 218    ;
-; Total fan-out                               ; 1785   ;
+; Total fan-out                               ; 1784   ;
 ; Average fan-out                             ; 2.80   ;
 +---------------------------------------------+--------+
 
@@ -386,9 +386,9 @@ Encoding Type:  One-Hot
 ; Music:re1|sa1                            ; Merged with Music:re1|toneOut               ;
 ; Music:sa1|sa0                            ; Merged with Music:sa1|toneOut               ;
 ; Music:ga1|count_sa2[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
+; Music:dha1|count_sa5[0]                  ; Merged with Music:sa1|count_sa0[0]          ;
 ; Music:pa1|count_sa4[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
 ; Music:ni1|count_sa6[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
-; Music:dha1|count_sa5[0]                  ; Merged with Music:sa1|count_sa0[0]          ;
 ; Music:ni1|count_sa6[1]                   ; Merged with Music:sa1|count_sa0[1]          ;
 ; Music:dha1|count_sa5[1]                  ; Merged with Music:sa1|count_sa0[1]          ;
 ; Music:pa1|count_sa4[1]                   ; Merged with Music:ga1|count_sa2[1]          ;
@@ -441,7 +441,7 @@ Encoding Type:  One-Hot
 ; Music:ma1|toneOut                       ; 2       ;
 ; Music:dha1|toneOut                      ; 2       ;
 ; count[31]                               ; 2       ;
-; count[0]                                ; 10      ;
+; count[0]                                ; 12      ;
 ; Music:sa1|count_sa0[0]                  ; 11      ;
 ; Music:re1|count_sa1[0]                  ; 3       ;
 ; Music:ma1|count_sa3[0]                  ; 3       ;
@@ -457,8 +457,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 ; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |MusicSynthesizer|count[15] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MusicSynthesizer|count[0]  ;
-; 17:1               ; 4 bits    ; 44 LEs        ; 24 LEs               ; 20 LEs                 ; No         ; |MusicSynthesizer|y_present ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |MusicSynthesizer|y_present ;
+; 20:1               ; 5 bits    ; 65 LEs        ; 40 LEs               ; 25 LEs                 ; No         ; |MusicSynthesizer|y_present ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 12 LEs               ; 16 LEs                 ; No         ; |MusicSynthesizer|y_present ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
 
@@ -544,7 +544,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 01 15:49:41 2021
+    Info: Processing started: Thu Apr 01 16:35:05 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MusicSynthesizer -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -558,7 +558,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file musicsy
     Info (12022): Found design unit 1: MusicSynthesizer-fsm File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 10
     Info (12023): Found entity 1: MusicSynthesizer File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 4
 Info (12127): Elaborating entity "MusicSynthesizer" for the top level hierarchy
-Info (12128): Elaborating entity "Music" for hierarchy "Music:sa1" File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 148
+Info (12128): Elaborating entity "Music" for hierarchy "Music:sa1" File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 153
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[7]" is stuck at GND File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 7
 Info (17049): 1008 registers lost all their fanouts during netlist optimizations.
@@ -567,8 +567,8 @@ Info (21057): Implemented 637 device resources after synthesis - the final resou
     Info (21059): Implemented 9 output pins
     Info (21061): Implemented 626 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Thu Apr 01 15:49:49 2021
+    Info: Peak virtual memory: 4765 megabytes
+    Info: Processing ended: Thu Apr 01 16:35:13 2021
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:19
 

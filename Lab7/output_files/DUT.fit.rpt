@@ -1,5 +1,5 @@
 Fitter report for DUT
-Thu Apr 01 15:49:53 2021
+Thu Apr 01 16:35:17 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,20 +17,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. I/O Bank Usage
  10. All Package Pins
  11. Output Pin Default Load For Reported TCO
- 12. I/O Assignment Warnings
- 13. Fitter Resource Utilization by Entity
- 14. Delay Chain Summary
- 15. Control Signals
- 16. Global & Other Fast Signals
- 17. Routing Usage Summary
- 18. LAB Logic Elements
- 19. LAB-wide Signals
- 20. LAB Signals Sourced
- 21. LAB Signals Sourced Out
- 22. LAB Distinct Inputs
- 23. Fitter Device Options
- 24. Fitter Messages
- 25. Fitter Suppressed Messages
+ 12. Fitter Resource Utilization by Entity
+ 13. Delay Chain Summary
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Routing Usage Summary
+ 17. LAB Logic Elements
+ 18. LAB-wide Signals
+ 19. LAB Signals Sourced
+ 20. LAB Signals Sourced Out
+ 21. LAB Distinct Inputs
+ 22. Fitter Device Options
+ 23. Fitter Messages
+ 24. Fitter Suppressed Messages
 
 
 
@@ -57,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Thu Apr 01 15:49:53 2021       ;
+; Fitter Status         ; Successful - Thu Apr 01 16:35:17 2021       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; DUT                                         ;
 ; Top-level Entity Name ; MusicSynthesizer                            ;
@@ -133,8 +132,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.3%      ;
-;     Processors 3-6         ;   1.2%      ;
+;     Processor 2            ;   1.5%      ;
+;     Processors 3-6         ;   1.3%      ;
 +----------------------------+-------------+
 
 
@@ -155,9 +154,9 @@ The pin-out file can be found in S:/EE214_Labs/Lab7/output_files/DUT.pin.
 ;     -- Combinational with a register        ; 168                   ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 187                   ;
-;     -- 3 input functions                    ; 43                    ;
-;     -- 2 input functions                    ; 246                   ;
+;     -- 4 input functions                    ; 189                   ;
+;     -- 3 input functions                    ; 38                    ;
+;     -- 2 input functions                    ; 249                   ;
 ;     -- 1 input functions                    ; 7                     ;
 ;     -- 0 input functions                    ; 0                     ;
 ;                                             ;                       ;
@@ -166,11 +165,11 @@ The pin-out file can be found in S:/EE214_Labs/Lab7/output_files/DUT.pin.
 ;     -- arithmetic mode                      ; 235                   ;
 ;     -- qfbk mode                            ; 52                    ;
 ;     -- register cascade mode                ; 0                     ;
-;     -- synchronous clear/load mode          ; 99                    ;
+;     -- synchronous clear/load mode          ; 98                    ;
 ;     -- asynchronous clear/load mode         ; 0                     ;
 ;                                             ;                       ;
 ; Total registers                             ; 258 / 1,270 ( 20 % )  ;
-; Total LABs                                  ; 66 / 127 ( 52 % )     ;
+; Total LABs                                  ; 68 / 127 ( 54 % )     ;
 ; Logic elements in carry chains              ; 244                   ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 11 / 114 ( 10 % )     ;
@@ -184,11 +183,11 @@ The pin-out file can be found in S:/EE214_Labs/Lab7/output_files/DUT.pin.
 ; Global signals                              ; 2                     ;
 ;     -- Global clocks                        ; 2 / 4 ( 50 % )        ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 11.7% / 16.1% / 6.9%  ;
-; Peak interconnect usage (total/H/V)         ; 16.6% / 21.2% / 12.0% ;
+; Average interconnect usage (total/H/V)      ; 12.4% / 13.8% / 10.8% ;
+; Peak interconnect usage (total/H/V)         ; 16.1% / 19.1% / 13.1% ;
 ; Maximum fan-out                             ; 218                   ;
-; Highest non-global fan-out                  ; 40                    ;
-; Total fan-out                               ; 1904                  ;
+; Highest non-global fan-out                  ; 41                    ;
+; Total fan-out                               ; 1903                  ;
 ; Average fan-out                             ; 3.26                  ;
 +---------------------------------------------+-----------------------+
 
@@ -198,8 +197,8 @@ The pin-out file can be found in S:/EE214_Labs/Lab7/output_files/DUT.pin.
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
-; clk_50 ; 18    ; 1        ; 0            ; 7            ; 5           ; 218                   ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; resetn ; 39    ; 4        ; 2            ; 3            ; 0           ; 40                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; clk_50 ; 89    ; 3        ; 17           ; 5            ; 1           ; 218                   ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; resetn ; 39    ; 4        ; 2            ; 3            ; 0           ; 41                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 +--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
 
@@ -225,9 +224,9 @@ The pin-out file can be found in S:/EE214_Labs/Lab7/output_files/DUT.pin.
 +----------+-----------------+---------------+--------------+
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
-; 1        ; 2 / 25 ( 8 % )  ; 3.3V          ; --           ;
+; 1        ; 1 / 25 ( 4 % )  ; 3.3V          ; --           ;
 ; 2        ; 0 / 30 ( 0 % )  ; 3.3V          ; --           ;
-; 3        ; 0 / 29 ( 0 % )  ; 3.3V          ; --           ;
+; 3        ; 1 / 29 ( 3 % )  ; 3.3V          ; --           ;
 ; 4        ; 9 / 30 ( 30 % ) ; 3.3V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
@@ -254,7 +253,7 @@ The pin-out file can be found in S:/EE214_Labs/Lab7/output_files/DUT.pin.
 ; 15       ; 24         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 16       ; 25         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 17       ;            ;          ; GNDINT         ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 18       ; 26         ; 1        ; clk_50         ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 18       ; 26         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 19       ;            ;          ; VCCINT         ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
 ; 20       ; 27         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 21       ; 28         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -325,7 +324,7 @@ The pin-out file can be found in S:/EE214_Labs/Lab7/output_files/DUT.pin.
 ; 86       ; 131        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 87       ; 132        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 88       ; 133        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 89       ; 134        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 89       ; 134        ; 3        ; clk_50         ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; 90       ;            ;          ; VCCINT         ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
 ; 91       ; 135        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 92       ;            ;          ; GNDINT         ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -405,15 +404,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+----------------------------------------+
-; I/O Assignment Warnings                ;
-+----------+-----------------------------+
-; Pin Name ; Reason                      ;
-+----------+-----------------------------+
-; clk_50   ; Missing location assignment ;
-+----------+-----------------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Fitter Resource Utilization by Entity                                                                                                                                                                                                            ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+------------------+--------------+
@@ -455,8 +445,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+--------------+---------+-------+--------+----------------------+------------------+
 ; Name        ; Location     ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
 +-------------+--------------+---------+-------+--------+----------------------+------------------+
-; clk_50      ; PIN_18       ; 218     ; Clock ; yes    ; Global Clock         ; GCLK0            ;
-; clock_music ; LC_X10_Y6_N6 ; 40      ; Clock ; yes    ; Global Clock         ; GCLK3            ;
+; clk_50      ; PIN_89       ; 218     ; Clock ; yes    ; Global Clock         ; GCLK2            ;
+; clock_music ; LC_X12_Y3_N3 ; 40      ; Clock ; yes    ; Global Clock         ; GCLK3            ;
 +-------------+--------------+---------+-------+--------+----------------------+------------------+
 
 
@@ -465,8 +455,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+--------------+---------+----------------------+------------------+
 ; Name        ; Location     ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +-------------+--------------+---------+----------------------+------------------+
-; clk_50      ; PIN_18       ; 218     ; Global Clock         ; GCLK0            ;
-; clock_music ; LC_X10_Y6_N6 ; 40      ; Global Clock         ; GCLK3            ;
+; clk_50      ; PIN_89       ; 218     ; Global Clock         ; GCLK2            ;
+; clock_music ; LC_X12_Y3_N3 ; 40      ; Global Clock         ; GCLK3            ;
 +-------------+--------------+---------+----------------------+------------------+
 
 
@@ -475,40 +465,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+----------------------+
 ; Routing Resource Type ; Usage                ;
 +-----------------------+----------------------+
-; C4s                   ; 149 / 2,870 ( 5 % )  ;
-; Direct links          ; 310 / 3,938 ( 8 % )  ;
+; C4s                   ; 246 / 2,870 ( 9 % )  ;
+; Direct links          ; 288 / 3,938 ( 7 % )  ;
 ; Global clocks         ; 2 / 4 ( 50 % )       ;
-; LAB clocks            ; 22 / 72 ( 31 % )     ;
-; LUT chains            ; 17 / 1,143 ( 1 % )   ;
-; Local interconnects   ; 791 / 3,938 ( 20 % ) ;
-; R4s                   ; 382 / 2,832 ( 13 % ) ;
+; LAB clocks            ; 23 / 72 ( 32 % )     ;
+; LUT chains            ; 16 / 1,143 ( 1 % )   ;
+; Local interconnects   ; 775 / 3,938 ( 20 % ) ;
+; R4s                   ; 332 / 2,832 ( 12 % ) ;
 +-----------------------+----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 8.68) ; Number of LABs  (Total = 66) ;
+; Number of Logic Elements  (Average = 8.43) ; Number of LABs  (Total = 68) ;
 +--------------------------------------------+------------------------------+
-; 1                                          ; 2                            ;
-; 2                                          ; 0                            ;
+; 1                                          ; 3                            ;
+; 2                                          ; 2                            ;
 ; 3                                          ; 2                            ;
 ; 4                                          ; 1                            ;
-; 5                                          ; 3                            ;
-; 6                                          ; 2                            ;
-; 7                                          ; 7                            ;
-; 8                                          ; 2                            ;
-; 9                                          ; 1                            ;
-; 10                                         ; 46                           ;
+; 5                                          ; 1                            ;
+; 6                                          ; 5                            ;
+; 7                                          ; 3                            ;
+; 8                                          ; 4                            ;
+; 9                                          ; 2                            ;
+; 10                                         ; 45                           ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.83) ; Number of LABs  (Total = 66) ;
+; LAB-wide Signals  (Average = 0.82) ; Number of LABs  (Total = 68) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 54                           ;
+; 1 Clock                            ; 55                           ;
 ; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
@@ -516,22 +506,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 9.38) ; Number of LABs  (Total = 66) ;
+; Number of Signals Sourced  (Average = 9.10) ; Number of LABs  (Total = 68) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 2                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 2                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 1                            ;
 ; 5                                           ; 1                            ;
 ; 6                                           ; 3                            ;
-; 7                                           ; 5                            ;
-; 8                                           ; 4                            ;
-; 9                                           ; 4                            ;
-; 10                                          ; 26                           ;
-; 11                                          ; 6                            ;
+; 7                                           ; 6                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 5                            ;
+; 10                                          ; 27                           ;
+; 11                                          ; 8                            ;
 ; 12                                          ; 3                            ;
-; 13                                          ; 8                            ;
+; 13                                          ; 6                            ;
 ; 14                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
@@ -539,21 +529,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.38) ; Number of LABs  (Total = 66) ;
+; Number of Signals Sourced Out  (Average = 8.12) ; Number of LABs  (Total = 68) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 2                            ;
-; 2                                               ; 0                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 3                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 6                            ;
+; 1                                               ; 3                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 4                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 3                            ;
+; 6                                               ; 3                            ;
 ; 7                                               ; 6                            ;
-; 8                                               ; 5                            ;
-; 9                                               ; 10                           ;
-; 10                                              ; 21                           ;
-; 11                                              ; 4                            ;
-; 12                                              ; 4                            ;
+; 8                                               ; 7                            ;
+; 9                                               ; 11                           ;
+; 10                                              ; 23                           ;
+; 11                                              ; 2                            ;
+; 12                                              ; 3                            ;
 ; 13                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
@@ -561,30 +551,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 12.11) ; Number of LABs  (Total = 66) ;
+; Number of Distinct Inputs  (Average = 11.75) ; Number of LABs  (Total = 68) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 2                            ;
-; 3                                            ; 0                            ;
+; 3                                            ; 1                            ;
 ; 4                                            ; 0                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 6                            ;
-; 10                                           ; 6                            ;
-; 11                                           ; 11                           ;
+; 5                                            ; 1                            ;
+; 6                                            ; 3                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 3                            ;
+; 9                                            ; 4                            ;
+; 10                                           ; 4                            ;
+; 11                                           ; 15                           ;
 ; 12                                           ; 7                            ;
-; 13                                           ; 4                            ;
+; 13                                           ; 5                            ;
 ; 14                                           ; 5                            ;
-; 15                                           ; 8                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
+; 15                                           ; 4                            ;
+; 16                                           ; 6                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 3                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -618,7 +611,6 @@ Info (176444): Device migration not selected. If you intend to use device migrat
     Info (176445): Device 5M570ZT144C5 is compatible
     Info (176445): Device 5M570ZT144I5 is compatible
     Info (176445): Device 5M1270ZT144I5 is compatible
-Critical Warning (169085): No exact pin location assignment(s) for 1 pins of 11 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'DUT.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
@@ -629,7 +621,7 @@ Info (332111): Found 2 clocks
     Info (332111):    1.000       clk_50
     Info (332111):    1.000  clock_music
 Info (186079): Completed User Assigned Global Signals Promotion Operation
-Info (186215): Automatically promoted signal "clk_50" to use Global clock in PIN 18 File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 6
+Info (186215): Automatically promoted signal "clk_50" to use Global clock in PIN 89 File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 6
 Info (186215): Automatically promoted signal "clock_music" to use Global clock File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 20
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
@@ -649,13 +641,13 @@ Info (170195): Router estimated average interconnect usage is 9% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file S:/EE214_Labs/Lab7/output_files/DUT.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5560 megabytes
-    Info: Processing ended: Thu Apr 01 15:49:53 2021
+Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 5559 megabytes
+    Info: Processing ended: Thu Apr 01 16:35:17 2021
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:06
 

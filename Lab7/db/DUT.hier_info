@@ -1,5 +1,5 @@
 |MusicSynthesizer
-toneOut << Selector16.DB_MAX_OUTPUT_PORT_TYPE
+toneOut <= Selector16.DB_MAX_OUTPUT_PORT_TYPE
 clk_50 => Music:sa1.clk
 clk_50 => clock_music.CLK
 clk_50 => clk_c.CLK
@@ -76,14 +76,14 @@ resetn => count.OUTPUTSELECT
 resetn => count.OUTPUTSELECT
 resetn => count.OUTPUTSELECT
 resetn => count.OUTPUTSELECT
-LED[0] << Selector15.DB_MAX_OUTPUT_PORT_TYPE
-LED[1] << Selector14.DB_MAX_OUTPUT_PORT_TYPE
-LED[2] << Selector13.DB_MAX_OUTPUT_PORT_TYPE
-LED[3] << Selector12.DB_MAX_OUTPUT_PORT_TYPE
-LED[4] << Selector11.DB_MAX_OUTPUT_PORT_TYPE
-LED[5] << Selector10.DB_MAX_OUTPUT_PORT_TYPE
-LED[6] << Selector9.DB_MAX_OUTPUT_PORT_TYPE
-LED[7] << Selector8.DB_MAX_OUTPUT_PORT_TYPE
+LED[0] <= Selector15.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= Selector14.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= Selector13.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= Selector12.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= Selector11.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= Selector10.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= Selector9.DB_MAX_OUTPUT_PORT_TYPE
+LED[7] <= Selector8.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MusicSynthesizer|Music:sa1

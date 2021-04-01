@@ -15,7 +15,7 @@ type state_type is (Silent,sa,re,ga,ma,pa,dha,ni);
 
 -- Declare all necessary signals here
 --
-signal sa_tone, re_tone, ga_tone, ma_tone,pa_tone,dha_tone, ni_tone :std_logic;
+signal tune_sa, tune_re, tune_ga, tune_ma,tune_pa,tune_dha, tune_ni :std_logic;
 signal LED_sa, LED_re, LED_ga, LED_ma, LED_pa,LED_dha, LED_ni  : std_logic_vector(7 downto 0);
 signal clock_music : std_logic;
 -- Take the toneGenerator component
@@ -30,7 +30,7 @@ end component;
 
 begin
 
-	process(clock_music,clk_50,resetn,sa_tone, re_tone, ga_tone, ma_tone,pa_tone,dha_tone, ni_tone,LED_sa, LED_re, LED_ga, LED_ma,LED_pa, LED_dha, LED_ni)	-- Fill sensitivity list
+	process(clock_music,clk_50,resetn,tune_sa, tune_re, tune_ga, tune_ma,tune_pa,tune_dha, tune_ni,LED_sa, LED_re, LED_ga, LED_ma,LED_pa, LED_dha, LED_ni)	-- Fill sensitivity list
 	variable y_next_var : state_type;
 	variable timecounter : integer range 0 to 1E8 := 0;
 	variable count : integer;
@@ -59,13 +59,12 @@ begin
 					y_next_var := ma;
 				end if;
 			LED<=LED_pa;
-			toneOut<= pa_tone;
+			toneOut<= tune_pa;
 				
-			WHEN dha => 
-				
+			WHEN dha => 		
 					y_next_var := ma;
 					LED<=LED_dha;
-			      toneOut<= dha_tone;
+			      toneOut<= tune_dha;
 
 				
 			WHEN ma => 
@@ -75,7 +74,7 @@ begin
 					y_next_var := pa;
 				end if;
 			LED<=LED_ma;
-			toneOut<= ma_tone;
+			toneOut<= tune_ma;
 			
 			WHEN ga => 
 			if((count = 8) or (count = 20) ) then
@@ -84,7 +83,7 @@ begin
 					y_next_var := re;
 				end if;
 			LED<=LED_ga;
-			toneOut<= ga_tone;
+			toneOut<= tune_ga;
 			
 			WHEN re => --if the machine in Ni state
 				if((count = 16)) then
@@ -93,7 +92,7 @@ begin
 					y_next_var := sa;
 				end if;
 			LED<=LED_re;
-			toneOut<= re_tone;
+			toneOut<= tune_re;
 			
 			WHEN sa => --if the machine in Ni state
 				if((count = 24)) then
@@ -102,14 +101,20 @@ begin
 					y_next_var := Silent;
 				end if;
 			LED<=LED_sa;
-			toneOut<= sa_tone;
+			toneOut<= tune_sa;
 			
 			WHEN ni => --if the machine in Ni state
 				
-			y_next_var := re;
+			if(count = 25) then
+					y_next_var := ni;
+			elsif(count=26) then
+					y_next_var := re;
+			end if;
+			LED<=LED_pa;
+			toneOut<= tune_pa;
 				
 			LED<=LED_ni;
-			toneOut<= ni_tone;
+			toneOut<= tune_ni;
 			
 				
 		END CASE ;
@@ -145,12 +150,12 @@ begin
 	end process;
 	
 	-- instantiate the component of toneGenerator 
-	sa1:  Music port map(sa_tone, clk_50, LED_sa,"00000001");
-	re1:  Music port map(re_tone, clk_50, LED_re, "00000010");
-	ga1:  Music port map(ga_tone, clk_50, LED_ga, "00000100");
-	ma1:  Music port map(ma_tone, clk_50, LED_ma, "00001000");
-	pa1:  Music port map(pa_tone, clk_50, LED_pa, "00010000");
-	dha1:  Music port map(dha_tone, clk_50, LED_dha, "00100000");
+	sa1:  Music port map(tune_sa, clk_50, LED_sa,"00000001");
+	re1:  Music port map(tune_re, clk_50, LED_re, "00000010");
+	ga1:  Music port map(tune_ga, clk_50, LED_ga, "00000100");
+	ma1:  Music port map(tune_ma, clk_50, LED_ma, "00001000");
+	pa1:  Music port map(tune_pa, clk_50, LED_pa, "00010000");
+	dha1:  Music port map(tune_dha, clk_50, LED_dha, "00100000");
 	
-	ni1:  Music port map(ni_tone, clk_50, LED_ni, "01000000");
+	ni1:  Music port map(tune_ni, clk_50, LED_ni, "01000000");
 end fsm;
