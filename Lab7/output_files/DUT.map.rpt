@@ -1,0 +1,575 @@
+Analysis & Synthesis report for DUT
+Thu Apr 01 15:49:49 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |MusicSynthesizer|y_present
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "Music:ni1"
+ 15. Port Connectivity Checks: "Music:dha1"
+ 16. Port Connectivity Checks: "Music:pa1"
+ 17. Port Connectivity Checks: "Music:ma1"
+ 18. Port Connectivity Checks: "Music:ga1"
+ 19. Port Connectivity Checks: "Music:re1"
+ 20. Port Connectivity Checks: "Music:sa1"
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Apr 01 15:49:49 2021       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; DUT                                         ;
+; Top-level Entity Name       ; MusicSynthesizer                            ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 626                                         ;
+; Total pins                  ; 11                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 5M1270ZT144C5      ;                    ;
+; Top-level entity name                                            ; MusicSynthesizer   ; DUT                ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                   ;
++----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path            ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
+; Music.vhd                        ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab7/Music.vhd            ;         ;
+; MusicSynthesizer.vhd             ; yes             ; User VHDL File  ; S:/EE214_Labs/Lab7/MusicSynthesizer.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Total logic elements                        ; 626    ;
+;     -- Combinational with no register       ; 368    ;
+;     -- Register only                        ; 143    ;
+;     -- Combinational with a register        ; 115    ;
+;                                             ;        ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 187    ;
+;     -- 3 input functions                    ; 43     ;
+;     -- 2 input functions                    ; 246    ;
+;     -- 1 input functions                    ; 7      ;
+;     -- 0 input functions                    ; 0      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 391    ;
+;     -- arithmetic mode                      ; 235    ;
+;     -- qfbk mode                            ; 0      ;
+;     -- register cascade mode                ; 0      ;
+;     -- synchronous clear/load mode          ; 0      ;
+;     -- asynchronous clear/load mode         ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 258    ;
+; Total logic cells in carry chains           ; 244    ;
+; I/O pins                                    ; 11     ;
+; Maximum fan-out node                        ; clk_50 ;
+; Maximum fan-out                             ; 218    ;
+; Total fan-out                               ; 1785   ;
+; Average fan-out                             ; 2.80   ;
++---------------------------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name          ; Entity Name      ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+------------------+--------------+
+; |MusicSynthesizer          ; 626 (196)   ; 258          ; 0          ; 11   ; 0            ; 368 (127)    ; 143 (16)          ; 115 (53)         ; 244 (59)        ; 0 (0)      ; |MusicSynthesizer            ; MusicSynthesizer ; work         ;
+;    |Music:dha1|            ; 60 (60)     ; 26           ; 0          ; 0    ; 0            ; 34 (34)      ; 18 (18)           ; 8 (8)            ; 26 (26)         ; 0 (0)      ; |MusicSynthesizer|Music:dha1 ; Music            ; work         ;
+;    |Music:ga1|             ; 61 (61)     ; 27           ; 0          ; 0    ; 0            ; 34 (34)      ; 20 (20)           ; 7 (7)            ; 26 (26)         ; 0 (0)      ; |MusicSynthesizer|Music:ga1  ; Music            ; work         ;
+;    |Music:ma1|             ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 18 (18)           ; 10 (10)          ; 27 (27)         ; 0 (0)      ; |MusicSynthesizer|Music:ma1  ; Music            ; work         ;
+;    |Music:ni1|             ; 60 (60)     ; 26           ; 0          ; 0    ; 0            ; 34 (34)      ; 19 (19)           ; 7 (7)            ; 26 (26)         ; 0 (0)      ; |MusicSynthesizer|Music:ni1  ; Music            ; work         ;
+;    |Music:pa1|             ; 60 (60)     ; 26           ; 0          ; 0    ; 0            ; 34 (34)      ; 18 (18)           ; 8 (8)            ; 26 (26)         ; 0 (0)      ; |MusicSynthesizer|Music:pa1  ; Music            ; work         ;
+;    |Music:re1|             ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 17 (17)           ; 11 (11)          ; 27 (27)         ; 0 (0)      ; |MusicSynthesizer|Music:re1  ; Music            ; work         ;
+;    |Music:sa1|             ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 17 (17)           ; 11 (11)          ; 27 (27)         ; 0 (0)      ; |MusicSynthesizer|Music:sa1  ; Music            ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |MusicSynthesizer|y_present                                                                                                   ;
++------------------+--------------+---------------+--------------+--------------+--------------+--------------+--------------+------------------+
+; Name             ; y_present.ni ; y_present.dha ; y_present.pa ; y_present.ma ; y_present.ga ; y_present.re ; y_present.sa ; y_present.Silent ;
++------------------+--------------+---------------+--------------+--------------+--------------+--------------+--------------+------------------+
+; y_present.Silent ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0                ;
+; y_present.sa     ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 1            ; 1                ;
+; y_present.re     ; 0            ; 0             ; 0            ; 0            ; 0            ; 1            ; 0            ; 1                ;
+; y_present.ga     ; 0            ; 0             ; 0            ; 0            ; 1            ; 0            ; 0            ; 1                ;
+; y_present.ma     ; 0            ; 0             ; 0            ; 1            ; 0            ; 0            ; 0            ; 1                ;
+; y_present.pa     ; 0            ; 0             ; 1            ; 0            ; 0            ; 0            ; 0            ; 1                ;
+; y_present.dha    ; 0            ; 1             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1                ;
+; y_present.ni     ; 1            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1                ;
++------------------+--------------+---------------+--------------+--------------+--------------+--------------+--------------+------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++------------------------------------------+---------------------------------------------+
+; Register name                            ; Reason for Removal                          ;
++------------------------------------------+---------------------------------------------+
+; Music:ni1|LED[0]                         ; Stuck at GND due to stuck port data_in      ;
+; Music:ni1|sa0                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:ni1|count_sa0[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:ni1|count_sa0[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:dha1|LED[0]                        ; Stuck at GND due to stuck port data_in      ;
+; Music:dha1|sa0                           ; Stuck at VCC due to stuck port clock_enable ;
+; Music:dha1|count_sa0[0]                  ; Stuck at VCC due to stuck port clock_enable ;
+; Music:dha1|count_sa0[1..26]              ; Stuck at GND due to stuck port clock_enable ;
+; Music:pa1|LED[0]                         ; Stuck at GND due to stuck port data_in      ;
+; Music:pa1|sa0                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:pa1|count_sa0[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:pa1|count_sa0[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:ma1|LED[0]                         ; Stuck at GND due to stuck port data_in      ;
+; Music:ma1|sa0                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:ma1|count_sa0[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:ma1|count_sa0[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:ga1|LED[0]                         ; Stuck at GND due to stuck port data_in      ;
+; Music:ga1|sa0                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:ga1|count_sa0[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:ga1|count_sa0[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:re1|LED[0]                         ; Stuck at GND due to stuck port data_in      ;
+; Music:re1|sa0                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:re1|count_sa0[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:re1|count_sa0[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:sa1|count_sa7[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|sa7                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|LED[0]                         ; Stuck at VCC due to stuck port data_in      ;
+; Music:sa1|count_sa7[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:sa1|sa6                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa6[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa6[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:sa1|sa5                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa5[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa5[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:sa1|sa4                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa4[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa4[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:sa1|sa3                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa3[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa3[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:sa1|sa2                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa2[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa2[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:sa1|sa1                            ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa1[0]                   ; Stuck at VCC due to stuck port clock_enable ;
+; Music:sa1|count_sa1[1..26]               ; Stuck at GND due to stuck port clock_enable ;
+; Music:ni1|LED[7]                         ; Stuck at GND due to stuck port data_in      ;
+; Music:ni1|LED[6]                         ; Stuck at VCC due to stuck port data_in      ;
+; Music:ni1|LED[1..5]                      ; Stuck at GND due to stuck port data_in      ;
+; Music:dha1|LED[6,7]                      ; Stuck at GND due to stuck port data_in      ;
+; Music:dha1|LED[5]                        ; Stuck at VCC due to stuck port data_in      ;
+; Music:dha1|LED[1..4]                     ; Stuck at GND due to stuck port data_in      ;
+; Music:pa1|LED[5..7]                      ; Stuck at GND due to stuck port data_in      ;
+; Music:pa1|LED[4]                         ; Stuck at VCC due to stuck port data_in      ;
+; Music:pa1|LED[1..3]                      ; Stuck at GND due to stuck port data_in      ;
+; Music:ma1|LED[4..7]                      ; Stuck at GND due to stuck port data_in      ;
+; Music:ma1|LED[3]                         ; Stuck at VCC due to stuck port data_in      ;
+; Music:ma1|LED[1,2]                       ; Stuck at GND due to stuck port data_in      ;
+; Music:ga1|LED[3..7]                      ; Stuck at GND due to stuck port data_in      ;
+; Music:ga1|LED[2]                         ; Stuck at VCC due to stuck port data_in      ;
+; Music:ga1|LED[1]                         ; Stuck at GND due to stuck port data_in      ;
+; Music:re1|LED[2..7]                      ; Stuck at GND due to stuck port data_in      ;
+; Music:re1|LED[1]                         ; Stuck at VCC due to stuck port data_in      ;
+; Music:sa1|LED[1..7]                      ; Stuck at GND due to stuck port data_in      ;
+; Music:ni1|count_sa7[0]                   ; Lost fanout                                 ;
+; Music:ni1|sa7                            ; Lost fanout                                 ;
+; Music:ni1|count_sa7[1..26]               ; Lost fanout                                 ;
+; Music:ni1|sa5                            ; Lost fanout                                 ;
+; Music:ni1|count_sa5[0..26]               ; Lost fanout                                 ;
+; Music:ni1|sa4                            ; Lost fanout                                 ;
+; Music:ni1|count_sa4[0..26]               ; Lost fanout                                 ;
+; Music:ni1|sa3                            ; Lost fanout                                 ;
+; Music:ni1|count_sa3[0..26]               ; Lost fanout                                 ;
+; Music:ni1|sa2                            ; Lost fanout                                 ;
+; Music:ni1|count_sa2[0..26]               ; Lost fanout                                 ;
+; Music:ni1|sa1                            ; Lost fanout                                 ;
+; Music:ni1|count_sa1[0..26]               ; Lost fanout                                 ;
+; Music:dha1|count_sa7[0]                  ; Lost fanout                                 ;
+; Music:dha1|sa7                           ; Lost fanout                                 ;
+; Music:dha1|count_sa7[1..26]              ; Lost fanout                                 ;
+; Music:dha1|sa6                           ; Lost fanout                                 ;
+; Music:dha1|count_sa6[0..26]              ; Lost fanout                                 ;
+; Music:dha1|sa4                           ; Lost fanout                                 ;
+; Music:dha1|count_sa4[0..26]              ; Lost fanout                                 ;
+; Music:dha1|sa3                           ; Lost fanout                                 ;
+; Music:dha1|count_sa3[0..26]              ; Lost fanout                                 ;
+; Music:dha1|sa2                           ; Lost fanout                                 ;
+; Music:dha1|count_sa2[0..26]              ; Lost fanout                                 ;
+; Music:dha1|sa1                           ; Lost fanout                                 ;
+; Music:dha1|count_sa1[0..26]              ; Lost fanout                                 ;
+; Music:pa1|count_sa7[0]                   ; Lost fanout                                 ;
+; Music:pa1|sa7                            ; Lost fanout                                 ;
+; Music:pa1|count_sa7[1..26]               ; Lost fanout                                 ;
+; Music:pa1|sa6                            ; Lost fanout                                 ;
+; Music:pa1|count_sa6[0..26]               ; Lost fanout                                 ;
+; Music:pa1|sa5                            ; Lost fanout                                 ;
+; Music:pa1|count_sa5[0..26]               ; Lost fanout                                 ;
+; Music:pa1|sa3                            ; Lost fanout                                 ;
+; Music:pa1|count_sa3[0..26]               ; Lost fanout                                 ;
+; Music:pa1|sa2                            ; Lost fanout                                 ;
+; Music:pa1|count_sa2[0..26]               ; Lost fanout                                 ;
+; Music:pa1|sa1                            ; Lost fanout                                 ;
+; Music:pa1|count_sa1[0..26]               ; Lost fanout                                 ;
+; Music:ma1|count_sa7[0]                   ; Lost fanout                                 ;
+; Music:ma1|sa7                            ; Lost fanout                                 ;
+; Music:ma1|count_sa7[1..26]               ; Lost fanout                                 ;
+; Music:ma1|sa6                            ; Lost fanout                                 ;
+; Music:ma1|count_sa6[0..26]               ; Lost fanout                                 ;
+; Music:ma1|sa5                            ; Lost fanout                                 ;
+; Music:ma1|count_sa5[0..26]               ; Lost fanout                                 ;
+; Music:ma1|sa4                            ; Lost fanout                                 ;
+; Music:ma1|count_sa4[0..26]               ; Lost fanout                                 ;
+; Music:ma1|sa2                            ; Lost fanout                                 ;
+; Music:ma1|count_sa2[0..26]               ; Lost fanout                                 ;
+; Music:ma1|sa1                            ; Lost fanout                                 ;
+; Music:ma1|count_sa1[0..26]               ; Lost fanout                                 ;
+; Music:ga1|count_sa7[0]                   ; Lost fanout                                 ;
+; Music:ga1|sa7                            ; Lost fanout                                 ;
+; Music:ga1|count_sa7[1..26]               ; Lost fanout                                 ;
+; Music:ga1|sa6                            ; Lost fanout                                 ;
+; Music:ga1|count_sa6[0..26]               ; Lost fanout                                 ;
+; Music:ga1|sa5                            ; Lost fanout                                 ;
+; Music:ga1|count_sa5[0..26]               ; Lost fanout                                 ;
+; Music:ga1|sa4                            ; Lost fanout                                 ;
+; Music:ga1|count_sa4[0..26]               ; Lost fanout                                 ;
+; Music:ga1|sa3                            ; Lost fanout                                 ;
+; Music:ga1|count_sa3[0..26]               ; Lost fanout                                 ;
+; Music:ga1|sa1                            ; Lost fanout                                 ;
+; Music:ga1|count_sa1[0..26]               ; Lost fanout                                 ;
+; Music:re1|count_sa7[0]                   ; Lost fanout                                 ;
+; Music:re1|sa7                            ; Lost fanout                                 ;
+; Music:re1|count_sa7[1..26]               ; Lost fanout                                 ;
+; Music:re1|sa6                            ; Lost fanout                                 ;
+; Music:re1|count_sa6[0..26]               ; Lost fanout                                 ;
+; Music:re1|sa5                            ; Lost fanout                                 ;
+; Music:re1|count_sa5[0..26]               ; Lost fanout                                 ;
+; Music:re1|sa4                            ; Lost fanout                                 ;
+; Music:re1|count_sa4[0..26]               ; Lost fanout                                 ;
+; Music:re1|sa3                            ; Lost fanout                                 ;
+; Music:re1|count_sa3[0..26]               ; Lost fanout                                 ;
+; Music:re1|sa2                            ; Lost fanout                                 ;
+; Music:re1|count_sa2[0..26]               ; Lost fanout                                 ;
+; Music:ni1|sa6                            ; Merged with Music:ni1|toneOut               ;
+; Music:dha1|sa5                           ; Merged with Music:dha1|toneOut              ;
+; Music:pa1|sa4                            ; Merged with Music:pa1|toneOut               ;
+; Music:ma1|sa3                            ; Merged with Music:ma1|toneOut               ;
+; Music:ga1|sa2                            ; Merged with Music:ga1|toneOut               ;
+; Music:re1|sa1                            ; Merged with Music:re1|toneOut               ;
+; Music:sa1|sa0                            ; Merged with Music:sa1|toneOut               ;
+; Music:ga1|count_sa2[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
+; Music:pa1|count_sa4[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
+; Music:ni1|count_sa6[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
+; Music:dha1|count_sa5[0]                  ; Merged with Music:sa1|count_sa0[0]          ;
+; Music:ni1|count_sa6[1]                   ; Merged with Music:sa1|count_sa0[1]          ;
+; Music:dha1|count_sa5[1]                  ; Merged with Music:sa1|count_sa0[1]          ;
+; Music:pa1|count_sa4[1]                   ; Merged with Music:ga1|count_sa2[1]          ;
+; Total Number of Removed Registers = 1442 ;                                             ;
++------------------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                      ;
++------------------------+--------------------------------+----------------------------------------------------------------------------------------+
+; Register name          ; Reason for Removal             ; Registers Removed due to This Register                                                 ;
++------------------------+--------------------------------+----------------------------------------------------------------------------------------+
+; Music:sa1|count_sa7[0] ; Stuck at VCC                   ; Music:sa1|sa7, Music:sa1|count_sa7[1], Music:sa1|count_sa7[2], Music:sa1|count_sa7[3], ;
+;                        ; due to stuck port clock_enable ; Music:sa1|count_sa7[4], Music:sa1|count_sa7[5], Music:sa1|count_sa7[6],                ;
+;                        ;                                ; Music:sa1|count_sa7[7], Music:sa1|count_sa7[8], Music:sa1|count_sa7[9],                ;
+;                        ;                                ; Music:sa1|count_sa7[10], Music:sa1|count_sa7[11], Music:sa1|count_sa7[12],             ;
+;                        ;                                ; Music:sa1|count_sa7[13], Music:sa1|count_sa7[14], Music:sa1|count_sa7[15],             ;
+;                        ;                                ; Music:sa1|count_sa7[16], Music:sa1|count_sa7[17], Music:sa1|count_sa7[18],             ;
+;                        ;                                ; Music:sa1|count_sa7[19], Music:sa1|count_sa7[20], Music:sa1|count_sa7[21],             ;
+;                        ;                                ; Music:sa1|count_sa7[22], Music:sa1|count_sa7[23], Music:sa1|count_sa7[24],             ;
+;                        ;                                ; Music:sa1|count_sa7[25], Music:sa1|count_sa7[26]                                       ;
++------------------------+--------------------------------+----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 258   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; Music:ni1|toneOut                       ; 2       ;
+; Music:sa1|toneOut                       ; 2       ;
+; Music:re1|toneOut                       ; 2       ;
+; Music:ga1|toneOut                       ; 2       ;
+; Music:pa1|toneOut                       ; 2       ;
+; Music:ma1|toneOut                       ; 2       ;
+; Music:dha1|toneOut                      ; 2       ;
+; count[31]                               ; 2       ;
+; count[0]                                ; 10      ;
+; Music:sa1|count_sa0[0]                  ; 11      ;
+; Music:re1|count_sa1[0]                  ; 3       ;
+; Music:ma1|count_sa3[0]                  ; 3       ;
+; clk_c                                   ; 1       ;
+; Total number of inverted registers = 13 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |MusicSynthesizer|count[15] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |MusicSynthesizer|count[0]  ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 24 LEs               ; 20 LEs                 ; No         ; |MusicSynthesizer|y_present ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |MusicSynthesizer|y_present ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Music:ni1"          ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[5..0] ; Input ; Info     ; Stuck at GND ;
+; switch[7]    ; Input ; Info     ; Stuck at GND ;
+; switch[6]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Music:dha1"         ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..6] ; Input ; Info     ; Stuck at GND ;
+; switch[4..0] ; Input ; Info     ; Stuck at GND ;
+; switch[5]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Music:pa1"          ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..5] ; Input ; Info     ; Stuck at GND ;
+; switch[3..0] ; Input ; Info     ; Stuck at GND ;
+; switch[4]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Music:ma1"          ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..4] ; Input ; Info     ; Stuck at GND ;
+; switch[2..0] ; Input ; Info     ; Stuck at GND ;
+; switch[3]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Music:ga1"          ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..3] ; Input ; Info     ; Stuck at GND ;
+; switch[1..0] ; Input ; Info     ; Stuck at GND ;
+; switch[2]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Music:re1"          ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..2] ; Input ; Info     ; Stuck at GND ;
+; switch[1]    ; Input ; Info     ; Stuck at VCC ;
+; switch[0]    ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Music:sa1"          ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..1] ; Input ; Info     ; Stuck at GND ;
+; switch[0]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Apr 01 15:49:41 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MusicSynthesizer -c DUT
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file song_tb.vhd
+    Info (12022): Found design unit 1: song_tb-testbench File: S:/EE214_Labs/Lab7/song_tb.vhd Line: 9
+    Info (12023): Found entity 1: song_tb File: S:/EE214_Labs/Lab7/song_tb.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file music.vhd
+    Info (12022): Found design unit 1: Music-musicc File: S:/EE214_Labs/Lab7/Music.vhd Line: 10
+    Info (12023): Found entity 1: Music File: S:/EE214_Labs/Lab7/Music.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file musicsynthesizer.vhd
+    Info (12022): Found design unit 1: MusicSynthesizer-fsm File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 10
+    Info (12023): Found entity 1: MusicSynthesizer File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 4
+Info (12127): Elaborating entity "MusicSynthesizer" for the top level hierarchy
+Info (12128): Elaborating entity "Music" for hierarchy "Music:sa1" File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 148
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED[7]" is stuck at GND File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 7
+Info (17049): 1008 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 637 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 626 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Thu Apr 01 15:49:49 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
+
+

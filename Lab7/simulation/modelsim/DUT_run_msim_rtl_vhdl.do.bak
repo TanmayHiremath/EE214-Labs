@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {S:/EE214_Labs/Lab7/Music.vhd}
+vcom -93 -work work {S:/EE214_Labs/Lab7/MusicSynthesizer.vhd}
+
