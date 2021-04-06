@@ -1,5 +1,5 @@
 Timing Analyzer report for DUT
-Thu Apr 01 16:35:21 2021
+Thu Apr 01 17:02:14 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -99,8 +99,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
 +------------+-----------------+-------------+------+
-; 68.39 MHz  ; 68.39 MHz       ; clock_music ;      ;
-; 108.86 MHz ; 108.86 MHz      ; clk_50      ;      ;
+; 65.3 MHz   ; 65.3 MHz        ; clock_music ;      ;
+; 105.54 MHz ; 105.54 MHz      ; clk_50      ;      ;
 +------------+-----------------+-------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -110,8 +110,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+---------+---------------+
 ; Clock       ; Slack   ; End Point TNS ;
 +-------------+---------+---------------+
-; clock_music ; -13.623 ; -403.687      ;
-; clk_50      ; -8.186  ; -1471.073     ;
+; clock_music ; -14.315 ; -397.458      ;
+; clk_50      ; -8.475  ; -1461.962     ;
 +-------------+---------+---------------+
 
 
@@ -120,8 +120,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+-------+---------------+
 ; Clock       ; Slack ; End Point TNS ;
 +-------------+-------+---------------+
-; clk_50      ; 1.659 ; 0.000         ;
-; clock_music ; 1.927 ; 0.000         ;
+; clk_50      ; 1.639 ; 0.000         ;
+; clock_music ; 2.126 ; 0.000         ;
 +-------------+-------+---------------+
 
 
@@ -147,220 +147,220 @@ No paths to report.
 +-------------+--------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Setup: 'clock_music'                                                                                         ;
-+---------+-----------+------------------+--------------+-------------+--------------+------------+------------+
-; Slack   ; From Node ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+---------+-----------+------------------+--------------+-------------+--------------+------------+------------+
-; -13.623 ; count[13] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.290     ;
-; -13.343 ; count[13] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.010     ;
-; -13.066 ; count[12] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.733     ;
-; -13.034 ; count[15] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.701     ;
-; -12.892 ; count[14] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.559     ;
-; -12.863 ; count[10] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.530     ;
-; -12.847 ; count[27] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.514     ;
-; -12.845 ; count[13] ; y_present.ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.512     ;
-; -12.807 ; count[18] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.474     ;
-; -12.786 ; count[12] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.453     ;
-; -12.754 ; count[15] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.421     ;
-; -12.728 ; count[13] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.395     ;
-; -12.701 ; count[8]  ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.368     ;
-; -12.681 ; count[25] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.348     ;
-; -12.663 ; count[30] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.330     ;
-; -12.660 ; count[13] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.327     ;
-; -12.659 ; count[19] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.326     ;
-; -12.655 ; count[13] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.322     ;
-; -12.645 ; count[13] ; y_present.pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.312     ;
-; -12.612 ; count[14] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.279     ;
-; -12.583 ; count[10] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.250     ;
-; -12.567 ; count[27] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.234     ;
-; -12.566 ; count[28] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.233     ;
-; -12.528 ; count[11] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.195     ;
-; -12.527 ; count[18] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.194     ;
-; -12.510 ; count[24] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.177     ;
-; -12.474 ; count[22] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.141     ;
-; -12.470 ; count[16] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.137     ;
-; -12.459 ; count[6]  ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.126     ;
-; -12.421 ; count[8]  ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.088     ;
-; -12.401 ; count[25] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.068     ;
-; -12.390 ; count[29] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.057     ;
-; -12.383 ; count[30] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.050     ;
-; -12.379 ; count[19] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.046     ;
-; -12.288 ; count[12] ; y_present.ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.955     ;
-; -12.286 ; count[28] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.953     ;
-; -12.256 ; count[15] ; y_present.ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.923     ;
-; -12.248 ; count[11] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.915     ;
-; -12.230 ; count[24] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.897     ;
-; -12.224 ; count[20] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.891     ;
-; -12.215 ; count[13] ; y_present.Silent ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.882     ;
-; -12.194 ; count[22] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.861     ;
-; -12.190 ; count[7]  ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.857     ;
-; -12.190 ; count[16] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.857     ;
-; -12.179 ; count[6]  ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.846     ;
-; -12.171 ; count[12] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.838     ;
-; -12.161 ; count[9]  ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.828     ;
-; -12.140 ; count[26] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.807     ;
-; -12.139 ; count[15] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.806     ;
-; -12.125 ; count[17] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.792     ;
-; -12.114 ; count[14] ; y_present.ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.781     ;
-; -12.110 ; count[29] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.777     ;
-; -12.103 ; count[12] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.770     ;
-; -12.098 ; count[12] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.765     ;
-; -12.088 ; count[12] ; y_present.pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.755     ;
-; -12.085 ; count[10] ; y_present.ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.752     ;
-; -12.071 ; count[15] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.738     ;
-; -12.066 ; count[15] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.733     ;
-; -12.056 ; count[15] ; y_present.pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.723     ;
-; -11.997 ; count[14] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.664     ;
-; -11.988 ; count[23] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.655     ;
-; -11.968 ; count[10] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.635     ;
-; -11.944 ; count[20] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.611     ;
-; -11.929 ; count[14] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.596     ;
-; -11.924 ; count[14] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.591     ;
-; -11.923 ; count[8]  ; y_present.ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.590     ;
-; -11.914 ; count[14] ; y_present.pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.581     ;
-; -11.910 ; count[7]  ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.577     ;
-; -11.900 ; count[10] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.567     ;
-; -11.895 ; count[10] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.562     ;
-; -11.891 ; count[21] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.558     ;
-; -11.885 ; count[10] ; y_present.pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.552     ;
-; -11.884 ; count[27] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.551     ;
-; -11.881 ; count[9]  ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.548     ;
-; -11.879 ; count[27] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.546     ;
-; -11.874 ; count[27] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.541     ;
-; -11.861 ; count[31] ; y_present.dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.528     ;
-; -11.860 ; count[26] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.527     ;
-; -11.845 ; count[17] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.512     ;
-; -11.844 ; count[18] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.511     ;
-; -11.839 ; count[18] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.506     ;
-; -11.834 ; count[18] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.501     ;
-; -11.806 ; count[8]  ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.473     ;
-; -11.750 ; count[11] ; y_present.ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.417     ;
-; -11.738 ; count[8]  ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.405     ;
-; -11.733 ; count[8]  ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.400     ;
-; -11.723 ; count[8]  ; y_present.pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.390     ;
-; -11.718 ; count[25] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.385     ;
-; -11.713 ; count[25] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.380     ;
-; -11.708 ; count[23] ; y_present.ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.375     ;
-; -11.708 ; count[25] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.375     ;
-; -11.700 ; count[30] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.367     ;
-; -11.696 ; count[19] ; y_present.re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.363     ;
-; -11.695 ; count[30] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.362     ;
-; -11.691 ; count[19] ; y_present.sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.358     ;
-; -11.690 ; count[30] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.357     ;
-; -11.686 ; count[19] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.353     ;
-; -11.681 ; count[6]  ; y_present.ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.348     ;
-; -11.658 ; count[12] ; y_present.Silent ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.325     ;
-; -11.633 ; count[11] ; y_present.ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.300     ;
-+---------+-----------+------------------+--------------+-------------+--------------+------------+------------+
++-----------------------------------------------------------------------------------------------------------+
+; Setup: 'clock_music'                                                                                      ;
++---------+-----------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------+---------------+--------------+-------------+--------------+------------+------------+
+; -14.315 ; count[30] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.982     ;
+; -14.172 ; count[26] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.839     ;
+; -14.147 ; count[31] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.814     ;
+; -14.005 ; count[17] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.672     ;
+; -14.000 ; count[25] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.667     ;
+; -13.977 ; count[28] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.644     ;
+; -13.900 ; count[18] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.567     ;
+; -13.829 ; count[24] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.496     ;
+; -13.667 ; count[19] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.334     ;
+; -13.629 ; count[12] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.296     ;
+; -13.624 ; count[30] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.291     ;
+; -13.608 ; count[29] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.275     ;
+; -13.602 ; count[22] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.269     ;
+; -13.481 ; count[26] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.148     ;
+; -13.466 ; count[14] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.133     ;
+; -13.464 ; count[27] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.131     ;
+; -13.456 ; count[31] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.123     ;
+; -13.435 ; count[23] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.102     ;
+; -13.360 ; count[16] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.027     ;
+; -13.314 ; count[17] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.981     ;
+; -13.309 ; count[25] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.976     ;
+; -13.291 ; count[13] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.958     ;
+; -13.286 ; count[28] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.953     ;
+; -13.265 ; count[11] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.932     ;
+; -13.258 ; count[20] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.925     ;
+; -13.209 ; count[18] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.876     ;
+; -13.187 ; count[6]  ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.854     ;
+; -13.138 ; count[24] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.805     ;
+; -13.122 ; count[30] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.789     ;
+; -13.121 ; count[30] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.788     ;
+; -13.098 ; count[8]  ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.765     ;
+; -13.072 ; count[9]  ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.739     ;
+; -12.979 ; count[26] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.646     ;
+; -12.978 ; count[26] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.645     ;
+; -12.976 ; count[19] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.643     ;
+; -12.954 ; count[31] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.621     ;
+; -12.953 ; count[31] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.620     ;
+; -12.938 ; count[12] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.605     ;
+; -12.926 ; count[15] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.593     ;
+; -12.918 ; count[10] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.585     ;
+; -12.917 ; count[29] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.584     ;
+; -12.911 ; count[22] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.578     ;
+; -12.895 ; count[21] ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.562     ;
+; -12.812 ; count[17] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.479     ;
+; -12.811 ; count[17] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.478     ;
+; -12.807 ; count[25] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.474     ;
+; -12.806 ; count[25] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.473     ;
+; -12.784 ; count[28] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.451     ;
+; -12.783 ; count[28] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.450     ;
+; -12.775 ; count[14] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.442     ;
+; -12.773 ; count[27] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.440     ;
+; -12.744 ; count[23] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.411     ;
+; -12.707 ; count[18] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.374     ;
+; -12.706 ; count[18] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.373     ;
+; -12.702 ; count[7]  ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.369     ;
+; -12.669 ; count[16] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.336     ;
+; -12.650 ; count[30] ; y_present.ga  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.317     ;
+; -12.636 ; count[24] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.303     ;
+; -12.635 ; count[24] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.302     ;
+; -12.600 ; count[13] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.267     ;
+; -12.574 ; count[11] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.241     ;
+; -12.567 ; count[20] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.234     ;
+; -12.507 ; count[26] ; y_present.ga  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.174     ;
+; -12.496 ; count[6]  ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.163     ;
+; -12.482 ; count[31] ; y_present.ga  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.149     ;
+; -12.474 ; count[19] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.141     ;
+; -12.473 ; count[19] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.140     ;
+; -12.436 ; count[12] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.103     ;
+; -12.435 ; count[12] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.102     ;
+; -12.415 ; count[29] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.082     ;
+; -12.414 ; count[29] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.081     ;
+; -12.409 ; count[22] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.076     ;
+; -12.408 ; count[22] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.075     ;
+; -12.407 ; count[8]  ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.074     ;
+; -12.381 ; count[9]  ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.048     ;
+; -12.340 ; count[17] ; y_present.ga  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.007     ;
+; -12.335 ; count[25] ; y_present.ga  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.002     ;
+; -12.312 ; count[28] ; y_present.ga  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.979     ;
+; -12.273 ; count[14] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.940     ;
+; -12.272 ; count[14] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.939     ;
+; -12.271 ; count[27] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.938     ;
+; -12.270 ; count[27] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.937     ;
+; -12.242 ; count[23] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.909     ;
+; -12.241 ; count[23] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.908     ;
+; -12.235 ; count[15] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.902     ;
+; -12.235 ; count[18] ; y_present.ga  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.902     ;
+; -12.227 ; count[10] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.894     ;
+; -12.204 ; count[21] ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.871     ;
+; -12.167 ; count[16] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.834     ;
+; -12.166 ; count[16] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.833     ;
+; -12.164 ; count[24] ; y_present.ga  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.831     ;
+; -12.133 ; count[4]  ; y_present.ni  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.800     ;
+; -12.098 ; count[13] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.765     ;
+; -12.097 ; count[13] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.764     ;
+; -12.072 ; count[11] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.739     ;
+; -12.071 ; count[11] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.738     ;
+; -12.065 ; count[20] ; y_present.sa  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.732     ;
+; -12.064 ; count[20] ; y_present.re  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.731     ;
+; -12.011 ; count[7]  ; y_present.dha ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.678     ;
+; -12.002 ; count[19] ; y_present.ga  ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 12.669     ;
++---------+-----------+---------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'clk_50'                                                                                                                   ;
-+--------+-------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node               ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
-; -8.186 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.853      ;
-; -8.023 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.690      ;
-; -8.000 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.667      ;
-; -7.967 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.634      ;
-; -7.967 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[10] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.634      ;
-; -7.952 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.619      ;
-; -7.897 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.564      ;
-; -7.897 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.564      ;
-; -7.881 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.548      ;
-; -7.872 ; Music:sa1|count_sa0[1]  ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.539      ;
-; -7.869 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.536      ;
-; -7.854 ; Music:sa1|count_sa0[0]  ; Music:ni1|count_sa6[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.521      ;
-; -7.852 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.519      ;
-; -7.830 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[2]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.497      ;
-; -7.805 ; Music:sa1|count_sa0[14] ; Music:sa1|count_sa0[6]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.472      ;
-; -7.798 ; Music:sa1|count_sa0[0]  ; Music:ni1|count_sa6[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.465      ;
-; -7.784 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.451      ;
-; -7.782 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.449      ;
-; -7.776 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.443      ;
-; -7.775 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.442      ;
-; -7.773 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.440      ;
-; -7.763 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[26] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.430      ;
-; -7.753 ; Music:sa1|count_sa0[1]  ; Music:sa1|count_sa0[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.420      ;
-; -7.712 ; Music:sa1|count_sa0[0]  ; Music:ni1|count_sa6[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.379      ;
-; -7.711 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.378      ;
-; -7.694 ; Music:sa1|count_sa0[6]  ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.361      ;
-; -7.688 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[10] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.355      ;
-; -7.683 ; Music:sa1|count_sa0[0]  ; Music:ni1|count_sa6[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.350      ;
-; -7.672 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[9]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.339      ;
-; -7.665 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[11] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.332      ;
-; -7.661 ; Music:sa1|count_sa0[0]  ; Music:ni1|count_sa6[2]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.328      ;
-; -7.656 ; timecounter[4]          ; timecounter[10]          ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.323      ;
-; -7.629 ; Music:ga1|count_sa2[19] ; Music:ga1|count_sa2[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.296      ;
-; -7.628 ; Music:ga1|count_sa2[19] ; Music:ga1|count_sa2[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.295      ;
-; -7.626 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[21]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.293      ;
-; -7.625 ; Music:ga1|count_sa2[19] ; Music:ga1|toneOut        ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.292      ;
-; -7.619 ; Music:ga1|count_sa2[19] ; Music:ga1|count_sa2[7]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.286      ;
-; -7.619 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.286      ;
-; -7.618 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.285      ;
-; -7.616 ; Music:ni1|count_sa6[23] ; Music:ni1|count_sa6[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.283      ;
-; -7.616 ; Music:ga1|count_sa2[19] ; Music:ga1|count_sa2[2]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.283      ;
-; -7.615 ; Music:ga1|count_sa2[19] ; Music:ga1|count_sa2[8]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.282      ;
-; -7.615 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[19]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.282      ;
-; -7.613 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[26]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.280      ;
-; -7.607 ; Music:ga1|count_sa2[19] ; Music:ga1|count_sa2[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.274      ;
-; -7.607 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.274      ;
-; -7.600 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.267      ;
-; -7.597 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.264      ;
-; -7.596 ; Music:ga1|count_sa2[1]  ; Music:pa1|count_sa4[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.263      ;
-; -7.575 ; Music:sa1|count_sa0[6]  ; Music:sa1|count_sa0[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.242      ;
-; -7.567 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.234      ;
-; -7.563 ; Music:sa1|count_sa0[14] ; Music:sa1|count_sa0[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.230      ;
-; -7.551 ; timecounter[4]          ; timecounter[17]          ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.218      ;
-; -7.535 ; Music:ga1|count_sa2[1]  ; Music:pa1|count_sa4[6]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.202      ;
-; -7.534 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[17]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.201      ;
-; -7.533 ; Music:ga1|count_sa2[1]  ; Music:pa1|count_sa4[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.200      ;
-; -7.529 ; Music:ga1|count_sa2[1]  ; Music:pa1|count_sa4[8]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.196      ;
-; -7.524 ; Music:ga1|count_sa2[1]  ; Music:pa1|count_sa4[2]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.191      ;
-; -7.522 ; timecounter[1]          ; timecounter[10]          ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.189      ;
-; -7.519 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[25] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.186      ;
-; -7.515 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[26]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.182      ;
-; -7.515 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.182      ;
-; -7.514 ; Music:ga1|count_sa2[1]  ; Music:ga1|count_sa2[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.181      ;
-; -7.510 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[19]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.177      ;
-; -7.509 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.176      ;
-; -7.506 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.173      ;
-; -7.505 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.172      ;
-; -7.503 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.170      ;
-; -7.502 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[21]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.169      ;
-; -7.497 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.164      ;
-; -7.496 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.163      ;
-; -7.494 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.161      ;
-; -7.484 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[26] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.151      ;
-; -7.460 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.127      ;
-; -7.458 ; Music:sa1|count_sa0[1]  ; Music:sa1|count_sa0[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.125      ;
-; -7.445 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[18]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.112      ;
-; -7.437 ; Music:sa1|count_sa0[1]  ; Music:dha1|count_sa5[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.104      ;
-; -7.437 ; Music:sa1|count_sa0[1]  ; Music:sa1|count_sa0[6]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.104      ;
-; -7.431 ; Music:ga1|count_sa2[2]  ; Music:ga1|count_sa2[7]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.098      ;
-; -7.431 ; Music:sa1|count_sa0[0]  ; Music:ni1|count_sa6[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.098      ;
-; -7.430 ; Music:ga1|count_sa2[2]  ; Music:ga1|count_sa2[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.097      ;
-; -7.429 ; Music:ga1|count_sa2[2]  ; Music:ga1|toneOut        ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.096      ;
-; -7.421 ; Music:ga1|count_sa2[2]  ; Music:ga1|count_sa2[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.088      ;
-; -7.418 ; Music:ga1|count_sa2[2]  ; Music:ga1|count_sa2[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.085      ;
-; -7.417 ; timecounter[1]          ; timecounter[17]          ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.084      ;
-; -7.411 ; Music:ga1|count_sa2[2]  ; Music:ga1|count_sa2[2]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.078      ;
-; -7.410 ; Music:ga1|count_sa2[1]  ; Music:pa1|count_sa4[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.077      ;
-; -7.399 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[6]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.066      ;
-; -7.394 ; Music:sa1|count_sa0[1]  ; Music:ni1|count_sa6[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.061      ;
-; -7.394 ; Music:pa1|count_sa4[7]  ; Music:pa1|count_sa4[6]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.061      ;
-; -7.393 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[9]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.060      ;
-; -7.393 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[8]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.060      ;
-; -7.392 ; Music:pa1|count_sa4[7]  ; Music:pa1|count_sa4[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.059      ;
-; -7.391 ; Music:ga1|count_sa2[5]  ; Music:ga1|count_sa2[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.058      ;
-; -7.388 ; Music:sa1|count_sa0[8]  ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.055      ;
-; -7.388 ; Music:pa1|count_sa4[7]  ; Music:pa1|count_sa4[8]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.055      ;
-; -7.388 ; Music:sa1|count_sa0[0]  ; Music:pa1|count_sa4[2]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.055      ;
-; -7.386 ; Music:sa1|count_sa0[0]  ; Music:dha1|count_sa5[11] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.053      ;
-; -7.383 ; Music:pa1|count_sa4[7]  ; Music:pa1|count_sa4[2]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.050      ;
-; -7.364 ; Music:sa1|count_sa0[9]  ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.031      ;
-+--------+-------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk_50'                                                                                                                    ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
+; -8.475 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 9.142      ;
+; -8.070 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.737      ;
+; -8.058 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.725      ;
+; -8.045 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[19]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.712      ;
+; -8.039 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[25]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.706      ;
+; -8.017 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[21]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.684      ;
+; -8.007 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[23]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.674      ;
+; -7.971 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[21]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.638      ;
+; -7.968 ; Music:sa1|count_sa0[0]   ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.635      ;
+; -7.949 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.616      ;
+; -7.942 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[26]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.609      ;
+; -7.939 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.606      ;
+; -7.895 ; Music:sa1|count_sa0[2]   ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.562      ;
+; -7.882 ; Music:dha1|count_sa5[6]  ; Music:dha1|toneOut       ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.549      ;
+; -7.809 ; Music:re1|count_sa1[6]   ; Music:re1|count_sa1[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.476      ;
+; -7.804 ; Music:dha1|count_sa5[23] ; Music:dha1|toneOut       ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.471      ;
+; -7.803 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.470      ;
+; -7.766 ; Music:sa1|count_sa0[18]  ; Music:sa1|count_sa0[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.433      ;
+; -7.764 ; Music:sa1|count_sa0[18]  ; Music:sa1|count_sa0[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.431      ;
+; -7.760 ; Music:re1|count_sa1[0]   ; Music:re1|count_sa1[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.427      ;
+; -7.757 ; Music:sa1|count_sa0[18]  ; Music:sa1|count_sa0[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.424      ;
+; -7.755 ; Music:sa1|count_sa0[18]  ; Music:sa1|count_sa0[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.422      ;
+; -7.750 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.417      ;
+; -7.727 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.394      ;
+; -7.725 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.392      ;
+; -7.722 ; Music:re1|count_sa1[1]   ; Music:re1|count_sa1[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.389      ;
+; -7.699 ; Music:sa1|count_sa0[0]   ; Music:ga1|count_sa2[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.366      ;
+; -7.676 ; Music:dha1|count_sa5[6]  ; Music:dha1|count_sa5[10] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.343      ;
+; -7.675 ; Music:re1|count_sa1[6]   ; Music:re1|count_sa1[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.342      ;
+; -7.665 ; Music:re1|count_sa1[4]   ; Music:re1|count_sa1[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.332      ;
+; -7.626 ; Music:re1|count_sa1[0]   ; Music:re1|count_sa1[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.293      ;
+; -7.625 ; Music:dha1|count_sa5[6]  ; Music:dha1|count_sa5[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.292      ;
+; -7.619 ; Music:sa1|count_sa0[16]  ; Music:sa1|count_sa0[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.286      ;
+; -7.617 ; Music:sa1|count_sa0[16]  ; Music:sa1|count_sa0[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.284      ;
+; -7.610 ; Music:sa1|count_sa0[16]  ; Music:sa1|count_sa0[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.277      ;
+; -7.608 ; Music:sa1|count_sa0[16]  ; Music:sa1|count_sa0[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.275      ;
+; -7.588 ; Music:re1|count_sa1[1]   ; Music:re1|count_sa1[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.255      ;
+; -7.576 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.243      ;
+; -7.561 ; Music:pa1|count_sa4[10]  ; Music:pa1|toneOut        ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.228      ;
+; -7.554 ; Music:re1|count_sa1[5]   ; Music:re1|count_sa1[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.221      ;
+; -7.553 ; Music:re1|count_sa1[6]   ; Music:re1|count_sa1[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.220      ;
+; -7.532 ; Music:ma1|count_sa3[0]   ; Music:ma1|count_sa3[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.199      ;
+; -7.531 ; Music:re1|count_sa1[4]   ; Music:re1|count_sa1[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.198      ;
+; -7.512 ; Music:dha1|count_sa5[4]  ; Music:dha1|count_sa5[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.179      ;
+; -7.510 ; Music:sa1|count_sa0[0]   ; Music:sa1|count_sa0[21]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.177      ;
+; -7.506 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.173      ;
+; -7.504 ; Music:re1|count_sa1[0]   ; Music:re1|count_sa1[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.171      ;
+; -7.500 ; Music:sa1|count_sa0[0]   ; Music:sa1|count_sa0[23]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.167      ;
+; -7.496 ; Music:dha1|count_sa5[4]  ; Music:dha1|count_sa5[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.163      ;
+; -7.494 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.161      ;
+; -7.488 ; Music:dha1|count_sa5[4]  ; Music:dha1|count_sa5[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.155      ;
+; -7.484 ; Music:sa1|count_sa0[1]   ; Music:dha1|count_sa5[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.151      ;
+; -7.479 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.146      ;
+; -7.479 ; Music:dha1|count_sa5[4]  ; Music:dha1|count_sa5[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.146      ;
+; -7.468 ; Music:sa1|count_sa0[1]   ; Music:dha1|count_sa5[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.135      ;
+; -7.466 ; Music:re1|count_sa1[1]   ; Music:re1|count_sa1[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.133      ;
+; -7.460 ; Music:sa1|count_sa0[1]   ; Music:dha1|count_sa5[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.127      ;
+; -7.456 ; Music:sa1|count_sa0[8]   ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.123      ;
+; -7.451 ; Music:sa1|count_sa0[1]   ; Music:dha1|count_sa5[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.118      ;
+; -7.442 ; Music:sa1|count_sa0[9]   ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.109      ;
+; -7.441 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[18]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.108      ;
+; -7.437 ; Music:sa1|count_sa0[2]   ; Music:sa1|count_sa0[21]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.104      ;
+; -7.432 ; Music:sa1|count_sa0[0]   ; Music:sa1|count_sa0[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.099      ;
+; -7.431 ; Music:re1|count_sa1[21]  ; Music:re1|count_sa1[5]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.098      ;
+; -7.431 ; Music:re1|count_sa1[7]   ; Music:re1|count_sa1[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.098      ;
+; -7.429 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.096      ;
+; -7.427 ; Music:sa1|count_sa0[2]   ; Music:sa1|count_sa0[23]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.094      ;
+; -7.425 ; Music:re1|count_sa1[21]  ; Music:re1|count_sa1[7]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.092      ;
+; -7.425 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.092      ;
+; -7.424 ; Music:re1|count_sa1[21]  ; Music:re1|count_sa1[1]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.091      ;
+; -7.423 ; Music:re1|count_sa1[21]  ; Music:re1|count_sa1[4]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.090      ;
+; -7.420 ; Music:re1|count_sa1[5]   ; Music:re1|count_sa1[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.087      ;
+; -7.419 ; Music:sa1|count_sa0[14]  ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.086      ;
+; -7.415 ; Music:dha1|count_sa5[4]  ; Music:dha1|count_sa5[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.082      ;
+; -7.409 ; Music:re1|count_sa1[4]   ; Music:re1|count_sa1[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.076      ;
+; -7.387 ; timecounter[23]          ; clk_c                    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.054      ;
+; -7.387 ; Music:sa1|count_sa0[1]   ; Music:dha1|count_sa5[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.054      ;
+; -7.379 ; Music:ga1|count_sa2[13]  ; Music:ga1|count_sa2[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.046      ;
+; -7.362 ; Music:pa1|count_sa4[11]  ; Music:pa1|toneOut        ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.029      ;
+; -7.359 ; Music:sa1|count_sa0[2]   ; Music:sa1|count_sa0[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.026      ;
+; -7.357 ; Music:re1|count_sa1[16]  ; Music:re1|count_sa1[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.024      ;
+; -7.356 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[17]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.023      ;
+; -7.348 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.015      ;
+; -7.347 ; Music:sa1|count_sa0[1]   ; Music:sa1|count_sa0[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.014      ;
+; -7.344 ; Music:re1|count_sa1[13]  ; Music:re1|count_sa1[8]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.011      ;
+; -7.343 ; Music:re1|count_sa1[13]  ; Music:re1|count_sa1[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.010      ;
+; -7.342 ; Music:sa1|count_sa0[10]  ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.009      ;
+; -7.340 ; Music:pa1|count_sa4[10]  ; Music:pa1|count_sa4[8]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.007      ;
+; -7.339 ; Music:re1|count_sa1[13]  ; Music:re1|count_sa1[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.006      ;
+; -7.339 ; Music:re1|count_sa1[13]  ; Music:re1|count_sa1[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.006      ;
+; -7.338 ; Music:re1|count_sa1[13]  ; Music:re1|count_sa1[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.005      ;
+; -7.337 ; Music:pa1|count_sa4[10]  ; Music:pa1|count_sa4[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.004      ;
+; -7.336 ; Music:sa1|count_sa0[13]  ; Music:sa1|count_sa0[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.003      ;
+; -7.335 ; Music:dha1|count_sa5[22] ; Music:dha1|toneOut       ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.002      ;
+; -7.334 ; Music:pa1|count_sa4[10]  ; Music:pa1|count_sa4[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.001      ;
+; -7.332 ; Music:pa1|count_sa4[10]  ; Music:pa1|count_sa4[2]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.999      ;
+; -7.332 ; Music:sa1|count_sa0[0]   ; Music:pa1|count_sa4[18]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.999      ;
+; -7.329 ; Music:ma1|count_sa3[0]   ; Music:ma1|count_sa3[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.996      ;
+; -7.327 ; Music:ma1|count_sa3[21]  ; Music:ma1|count_sa3[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.994      ;
+; -7.321 ; Music:sa1|count_sa0[19]  ; Music:sa1|count_sa0[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.988      ;
++--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -368,106 +368,106 @@ No paths to report.
 +-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
-; 1.659 ; Music:pa1|toneOut        ; Music:pa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.880      ;
-; 1.926 ; Music:re1|toneOut        ; Music:re1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.147      ;
+; 1.639 ; Music:ni1|toneOut        ; Music:ni1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.860      ;
+; 1.906 ; clk_c                    ; clock_music              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.127      ;
 ; 1.926 ; Music:sa1|count_sa0[0]   ; Music:sa1|count_sa0[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.147      ;
-; 2.128 ; clk_c                    ; clock_music              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.349      ;
-; 2.136 ; Music:re1|count_sa1[0]   ; Music:re1|count_sa1[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.357      ;
-; 2.138 ; timecounter[24]          ; timecounter[19]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.359      ;
-; 2.213 ; Music:sa1|toneOut        ; Music:sa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.434      ;
-; 2.222 ; Music:ma1|toneOut        ; Music:ma1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.443      ;
-; 2.222 ; Music:dha1|toneOut       ; Music:dha1|toneOut       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.443      ;
-; 2.233 ; Music:ni1|toneOut        ; Music:ni1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.454      ;
-; 2.267 ; Music:ga1|toneOut        ; Music:ga1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.488      ;
-; 2.321 ; Music:ma1|count_sa3[0]   ; Music:ma1|count_sa3[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.542      ;
-; 2.643 ; timecounter[21]          ; timecounter[19]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.864      ;
-; 2.706 ; timecounter[24]          ; timecounter[20]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.927      ;
-; 2.718 ; timecounter[24]          ; timecounter[18]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.939      ;
-; 2.719 ; timecounter[24]          ; timecounter[22]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.940      ;
-; 2.826 ; Music:ga1|count_sa2[24]  ; Music:ga1|count_sa2[24]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.047      ;
-; 2.835 ; Music:ni1|count_sa6[23]  ; Music:ni1|count_sa6[23]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.056      ;
-; 2.835 ; Music:sa1|count_sa0[25]  ; Music:sa1|count_sa0[25]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.056      ;
-; 2.835 ; Music:pa1|count_sa4[23]  ; Music:pa1|count_sa4[23]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.056      ;
+; 2.107 ; Music:sa1|toneOut        ; Music:sa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.328      ;
+; 2.133 ; Music:ni1|count_sa6[0]   ; Music:ni1|count_sa6[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.354      ;
+; 2.142 ; Music:dha1|toneOut       ; Music:dha1|toneOut       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.363      ;
+; 2.211 ; Music:ma1|toneOut        ; Music:ma1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.432      ;
+; 2.211 ; Music:ma1|count_sa3[0]   ; Music:ma1|count_sa3[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.432      ;
+; 2.222 ; Music:pa1|toneOut        ; Music:pa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.443      ;
+; 2.229 ; Music:re1|count_sa1[0]   ; Music:re1|count_sa1[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.450      ;
+; 2.232 ; Music:re1|toneOut        ; Music:re1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.453      ;
+; 2.333 ; Music:pa1|count_sa4[17]  ; Music:pa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.554      ;
+; 2.519 ; Music:sa1|count_sa0[17]  ; Music:sa1|count_sa0[7]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.740      ;
+; 2.564 ; Music:ga1|count_sa2[17]  ; Music:ga1|count_sa2[7]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.785      ;
+; 2.567 ; Music:ga1|count_sa2[17]  ; Music:ga1|count_sa2[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.788      ;
+; 2.568 ; Music:ga1|count_sa2[17]  ; Music:ga1|count_sa2[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.789      ;
+; 2.578 ; Music:sa1|count_sa0[24]  ; Music:sa1|count_sa0[10]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.799      ;
+; 2.582 ; Music:sa1|count_sa0[24]  ; Music:sa1|count_sa0[15]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.803      ;
+; 2.589 ; Music:sa1|count_sa0[24]  ; Music:sa1|count_sa0[9]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.810      ;
+; 2.589 ; Music:sa1|count_sa0[24]  ; Music:sa1|count_sa0[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.810      ;
+; 2.620 ; timecounter[13]          ; timecounter[11]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.841      ;
+; 2.675 ; Music:ni1|count_sa6[17]  ; Music:ni1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.896      ;
+; 2.678 ; Music:ni1|count_sa6[17]  ; Music:ni1|count_sa6[9]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.899      ;
+; 2.681 ; Music:ni1|count_sa6[17]  ; Music:ni1|count_sa6[15]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.902      ;
+; 2.723 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[11]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.944      ;
+; 2.723 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[14]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.944      ;
+; 2.724 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[13]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.945      ;
+; 2.726 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.947      ;
+; 2.728 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.949      ;
+; 2.771 ; Music:sa1|count_sa0[24]  ; Music:sa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.992      ;
+; 2.774 ; Music:dha1|count_sa5[16] ; Music:dha1|toneOut       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.995      ;
+; 2.825 ; Music:sa1|count_sa0[25]  ; Music:sa1|count_sa0[25]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.046      ;
+; 2.825 ; Music:re1|count_sa1[25]  ; Music:re1|count_sa1[25]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.046      ;
+; 2.832 ; Music:pa1|count_sa4[19]  ; Music:pa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.053      ;
+; 2.836 ; Music:ga1|count_sa2[24]  ; Music:ga1|count_sa2[24]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.057      ;
+; 2.836 ; Music:pa1|count_sa4[24]  ; Music:pa1|count_sa4[24]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.057      ;
 ; 2.836 ; Music:dha1|count_sa5[24] ; Music:dha1|count_sa5[24] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.057      ;
-; 2.877 ; Music:re1|count_sa1[24]  ; Music:re1|count_sa1[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.098      ;
-; 2.890 ; Music:pa1|count_sa4[17]  ; Music:pa1|count_sa4[6]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.111      ;
-; 2.991 ; Music:ni1|count_sa6[24]  ; Music:ni1|count_sa6[24]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.212      ;
-; 2.991 ; Music:pa1|count_sa4[24]  ; Music:pa1|count_sa4[24]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.212      ;
+; 2.838 ; Music:re1|count_sa1[2]   ; Music:re1|count_sa1[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.059      ;
+; 2.850 ; Music:ga1|count_sa2[17]  ; Music:ga1|count_sa2[14]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.071      ;
+; 2.853 ; Music:ga1|count_sa2[17]  ; Music:ga1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.074      ;
+; 2.855 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[7]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.076      ;
+; 2.855 ; Music:ga1|count_sa2[17]  ; Music:ga1|count_sa2[10]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.076      ;
+; 2.856 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[4]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.077      ;
+; 2.857 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.078      ;
+; 2.858 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[5]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.079      ;
+; 2.865 ; Music:re1|count_sa1[3]   ; Music:re1|count_sa1[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.086      ;
+; 2.940 ; Music:ma1|count_sa3[17]  ; Music:ma1|count_sa3[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.161      ;
+; 2.994 ; Music:ga1|count_sa2[23]  ; Music:ga1|count_sa2[23]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.215      ;
+; 2.994 ; Music:pa1|count_sa4[23]  ; Music:pa1|count_sa4[23]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.215      ;
 ; 2.994 ; Music:dha1|count_sa5[23] ; Music:dha1|count_sa5[23] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.215      ;
-; 3.010 ; Music:ga1|count_sa2[9]   ; Music:ga1|count_sa2[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.231      ;
-; 3.035 ; timecounter[5]           ; clock_music              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.256      ;
-; 3.062 ; Music:ma1|count_sa3[17]  ; Music:ma1|count_sa3[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.283      ;
-; 3.097 ; Music:ni1|count_sa6[8]   ; Music:ni1|count_sa6[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.318      ;
-; 3.105 ; Music:re1|count_sa1[26]  ; Music:re1|count_sa1[26]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.326      ;
-; 3.108 ; Music:ga1|count_sa2[4]   ; Music:ga1|count_sa2[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.329      ;
-; 3.116 ; timecounter[26]          ; timecounter[26]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.337      ;
-; 3.127 ; clk_c                    ; clk_c                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.348      ;
-; 3.128 ; Music:ma1|count_sa3[9]   ; Music:ma1|count_sa3[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.349      ;
-; 3.165 ; Music:ma1|count_sa3[17]  ; Music:ma1|count_sa3[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.386      ;
-; 3.176 ; timecounter[26]          ; timecounter[19]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.397      ;
-; 3.180 ; Music:re1|count_sa1[24]  ; Music:re1|count_sa1[14]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.401      ;
-; 3.181 ; Music:re1|count_sa1[24]  ; Music:re1|count_sa1[11]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.402      ;
-; 3.183 ; Music:re1|count_sa1[24]  ; Music:re1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.404      ;
-; 3.194 ; Music:ga1|count_sa2[24]  ; Music:ga1|count_sa2[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.415      ;
-; 3.199 ; Music:ga1|count_sa2[24]  ; Music:ga1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.420      ;
-; 3.211 ; timecounter[21]          ; timecounter[20]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.432      ;
-; 3.216 ; Music:ma1|count_sa3[17]  ; Music:ma1|count_sa3[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.437      ;
-; 3.221 ; Music:pa1|count_sa4[17]  ; Music:pa1|count_sa4[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.442      ;
-; 3.223 ; timecounter[21]          ; timecounter[18]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.444      ;
-; 3.224 ; timecounter[21]          ; timecounter[22]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.445      ;
-; 3.225 ; Music:pa1|count_sa4[17]  ; Music:pa1|count_sa4[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.446      ;
-; 3.227 ; Music:pa1|count_sa4[17]  ; Music:pa1|count_sa4[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.448      ;
-; 3.242 ; Music:dha1|count_sa5[24] ; Music:dha1|count_sa5[5]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.463      ;
-; 3.249 ; Music:dha1|count_sa5[24] ; Music:dha1|count_sa5[2]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.470      ;
-; 3.314 ; Music:pa1|count_sa4[24]  ; Music:pa1|count_sa4[10]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.535      ;
-; 3.314 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[10] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.535      ;
-; 3.358 ; Music:re1|count_sa1[24]  ; Music:re1|count_sa1[7]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.579      ;
-; 3.366 ; Music:re1|count_sa1[24]  ; Music:re1|count_sa1[4]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.587      ;
-; 3.367 ; Music:re1|count_sa1[24]  ; Music:re1|count_sa1[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.588      ;
-; 3.388 ; Music:sa1|count_sa0[8]   ; Music:sa1|count_sa0[7]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.609      ;
-; 3.404 ; Music:pa1|count_sa4[26]  ; Music:pa1|count_sa4[26]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.625      ;
-; 3.424 ; Music:ni1|count_sa6[26]  ; Music:ni1|count_sa6[26]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.645      ;
-; 3.427 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[12] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.648      ;
-; 3.428 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[15] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.649      ;
-; 3.433 ; Music:dha1|count_sa5[26] ; Music:dha1|count_sa5[26] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.654      ;
-; 3.435 ; Music:ni1|count_sa6[24]  ; Music:ni1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.656      ;
-; 3.438 ; Music:ma1|count_sa3[4]   ; Music:ma1|count_sa3[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.659      ;
-; 3.490 ; Music:dha1|count_sa5[3]  ; Music:dha1|toneOut       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.711      ;
-; 3.492 ; Music:ma1|count_sa3[17]  ; Music:ma1|count_sa3[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.713      ;
-; 3.493 ; Music:ma1|count_sa3[17]  ; Music:ma1|count_sa3[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.714      ;
-; 3.494 ; timecounter[5]           ; timecounter[9]           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.715      ;
-; 3.499 ; Music:ma1|count_sa3[17]  ; Music:ma1|count_sa3[5]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.720      ;
-; 3.504 ; timecounter[24]          ; timecounter[9]           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.725      ;
-; 3.515 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[5]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.736      ;
-; 3.518 ; timecounter[24]          ; timecounter[16]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.739      ;
-; 3.519 ; Music:dha1|count_sa5[24] ; Music:dha1|count_sa5[13] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.740      ;
-; 3.520 ; Music:dha1|count_sa5[24] ; Music:dha1|count_sa5[14] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.741      ;
-; 3.523 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[2]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.744      ;
-; 3.527 ; Music:dha1|count_sa5[24] ; Music:dha1|toneOut       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.748      ;
-; 3.542 ; Music:ma1|count_sa3[9]   ; Music:ma1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.763      ;
-; 3.544 ; Music:ma1|count_sa3[9]   ; Music:ma1|count_sa3[12]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.765      ;
-; 3.544 ; Music:ma1|count_sa3[9]   ; Music:ma1|count_sa3[13]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.765      ;
-; 3.550 ; Music:ni1|count_sa6[24]  ; Music:ni1|count_sa6[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.771      ;
-; 3.558 ; Music:sa1|count_sa0[24]  ; Music:sa1|count_sa0[6]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.779      ;
-; 3.559 ; Music:sa1|count_sa0[24]  ; Music:sa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.780      ;
-; 3.562 ; Music:sa1|count_sa0[24]  ; Music:sa1|count_sa0[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.783      ;
-; 3.575 ; timecounter[20]          ; timecounter[19]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.796      ;
-; 3.581 ; Music:ma1|count_sa3[19]  ; Music:ma1|count_sa3[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.802      ;
-; 3.597 ; Music:sa1|count_sa0[8]   ; Music:sa1|count_sa0[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.818      ;
-; 3.599 ; Music:sa1|count_sa0[8]   ; Music:sa1|count_sa0[9]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.820      ;
-; 3.602 ; Music:sa1|count_sa0[8]   ; Music:sa1|count_sa0[15]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.823      ;
-; 3.610 ; Music:sa1|count_sa0[8]   ; Music:sa1|count_sa0[10]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.831      ;
-; 3.611 ; Music:sa1|count_sa0[8]   ; Music:sa1|count_sa0[5]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.832      ;
-; 3.617 ; Music:ga1|count_sa2[7]   ; Music:ga1|count_sa2[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.838      ;
-; 3.621 ; timecounter[19]          ; timecounter[20]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.842      ;
-; 3.624 ; Music:ni1|count_sa6[5]   ; Music:ni1|count_sa6[5]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.845      ;
-; 3.626 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.847      ;
-; 3.626 ; timecounter[19]          ; timecounter[18]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.847      ;
-; 3.627 ; timecounter[19]          ; timecounter[22]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.848      ;
-; 3.628 ; Music:ma1|count_sa3[4]   ; Music:ma1|count_sa3[4]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.849      ;
-; 3.629 ; Music:re1|count_sa1[17]  ; Music:re1|count_sa1[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.850      ;
-; 3.639 ; Music:sa1|count_sa0[4]   ; Music:sa1|count_sa0[4]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.860      ;
-; 3.640 ; Music:ni1|count_sa6[20]  ; Music:ni1|count_sa6[20]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.861      ;
+; 3.101 ; timecounter[24]          ; timecounter[20]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.322      ;
+; 3.102 ; timecounter[24]          ; timecounter[16]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.323      ;
+; 3.106 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[14] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.327      ;
+; 3.108 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[13] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.329      ;
+; 3.113 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[12] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.334      ;
+; 3.113 ; timecounter[24]          ; timecounter[19]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.334      ;
+; 3.115 ; timecounter[24]          ; timecounter[22]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.336      ;
+; 3.116 ; timecounter[24]          ; timecounter[18]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.337      ;
+; 3.173 ; Music:pa1|count_sa4[24]  ; Music:pa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.394      ;
+; 3.183 ; Music:dha1|count_sa5[24] ; Music:dha1|count_sa5[15] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.404      ;
+; 3.189 ; clk_c                    ; clk_c                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.410      ;
+; 3.193 ; timecounter[13]          ; clock_music              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.414      ;
+; 3.193 ; timecounter[13]          ; timecounter[17]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.414      ;
+; 3.196 ; timecounter[13]          ; timecounter[14]          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.417      ;
+; 3.211 ; Music:ga1|count_sa2[24]  ; Music:ga1|count_sa2[7]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.432      ;
+; 3.217 ; Music:ga1|count_sa2[24]  ; Music:ga1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.438      ;
+; 3.219 ; Music:ga1|count_sa2[24]  ; Music:ga1|count_sa2[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.440      ;
+; 3.220 ; Music:ga1|count_sa2[24]  ; Music:ga1|count_sa2[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.441      ;
+; 3.252 ; Music:pa1|count_sa4[24]  ; Music:pa1|count_sa4[6]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.473      ;
+; 3.258 ; Music:pa1|count_sa4[24]  ; Music:pa1|count_sa4[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.479      ;
+; 3.265 ; Music:pa1|count_sa4[24]  ; Music:pa1|count_sa4[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.486      ;
+; 3.275 ; Music:re1|count_sa1[6]   ; Music:re1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.496      ;
+; 3.282 ; Music:ma1|count_sa3[17]  ; Music:ma1|count_sa3[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.503      ;
+; 3.299 ; Music:ga1|toneOut        ; Music:ga1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.520      ;
+; 3.359 ; Music:re1|count_sa1[9]   ; Music:re1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.580      ;
+; 3.366 ; Music:sa1|count_sa0[5]   ; Music:sa1|count_sa0[5]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.587      ;
+; 3.370 ; Music:sa1|count_sa0[3]   ; Music:sa1|count_sa0[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.591      ;
+; 3.398 ; Music:ni1|count_sa6[1]   ; Music:ni1|count_sa6[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.619      ;
+; 3.431 ; Music:dha1|count_sa5[8]  ; Music:dha1|count_sa5[14] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.652      ;
+; 3.433 ; Music:dha1|count_sa5[8]  ; Music:dha1|count_sa5[13] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.654      ;
+; 3.438 ; Music:dha1|count_sa5[8]  ; Music:dha1|count_sa5[12] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.659      ;
+; 3.445 ; Music:ga1|count_sa2[26]  ; Music:ga1|count_sa2[26]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.666      ;
+; 3.447 ; Music:ni1|count_sa6[14]  ; Music:ni1|count_sa6[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.668      ;
+; 3.457 ; Music:ma1|count_sa3[17]  ; Music:ma1|count_sa3[13]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.678      ;
+; 3.460 ; Music:ma1|count_sa3[19]  ; Music:ma1|count_sa3[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.681      ;
+; 3.462 ; Music:ni1|count_sa6[17]  ; Music:ni1|count_sa6[12]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.683      ;
+; 3.464 ; Music:ni1|count_sa6[17]  ; Music:ni1|count_sa6[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.685      ;
+; 3.468 ; Music:pa1|count_sa4[24]  ; Music:pa1|count_sa4[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.689      ;
+; 3.471 ; Music:pa1|count_sa4[24]  ; Music:pa1|count_sa4[9]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.692      ;
+; 3.472 ; Music:pa1|count_sa4[24]  ; Music:pa1|count_sa4[10]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.693      ;
+; 3.480 ; Music:sa1|count_sa0[24]  ; Music:sa1|count_sa0[12]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.701      ;
+; 3.541 ; Music:sa1|count_sa0[24]  ; Music:sa1|count_sa0[6]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.762      ;
+; 3.544 ; Music:pa1|count_sa4[18]  ; Music:pa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.765      ;
+; 3.559 ; Music:dha1|count_sa5[16] ; Music:dha1|count_sa5[10] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.780      ;
+; 3.571 ; Music:sa1|count_sa0[17]  ; Music:sa1|count_sa0[5]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.792      ;
+; 3.572 ; Music:sa1|count_sa0[17]  ; Music:sa1|count_sa0[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.793      ;
+; 3.582 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[2]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.803      ;
+; 3.583 ; Music:dha1|count_sa5[3]  ; Music:dha1|count_sa5[5]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.804      ;
+; 3.599 ; Music:ni1|count_sa6[4]   ; Music:ni1|count_sa6[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.820      ;
+; 3.607 ; Music:dha1|count_sa5[24] ; Music:dha1|count_sa5[2]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.828      ;
 +-------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -476,106 +476,106 @@ No paths to report.
 +-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
-; 1.927 ; y_present.re     ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 2.148      ;
-; 2.107 ; y_present.ga     ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 2.328      ;
-; 2.132 ; y_present.sa     ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 2.353      ;
-; 2.251 ; y_present.ma     ; y_present.ma     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 2.472      ;
-; 2.262 ; count[0]         ; count[0]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 2.483      ;
-; 3.050 ; y_present.Silent ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.271      ;
-; 3.203 ; y_present.pa     ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.424      ;
-; 3.333 ; y_present.sa     ; y_present.ni     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.554      ;
-; 3.671 ; count[1]         ; count[1]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.892      ;
-; 3.738 ; count[3]         ; count[3]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.959      ;
-; 3.926 ; count[5]         ; count[0]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.147      ;
-; 3.977 ; y_present.Silent ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.198      ;
-; 3.983 ; y_present.ma     ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.204      ;
-; 3.989 ; y_present.dha    ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.210      ;
-; 4.107 ; count[5]         ; count[3]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.328      ;
-; 4.108 ; count[5]         ; count[1]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.329      ;
-; 4.246 ; count[5]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.467      ;
-; 4.419 ; y_present.dha    ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.640      ;
-; 4.482 ; count[1]         ; count[3]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.703      ;
-; 4.595 ; y_present.dha    ; y_present.ma     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.816      ;
-; 4.629 ; y_present.pa     ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.850      ;
-; 4.633 ; y_present.sa     ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.854      ;
-; 4.952 ; count[1]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.173      ;
-; 4.960 ; count[3]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.181      ;
-; 4.966 ; count[4]         ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.187      ;
-; 4.993 ; count[5]         ; count[31]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.214      ;
-; 4.996 ; count[5]         ; count[28]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.217      ;
-; 5.007 ; y_present.pa     ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.228      ;
-; 5.012 ; y_present.pa     ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.233      ;
-; 5.017 ; y_present.pa     ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.238      ;
-; 5.114 ; count[5]         ; count[14]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.335      ;
-; 5.120 ; count[5]         ; count[8]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.341      ;
-; 5.124 ; count[5]         ; count[13]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.345      ;
-; 5.126 ; count[5]         ; count[9]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.347      ;
-; 5.128 ; count[5]         ; count[11]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.349      ;
-; 5.132 ; count[5]         ; count[12]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.353      ;
-; 5.132 ; count[5]         ; count[16]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.353      ;
-; 5.135 ; count[5]         ; count[10]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.356      ;
-; 5.135 ; count[5]         ; count[19]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.356      ;
-; 5.145 ; count[5]         ; count[18]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.366      ;
-; 5.153 ; count[5]         ; count[22]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.374      ;
-; 5.154 ; count[5]         ; count[7]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.375      ;
-; 5.154 ; count[5]         ; count[23]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.375      ;
-; 5.206 ; count[5]         ; count[21]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.427      ;
-; 5.233 ; count[0]         ; count[3]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.454      ;
-; 5.309 ; count[3]         ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.530      ;
-; 5.328 ; count[5]         ; count[25]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.549      ;
-; 5.331 ; count[5]         ; count[6]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.552      ;
-; 5.334 ; count[5]         ; count[27]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.555      ;
-; 5.340 ; count[5]         ; count[26]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.561      ;
-; 5.340 ; count[0]         ; count[1]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.561      ;
-; 5.341 ; count[5]         ; count[15]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.562      ;
-; 5.342 ; count[5]         ; count[24]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.563      ;
-; 5.402 ; count[1]         ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.623      ;
-; 5.432 ; count[6]         ; count[6]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.653      ;
-; 5.481 ; count[0]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.702      ;
-; 5.517 ; count[5]         ; count[29]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.738      ;
-; 5.517 ; y_present.ma     ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.738      ;
-; 5.522 ; y_present.pa     ; y_present.ni     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.743      ;
-; 5.522 ; y_present.ma     ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.743      ;
-; 5.559 ; count[5]         ; count[20]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.780      ;
-; 5.584 ; y_present.pa     ; y_present.ma     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.805      ;
-; 5.592 ; count[5]         ; count[4]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.813      ;
-; 5.602 ; count[5]         ; count[2]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.823      ;
-; 5.632 ; y_present.sa     ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.853      ;
-; 5.642 ; y_present.sa     ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.863      ;
-; 5.669 ; y_present.sa     ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.890      ;
-; 5.711 ; count[5]         ; count[30]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.932      ;
-; 5.720 ; count[5]         ; count[17]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.941      ;
-; 5.727 ; count[1]         ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.948      ;
-; 5.852 ; count[7]         ; count[7]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.073      ;
-; 5.911 ; count[4]         ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.132      ;
-; 5.920 ; count[2]         ; count[0]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.141      ;
-; 5.924 ; count[8]         ; count[8]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.145      ;
-; 6.015 ; count[15]        ; count[15]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.236      ;
-; 6.024 ; count[0]         ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.245      ;
-; 6.027 ; y_present.ma     ; y_present.ni     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.248      ;
-; 6.082 ; count[4]         ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.303      ;
-; 6.101 ; count[2]         ; count[3]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.322      ;
-; 6.102 ; count[2]         ; count[1]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.323      ;
-; 6.105 ; count[1]         ; count[4]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.326      ;
-; 6.113 ; count[3]         ; count[4]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.334      ;
-; 6.115 ; count[0]         ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.336      ;
-; 6.126 ; count[1]         ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.347      ;
-; 6.130 ; count[24]        ; count[24]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.351      ;
-; 6.179 ; count[1]         ; count[6]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.400      ;
-; 6.187 ; count[3]         ; count[6]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.408      ;
-; 6.240 ; count[2]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.461      ;
-; 6.250 ; count[1]         ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.471      ;
-; 6.251 ; count[3]         ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.472      ;
-; 6.266 ; count[4]         ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.487      ;
-; 6.288 ; y_present.ni     ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.509      ;
-; 6.307 ; y_present.ma     ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.528      ;
-; 6.312 ; count[2]         ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.533      ;
-; 6.334 ; count[16]        ; count[16]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.555      ;
-; 6.386 ; count[3]         ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.607      ;
-; 6.387 ; count[4]         ; y_present.ma     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.608      ;
-; 6.390 ; y_present.ni     ; y_present.ni     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.611      ;
-; 6.414 ; count[1]         ; count[13]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.635      ;
-; 6.422 ; count[3]         ; count[13]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.643      ;
+; 2.126 ; y_present.re     ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 2.347      ;
+; 2.145 ; y_present.ma     ; y_present.ma     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 2.366      ;
+; 2.167 ; count[0]         ; count[0]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 2.388      ;
+; 3.217 ; y_present.pa     ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.438      ;
+; 3.225 ; y_present.ni     ; y_present.ni     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.446      ;
+; 3.370 ; count[2]         ; count[2]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.591      ;
+; 3.375 ; y_present.ni     ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.596      ;
+; 3.398 ; y_present.ma     ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.619      ;
+; 3.659 ; y_present.dha    ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.880      ;
+; 3.665 ; y_present.ga     ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.886      ;
+; 3.749 ; y_present.pa     ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 3.970      ;
+; 3.780 ; count[5]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.001      ;
+; 3.846 ; y_present.ni     ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.067      ;
+; 3.847 ; y_present.ni     ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.068      ;
+; 4.002 ; y_present.ma     ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.223      ;
+; 4.096 ; y_present.dha    ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.317      ;
+; 4.349 ; y_present.ni     ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.570      ;
+; 4.393 ; y_present.sa     ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.614      ;
+; 4.414 ; y_present.ma     ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.635      ;
+; 4.471 ; y_present.Silent ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.692      ;
+; 4.591 ; y_present.Silent ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 4.812      ;
+; 4.824 ; count[2]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.045      ;
+; 4.874 ; y_present.sa     ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.095      ;
+; 4.880 ; y_present.sa     ; y_present.ni     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.101      ;
+; 4.885 ; y_present.ma     ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.106      ;
+; 4.886 ; y_present.ma     ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.107      ;
+; 4.893 ; y_present.pa     ; y_present.ma     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.114      ;
+; 4.942 ; y_present.dha    ; y_present.ma     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.163      ;
+; 4.980 ; y_present.Silent ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.201      ;
+; 5.120 ; y_present.re     ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.341      ;
+; 5.175 ; y_present.ga     ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.396      ;
+; 5.256 ; count[1]         ; count[2]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.477      ;
+; 5.261 ; count[3]         ; count[17]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.482      ;
+; 5.261 ; count[3]         ; count[19]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.482      ;
+; 5.323 ; count[21]        ; count[21]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.544      ;
+; 5.388 ; y_present.ma     ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.609      ;
+; 5.395 ; count[22]        ; count[22]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.616      ;
+; 5.397 ; count[2]         ; count[17]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.618      ;
+; 5.397 ; count[2]         ; count[19]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.618      ;
+; 5.404 ; count[2]         ; count[3]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.625      ;
+; 5.408 ; y_present.sa     ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.629      ;
+; 5.421 ; count[6]         ; count[6]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.642      ;
+; 5.428 ; count[3]         ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.649      ;
+; 5.451 ; y_present.Silent ; y_present.re     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.672      ;
+; 5.452 ; y_present.Silent ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.673      ;
+; 5.469 ; count[18]        ; count[18]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.690      ;
+; 5.522 ; count[23]        ; count[23]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.743      ;
+; 5.544 ; count[3]         ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.765      ;
+; 5.555 ; count[2]         ; count[4]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.776      ;
+; 5.557 ; count[1]         ; count[1]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.778      ;
+; 5.568 ; count[1]         ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.789      ;
+; 5.593 ; count[11]        ; count[11]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.814      ;
+; 5.603 ; count[4]         ; count[17]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.824      ;
+; 5.603 ; count[4]         ; count[19]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.824      ;
+; 5.631 ; count[1]         ; y_present.Silent ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.852      ;
+; 5.657 ; y_present.dha    ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.878      ;
+; 5.659 ; count[19]        ; count[19]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.880      ;
+; 5.679 ; count[17]        ; count[17]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.900      ;
+; 5.690 ; count[0]         ; count[2]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.911      ;
+; 5.725 ; count[3]         ; count[3]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.946      ;
+; 5.726 ; count[3]         ; y_present.sa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.947      ;
+; 5.730 ; count[3]         ; count[16]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.951      ;
+; 5.731 ; count[3]         ; count[18]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.952      ;
+; 5.732 ; count[3]         ; count[6]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.953      ;
+; 5.747 ; count[27]        ; count[27]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.968      ;
+; 5.764 ; count[13]        ; count[13]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 5.985      ;
+; 5.786 ; count[1]         ; count[17]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.007      ;
+; 5.786 ; count[1]         ; count[19]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.007      ;
+; 5.804 ; y_present.ma     ; y_present.ni     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.025      ;
+; 5.833 ; count[29]        ; count[29]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.054      ;
+; 5.841 ; count[25]        ; count[25]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.062      ;
+; 5.841 ; count[3]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.062      ;
+; 5.847 ; count[3]         ; y_present.ni     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.068      ;
+; 5.862 ; count[5]         ; count[17]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.083      ;
+; 5.862 ; count[5]         ; count[19]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.083      ;
+; 5.866 ; count[2]         ; count[16]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.087      ;
+; 5.867 ; count[2]         ; count[18]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.088      ;
+; 5.868 ; count[2]         ; count[6]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.089      ;
+; 5.886 ; count[4]         ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.107      ;
+; 5.906 ; count[4]         ; count[4]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.127      ;
+; 5.912 ; count[5]         ; count[11]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.133      ;
+; 5.922 ; count[24]        ; count[24]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.143      ;
+; 5.922 ; count[3]         ; y_present.pa     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.143      ;
+; 5.927 ; count[4]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.148      ;
+; 5.949 ; count[5]         ; count[6]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.170      ;
+; 5.954 ; y_present.Silent ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.175      ;
+; 6.011 ; y_present.re     ; y_present.ga     ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.232      ;
+; 6.014 ; count[1]         ; count[5]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.235      ;
+; 6.061 ; count[21]        ; count[22]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.282      ;
+; 6.069 ; count[1]         ; y_present.dha    ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.290      ;
+; 6.072 ; count[4]         ; count[16]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.293      ;
+; 6.073 ; count[4]         ; count[18]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.294      ;
+; 6.073 ; count[5]         ; count[13]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.294      ;
+; 6.074 ; count[4]         ; count[6]         ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.295      ;
+; 6.092 ; count[3]         ; count[21]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.313      ;
+; 6.093 ; count[3]         ; count[23]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.314      ;
+; 6.094 ; count[3]         ; count[26]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.315      ;
+; 6.095 ; count[3]         ; count[22]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.316      ;
+; 6.100 ; count[3]         ; count[24]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.321      ;
+; 6.104 ; count[3]         ; count[25]        ; clock_music  ; clock_music ; 0.000        ; 0.000      ; 6.325      ;
 +-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -584,7 +584,7 @@ No paths to report.
 +-------------+-------------+----------+----------+----------+----------+
 ; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------+-------------+----------+----------+----------+----------+
-; clk_50      ; clk_50      ; 7312     ; 0        ; 0        ; 0        ;
+; clk_50      ; clk_50      ; 7338     ; 0        ; 0        ; 0        ;
 ; clock_music ; clock_music ; 5542     ; 0        ; 0        ; 0        ;
 +-------------+-------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -595,7 +595,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------+-------------+----------+----------+----------+----------+
 ; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------+-------------+----------+----------+----------+----------+
-; clk_50      ; clk_50      ; 7312     ; 0        ; 0        ; 0        ;
+; clk_50      ; clk_50      ; 7338     ; 0        ; 0        ; 0        ;
 ; clock_music ; clock_music ; 5542     ; 0        ; 0        ; 0        ;
 +-------------+-------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -693,7 +693,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 01 16:35:20 2021
+    Info: Processing started: Thu Apr 01 17:02:13 2021
 Info: Command: quartus_sta MusicSynthesizer -c DUT
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -710,16 +710,16 @@ Info (332105): Deriving Clocks
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -13.623
+Info (332146): Worst-case setup slack is -14.315
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -13.623            -403.687 clock_music 
-    Info (332119):    -8.186           -1471.073 clk_50 
-Info (332146): Worst-case hold slack is 1.659
+    Info (332119):   -14.315            -397.458 clock_music 
+    Info (332119):    -8.475           -1461.962 clk_50 
+Info (332146): Worst-case hold slack is 1.639
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.659               0.000 clk_50 
-    Info (332119):     1.927               0.000 clock_music 
+    Info (332119):     1.639               0.000 clk_50 
+    Info (332119):     2.126               0.000 clock_music 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.289
@@ -731,8 +731,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4680 megabytes
-    Info: Processing ended: Thu Apr 01 16:35:21 2021
+    Info: Peak virtual memory: 4679 megabytes
+    Info: Processing ended: Thu Apr 01 17:02:14 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

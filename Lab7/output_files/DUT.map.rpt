@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DUT
-Thu Apr 01 16:35:13 2021
+Thu Apr 01 17:02:07 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,12 +53,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Apr 01 16:35:13 2021       ;
+; Analysis & Synthesis Status ; Successful - Thu Apr 01 17:02:07 2021       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; DUT                                         ;
 ; Top-level Entity Name       ; MusicSynthesizer                            ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 626                                         ;
+; Total logic elements        ; 629                                         ;
 ; Total pins                  ; 11                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -167,32 +167,32 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Total logic elements                        ; 626    ;
-;     -- Combinational with no register       ; 368    ;
-;     -- Register only                        ; 143    ;
-;     -- Combinational with a register        ; 115    ;
+; Total logic elements                        ; 629    ;
+;     -- Combinational with no register       ; 369    ;
+;     -- Register only                        ; 144    ;
+;     -- Combinational with a register        ; 116    ;
 ;                                             ;        ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 189    ;
+;     -- 4 input functions                    ; 190    ;
 ;     -- 3 input functions                    ; 38     ;
 ;     -- 2 input functions                    ; 249    ;
-;     -- 1 input functions                    ; 7      ;
+;     -- 1 input functions                    ; 8      ;
 ;     -- 0 input functions                    ; 0      ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 391    ;
-;     -- arithmetic mode                      ; 235    ;
+;     -- normal mode                          ; 393    ;
+;     -- arithmetic mode                      ; 236    ;
 ;     -- qfbk mode                            ; 0      ;
 ;     -- register cascade mode                ; 0      ;
 ;     -- synchronous clear/load mode          ; 0      ;
 ;     -- asynchronous clear/load mode         ; 0      ;
 ;                                             ;        ;
-; Total registers                             ; 258    ;
-; Total logic cells in carry chains           ; 244    ;
+; Total registers                             ; 260    ;
+; Total logic cells in carry chains           ; 245    ;
 ; I/O pins                                    ; 11     ;
 ; Maximum fan-out node                        ; clk_50 ;
-; Maximum fan-out                             ; 218    ;
-; Total fan-out                               ; 1784   ;
+; Maximum fan-out                             ; 220    ;
+; Total fan-out                               ; 1792   ;
 ; Average fan-out                             ; 2.80   ;
 +---------------------------------------------+--------+
 
@@ -202,11 +202,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name          ; Entity Name      ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------+------------------+--------------+
-; |MusicSynthesizer          ; 626 (196)   ; 258          ; 0          ; 11   ; 0            ; 368 (127)    ; 143 (16)          ; 115 (53)         ; 244 (59)        ; 0 (0)      ; |MusicSynthesizer            ; MusicSynthesizer ; work         ;
+; |MusicSynthesizer          ; 629 (196)   ; 260          ; 0          ; 11   ; 0            ; 369 (127)    ; 144 (16)          ; 116 (53)         ; 245 (59)        ; 0 (0)      ; |MusicSynthesizer            ; MusicSynthesizer ; work         ;
 ;    |Music:dha1|            ; 60 (60)     ; 26           ; 0          ; 0    ; 0            ; 34 (34)      ; 18 (18)           ; 8 (8)            ; 26 (26)         ; 0 (0)      ; |MusicSynthesizer|Music:dha1 ; Music            ; work         ;
 ;    |Music:ga1|             ; 61 (61)     ; 27           ; 0          ; 0    ; 0            ; 34 (34)      ; 20 (20)           ; 7 (7)            ; 26 (26)         ; 0 (0)      ; |MusicSynthesizer|Music:ga1  ; Music            ; work         ;
 ;    |Music:ma1|             ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 18 (18)           ; 10 (10)          ; 27 (27)         ; 0 (0)      ; |MusicSynthesizer|Music:ma1  ; Music            ; work         ;
-;    |Music:ni1|             ; 60 (60)     ; 26           ; 0          ; 0    ; 0            ; 34 (34)      ; 19 (19)           ; 7 (7)            ; 26 (26)         ; 0 (0)      ; |MusicSynthesizer|Music:ni1  ; Music            ; work         ;
+;    |Music:ni1|             ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 20 (20)           ; 8 (8)            ; 27 (27)         ; 0 (0)      ; |MusicSynthesizer|Music:ni1  ; Music            ; work         ;
 ;    |Music:pa1|             ; 60 (60)     ; 26           ; 0          ; 0    ; 0            ; 34 (34)      ; 18 (18)           ; 8 (8)            ; 26 (26)         ; 0 (0)      ; |MusicSynthesizer|Music:pa1  ; Music            ; work         ;
 ;    |Music:re1|             ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 17 (17)           ; 11 (11)          ; 27 (27)         ; 0 (0)      ; |MusicSynthesizer|Music:re1  ; Music            ; work         ;
 ;    |Music:sa1|             ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 17 (17)           ; 11 (11)          ; 27 (27)         ; 0 (0)      ; |MusicSynthesizer|Music:sa1  ; Music            ; work         ;
@@ -385,14 +385,12 @@ Encoding Type:  One-Hot
 ; Music:ga1|sa2                            ; Merged with Music:ga1|toneOut               ;
 ; Music:re1|sa1                            ; Merged with Music:re1|toneOut               ;
 ; Music:sa1|sa0                            ; Merged with Music:sa1|toneOut               ;
-; Music:ga1|count_sa2[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
 ; Music:dha1|count_sa5[0]                  ; Merged with Music:sa1|count_sa0[0]          ;
 ; Music:pa1|count_sa4[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
-; Music:ni1|count_sa6[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
-; Music:ni1|count_sa6[1]                   ; Merged with Music:sa1|count_sa0[1]          ;
+; Music:ga1|count_sa2[0]                   ; Merged with Music:sa1|count_sa0[0]          ;
 ; Music:dha1|count_sa5[1]                  ; Merged with Music:sa1|count_sa0[1]          ;
-; Music:pa1|count_sa4[1]                   ; Merged with Music:ga1|count_sa2[1]          ;
-; Total Number of Removed Registers = 1442 ;                                             ;
+; Music:pa1|count_sa4[1]                   ; Merged with Music:sa1|count_sa0[1]          ;
+; Total Number of Removed Registers = 1440 ;                                             ;
 +------------------------------------------+---------------------------------------------+
 
 
@@ -418,7 +416,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 258   ;
+; Total registers                              ; 260   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -442,11 +440,12 @@ Encoding Type:  One-Hot
 ; Music:dha1|toneOut                      ; 2       ;
 ; count[31]                               ; 2       ;
 ; count[0]                                ; 12      ;
-; Music:sa1|count_sa0[0]                  ; 11      ;
+; Music:ni1|count_sa6[0]                  ; 3       ;
+; Music:sa1|count_sa0[0]                  ; 9       ;
 ; Music:re1|count_sa1[0]                  ; 3       ;
 ; Music:ma1|count_sa3[0]                  ; 3       ;
 ; clk_c                                   ; 1       ;
-; Total number of inverted registers = 13 ;         ;
+; Total number of inverted registers = 14 ;         ;
 +-----------------------------------------+---------+
 
 
@@ -544,7 +543,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 01 16:35:05 2021
+    Info: Processing started: Thu Apr 01 17:01:59 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MusicSynthesizer -c DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -558,18 +557,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file musicsy
     Info (12022): Found design unit 1: MusicSynthesizer-fsm File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 10
     Info (12023): Found entity 1: MusicSynthesizer File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 4
 Info (12127): Elaborating entity "MusicSynthesizer" for the top level hierarchy
-Info (12128): Elaborating entity "Music" for hierarchy "Music:sa1" File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 153
+Info (12128): Elaborating entity "Music" for hierarchy "Music:sa1" File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 150
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED[7]" is stuck at GND File: S:/EE214_Labs/Lab7/MusicSynthesizer.vhd Line: 7
 Info (17049): 1008 registers lost all their fanouts during netlist optimizations.
-Info (21057): Implemented 637 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 640 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 626 logic cells
+    Info (21061): Implemented 629 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4765 megabytes
-    Info: Processing ended: Thu Apr 01 16:35:13 2021
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Thu Apr 01 17:02:07 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:18
 
 

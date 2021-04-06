@@ -70,7 +70,7 @@ if (clk = '1' and clk' event) then
 		LED <= (5 => '1', others => '0');
 
 	elsif(switch(6)='1') then
-		if (count_sa6 = 111111) then--550Hz
+		if (count_sa6 = 55556) then--550Hz
 		count_sa6 := 1;
 		sa6 := not sa6;
 		else

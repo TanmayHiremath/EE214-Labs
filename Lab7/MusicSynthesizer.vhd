@@ -110,9 +110,6 @@ begin
 			elsif(count=26) then
 					y_next_var := re;
 			end if;
-			LED<=LED_pa;
-			toneOut<= tune_pa;
-				
 			LED<=LED_ni;
 			toneOut<= tune_ni;
 			
